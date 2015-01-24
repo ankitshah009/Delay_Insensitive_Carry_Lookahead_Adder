@@ -1,0 +1,33 @@
+.subckt vfeed2 vdd vss
+*   SPICE3 file   created from vfeed2.ext -      technology: scmos
+m00 w1     w2     w3     vdd p w=28u  l=2.3636u ad=176p     pd=50u      as=196p     ps=70u
+m01 w4     w5     w1     vdd p w=28u  l=2.3636u ad=196p     pd=70u      as=176p     ps=50u
+m02 w6     w7     w8     vdd p w=28u  l=2.3636u ad=176p     pd=50u      as=196p     ps=70u
+m03 w9     w10    w6     vdd p w=28u  l=2.3636u ad=196p     pd=70u      as=176p     ps=50u
+m04 w11    w2     w12    vss n w=20u  l=2.3636u ad=136p     pd=42u      as=140p     ps=54u
+m05 w13    w5     w11    vss n w=20u  l=2.3636u ad=140p     pd=54u      as=136p     ps=42u
+m06 w14    w7     w15    vss n w=20u  l=2.3636u ad=136p     pd=42u      as=140p     ps=54u
+m07 w16    w10    w14    vss n w=20u  l=2.3636u ad=140p     pd=54u      as=136p     ps=42u
+C0  w6     vdd    0.020f
+C1  w7     w2     0.020f
+C2  w5     vdd    0.028f
+C3  vss    w10    0.007f
+C4  vss    w14    0.020f
+C5  w2     vdd    0.025f
+C6  vss    w7     0.028f
+C7  w10    w7     0.065f
+C8  w10    vdd    0.025f
+C9  w5     w2     0.065f
+C10 w7     vdd    0.028f
+C11 w1     vdd    0.020f
+C12 vss    w5     0.028f
+C13 w10    w5     0.020f
+C14 vss    w11    0.020f
+C15 vss    w2     0.007f
+C16 w10    w2     0.012f
+C17 w7     w5     0.086f
+C19 w10    vss    0.043f
+C20 w7     vss    0.043f
+C21 w5     vss    0.043f
+C22 w2     vss    0.043f
+.ends

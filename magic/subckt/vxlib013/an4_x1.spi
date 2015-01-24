@@ -1,0 +1,51 @@
+.subckt an4_x1 a b c d vdd vss z
+*   SPICE3 file   created from an4_x1.ext -      technology: scmos
+m00 vdd    zn     z      vdd p w=20u  l=2.3636u ad=149.524p pd=53.3333u as=142p     ps=56u
+m01 zn     a      vdd    vdd p w=16u  l=2.3636u ad=80p      pd=26u      as=119.619p ps=42.6667u
+m02 vdd    b      zn     vdd p w=16u  l=2.3636u ad=119.619p pd=42.6667u as=80p      ps=26u
+m03 zn     c      vdd    vdd p w=16u  l=2.3636u ad=80p      pd=26u      as=119.619p ps=42.6667u
+m04 vdd    d      zn     vdd p w=16u  l=2.3636u ad=119.619p pd=42.6667u as=80p      ps=26u
+m05 vss    zn     z      vss n w=10u  l=2.3636u ad=72.4138p pd=21.3793u as=68p      ps=36u
+m06 w1     a      vss    vss n w=19u  l=2.3636u ad=57p      pd=25u      as=137.586p ps=40.6207u
+m07 w2     b      w1     vss n w=19u  l=2.3636u ad=57p      pd=25u      as=57p      ps=25u
+m08 w3     c      w2     vss n w=19u  l=2.3636u ad=57p      pd=25u      as=57p      ps=25u
+m09 zn     d      w3     vss n w=19u  l=2.3636u ad=137p     pd=54u      as=57p      ps=25u
+C0  z      b      0.036f
+C1  vss    a      0.006f
+C2  d      c      0.208f
+C3  w1     zn     0.024f
+C4  z      zn     0.332f
+C5  c      b      0.255f
+C6  d      a      0.087f
+C7  d      vdd    0.038f
+C8  c      zn     0.115f
+C9  b      a      0.177f
+C10 b      vdd    0.006f
+C11 a      zn     0.363f
+C12 w2     b      0.016f
+C13 vss    d      0.006f
+C14 zn     vdd    0.259f
+C15 z      c      0.024f
+C16 w2     zn     0.012f
+C17 vss    b      0.033f
+C18 d      b      0.061f
+C19 z      a      0.051f
+C20 vss    zn     0.237f
+C21 z      vdd    0.044f
+C22 c      a      0.129f
+C23 d      zn     0.124f
+C24 b      zn     0.274f
+C25 c      vdd    0.020f
+C26 w3     b      0.013f
+C27 vss    z      0.054f
+C28 a      vdd    0.053f
+C29 vss    c      0.007f
+C30 z      d      0.004f
+C31 w3     zn     0.012f
+C33 z      vss    0.011f
+C34 d      vss    0.027f
+C35 c      vss    0.037f
+C36 b      vss    0.029f
+C37 a      vss    0.030f
+C38 zn     vss    0.039f
+.ends

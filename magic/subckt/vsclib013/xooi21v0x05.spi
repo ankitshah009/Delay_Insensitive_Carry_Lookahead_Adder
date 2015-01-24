@@ -1,0 +1,49 @@
+.subckt xooi21v0x05 a1 a2 b vdd vss z
+*   SPICE3 file   created from xooi21v0x05.ext -      technology: scmos
+m00 w1     bn     vdd    vdd p w=16u  l=2.3636u ad=48p      pd=22u      as=139.143p ps=44u
+m01 z      an     w1     vdd p w=16u  l=2.3636u ad=76.8p    pd=26.4u    as=48p      ps=22u
+m02 an     b      z      vdd p w=24u  l=2.3636u ad=96p      pd=32u      as=115.2p   ps=39.6u
+m03 w2     a2     an     vdd p w=24u  l=2.3636u ad=60p      pd=29u      as=96p      ps=32u
+m04 vdd    a1     w2     vdd p w=24u  l=2.3636u ad=208.714p pd=66u      as=60p      ps=29u
+m05 bn     b      vdd    vdd p w=16u  l=2.3636u ad=92p      pd=46u      as=139.143p ps=44u
+m06 z      bn     an     vss n w=14u  l=2.3636u ad=60.6667p pd=29.3333u as=70p      ps=37.6923u
+m07 bn     an     z      vss n w=7u   l=2.3636u ad=28p      pd=15u      as=30.3333p ps=14.6667u
+m08 vss    b      bn     vss n w=7u   l=2.3636u ad=92.8421p pd=34.6316u as=28p      ps=15u
+m09 an     a2     vss    vss n w=6u   l=2.3636u ad=30p      pd=16.1538u as=79.5789p ps=29.6842u
+m10 vss    a1     an     vss n w=6u   l=2.3636u ad=79.5789p pd=29.6842u as=30p      ps=16.1538u
+C0  vss    a2     0.023f
+C1  z      an     0.275f
+C2  w1     bn     0.012f
+C3  z      a1     0.002f
+C4  an     bn     0.572f
+C5  bn     a1     0.034f
+C6  an     a2     0.130f
+C7  bn     b      0.094f
+C8  an     vdd    0.028f
+C9  a1     a2     0.158f
+C10 vss    an     0.380f
+C11 a1     vdd    0.014f
+C12 a2     b      0.191f
+C13 w2     bn     0.010f
+C14 vss    a1     0.062f
+C15 b      vdd    0.039f
+C16 vss    b      0.034f
+C17 z      bn     0.546f
+C18 an     a1     0.026f
+C19 z      a2     0.005f
+C20 z      vdd    0.183f
+C21 an     b      0.086f
+C22 bn     a2     0.094f
+C23 vss    z      0.040f
+C24 bn     vdd    0.292f
+C25 a1     b      0.210f
+C26 vss    bn     0.062f
+C27 w1     z      0.009f
+C28 a2     vdd    0.040f
+C30 z      vss    0.013f
+C31 an     vss    0.032f
+C32 bn     vss    0.027f
+C33 a1     vss    0.030f
+C34 a2     vss    0.024f
+C35 b      vss    0.059f
+.ends

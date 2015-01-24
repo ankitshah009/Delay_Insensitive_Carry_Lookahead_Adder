@@ -1,0 +1,58 @@
+.subckt oan22_x2 a1 a2 b1 b2 vdd vss z
+*   SPICE3 file   created from oan22_x2.ext -      technology: scmos
+m00 vdd    zn     z      vdd p w=39u  l=2.3636u ad=247p     pd=64.6667u as=237p     ps=94u
+m01 w1     b1     vdd    vdd p w=39u  l=2.3636u ad=117p     pd=45u      as=247p     ps=64.6667u
+m02 zn     b2     w1     vdd p w=39u  l=2.3636u ad=195p     pd=49u      as=117p     ps=45u
+m03 w2     a2     zn     vdd p w=39u  l=2.3636u ad=117p     pd=45u      as=195p     ps=49u
+m04 vdd    a1     w2     vdd p w=39u  l=2.3636u ad=247p     pd=64.6667u as=117p     ps=45u
+m05 z      zn     vss    vss n w=19u  l=2.3636u ad=113p     pd=54u      as=133p     ps=48.7547u
+m06 zn     b1     n3     vss n w=17u  l=2.3636u ad=85p      pd=27u      as=100p     ps=38.5u
+m07 n3     b2     zn     vss n w=17u  l=2.3636u ad=100p     pd=38.5u    as=85p      ps=27u
+m08 vss    a2     n3     vss n w=17u  l=2.3636u ad=119p     pd=43.6226u as=100p     ps=38.5u
+m09 n3     a1     vss    vss n w=17u  l=2.3636u ad=100p     pd=38.5u    as=119p     ps=43.6226u
+C0  n3     a1     0.011f
+C1  vss    z      0.059f
+C2  b2     zn     0.101f
+C3  a2     vdd    0.013f
+C4  n3     b2     0.132f
+C5  w2     a1     0.014f
+C6  vss    a2     0.021f
+C7  b1     vdd    0.023f
+C8  vss    b1     0.010f
+C9  z      a1     0.005f
+C10 n3     zn     0.111f
+C11 z      b2     0.030f
+C12 w1     b1     0.015f
+C13 a1     a2     0.250f
+C14 z      zn     0.261f
+C15 w1     vdd    0.011f
+C16 a2     b2     0.191f
+C17 a1     b1     0.042f
+C18 a1     vdd    0.081f
+C19 a2     zn     0.048f
+C20 b2     b1     0.194f
+C21 vss    a1     0.006f
+C22 n3     a2     0.039f
+C23 b2     vdd    0.008f
+C24 b1     zn     0.344f
+C25 vss    b2     0.049f
+C26 n3     b1     0.027f
+C27 w2     a2     0.011f
+C28 zn     vdd    0.174f
+C29 z      a2     0.022f
+C30 vss    zn     0.040f
+C31 n3     vss    0.286f
+C32 a1     b2     0.046f
+C33 w2     vdd    0.011f
+C34 z      b1     0.051f
+C35 w1     zn     0.012f
+C36 z      vdd    0.056f
+C37 a2     b1     0.105f
+C38 a1     zn     0.063f
+C40 z      vss    0.017f
+C41 a1     vss    0.020f
+C42 a2     vss    0.026f
+C43 b2     vss    0.027f
+C44 b1     vss    0.024f
+C45 zn     vss    0.030f
+.ends

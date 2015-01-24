@@ -1,0 +1,48 @@
+.subckt aoi31v0x05 a1 a2 a3 b vdd vss z
+*   SPICE3 file   created from aoi31v0x05.ext -      technology: scmos
+m00 n3     b      z      vdd p w=16u  l=2.3636u ad=64p      pd=24u      as=106p     ps=46u
+m01 vdd    a3     n3     vdd p w=16u  l=2.3636u ad=109.667p pd=40.6667u as=64p      ps=24u
+m02 n3     a2     vdd    vdd p w=16u  l=2.3636u ad=64p      pd=24u      as=109.667p ps=40.6667u
+m03 vdd    a1     n3     vdd p w=16u  l=2.3636u ad=109.667p pd=40.6667u as=64p      ps=24u
+m04 z      b      vss    vss n w=6u   l=2.3636u ad=25.5p    pd=13.5u    as=92.625p  ps=36u
+m05 w1     a3     z      vss n w=10u  l=2.3636u ad=25p      pd=15u      as=42.5p    ps=22.5u
+m06 w2     a2     w1     vss n w=10u  l=2.3636u ad=25p      pd=15u      as=25p      ps=15u
+m07 vss    a1     w2     vss n w=10u  l=2.3636u ad=154.375p pd=60u      as=25p      ps=15u
+C0  n3     b      0.020f
+C1  vss    a1     0.171f
+C2  z      a3     0.053f
+C3  vss    vdd    0.003f
+C4  a3     b      0.180f
+C5  z      a1     0.050f
+C6  n3     a2     0.095f
+C7  a3     a2     0.123f
+C8  b      a1     0.099f
+C9  z      vdd    0.029f
+C10 a1     a2     0.178f
+C11 b      vdd    0.018f
+C12 vss    z      0.140f
+C13 a2     vdd    0.047f
+C14 vss    b      0.046f
+C15 w1     a1     0.007f
+C16 n3     a3     0.115f
+C17 z      b      0.231f
+C18 n3     a1     0.014f
+C19 vss    a2     0.019f
+C20 n3     vdd    0.185f
+C21 a3     a1     0.064f
+C22 z      a2     0.013f
+C23 b      a2     0.030f
+C24 a3     vdd    0.054f
+C25 vss    n3     0.006f
+C26 a1     vdd    0.015f
+C27 n3     z      0.058f
+C28 w1     b      0.005f
+C29 w2     a1     0.012f
+C30 vss    a3     0.022f
+C32 n3     vss    0.002f
+C33 z      vss    0.013f
+C34 a3     vss    0.022f
+C35 b      vss    0.024f
+C36 a1     vss    0.024f
+C37 a2     vss    0.026f
+.ends

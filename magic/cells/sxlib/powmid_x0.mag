@@ -1,0 +1,37 @@
+magic
+tech scmos
+timestamp 1185039145
+<< checkpaint >>
+rect -22 -22 92 122
+<< ab >>
+rect 0 0 70 100
+<< metal1 >>
+rect 8 101 32 102
+rect -2 87 72 101
+rect -2 -1 72 13
+rect 38 -2 62 -1
+<< metal2 >>
+rect 12 98 18 102
+rect 22 98 28 102
+rect 42 -2 48 2
+rect 52 -2 58 2
+<< metal3 >>
+rect 12 98 18 102
+rect 22 98 28 102
+rect 8 -2 32 98
+rect 38 2 62 102
+rect 42 -2 48 2
+rect 52 -2 58 2
+<< m3contact >>
+rect 8 98 12 102
+rect 18 98 22 102
+rect 28 98 32 102
+rect 38 -2 42 2
+rect 48 -2 52 2
+rect 58 -2 62 2
+<< labels >>
+rlabel metal1 35 6 35 6 6 vss
+rlabel metal1 35 6 35 6 6 vss
+rlabel metal1 35 94 35 94 6 vdd
+rlabel metal1 35 94 35 94 6 vdd
+<< end >>

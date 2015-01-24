@@ -1,0 +1,79 @@
+.subckt aoi22v0x4 a1 a2 b1 b2 vdd vss z
+*   SPICE3 file   created from aoi22v0x4.ext -      technology: scmos
+m00 z      b1     n3     vdd p w=28u  l=2.3636u ad=112p     pd=36u      as=118.75p  ps=40.25u
+m01 n3     b2     z      vdd p w=28u  l=2.3636u ad=118.75p  pd=40.25u   as=112p     ps=36u
+m02 z      b2     n3     vdd p w=28u  l=2.3636u ad=112p     pd=36u      as=118.75p  ps=40.25u
+m03 n3     b1     z      vdd p w=28u  l=2.3636u ad=118.75p  pd=40.25u   as=112p     ps=36u
+m04 z      b1     n3     vdd p w=28u  l=2.3636u ad=112p     pd=36u      as=118.75p  ps=40.25u
+m05 n3     b2     z      vdd p w=28u  l=2.3636u ad=118.75p  pd=40.25u   as=112p     ps=36u
+m06 z      b2     n3     vdd p w=28u  l=2.3636u ad=112p     pd=36u      as=118.75p  ps=40.25u
+m07 n3     b1     z      vdd p w=28u  l=2.3636u ad=118.75p  pd=40.25u   as=112p     ps=36u
+m08 vdd    a1     n3     vdd p w=28u  l=2.3636u ad=121.25p  pd=37.25u   as=118.75p  ps=40.25u
+m09 n3     a2     vdd    vdd p w=28u  l=2.3636u ad=118.75p  pd=40.25u   as=121.25p  ps=37.25u
+m10 vdd    a2     n3     vdd p w=28u  l=2.3636u ad=121.25p  pd=37.25u   as=118.75p  ps=40.25u
+m11 n3     a1     vdd    vdd p w=28u  l=2.3636u ad=118.75p  pd=40.25u   as=121.25p  ps=37.25u
+m12 vdd    a1     n3     vdd p w=28u  l=2.3636u ad=121.25p  pd=37.25u   as=118.75p  ps=40.25u
+m13 n3     a2     vdd    vdd p w=28u  l=2.3636u ad=118.75p  pd=40.25u   as=121.25p  ps=37.25u
+m14 vdd    a2     n3     vdd p w=28u  l=2.3636u ad=121.25p  pd=37.25u   as=118.75p  ps=40.25u
+m15 n3     a1     vdd    vdd p w=28u  l=2.3636u ad=118.75p  pd=40.25u   as=121.25p  ps=37.25u
+m16 w1     b2     z      vss n w=14u  l=2.3636u ad=35p      pd=19u      as=65.8p    ps=26.32u
+m17 vss    b1     w1     vss n w=14u  l=2.3636u ad=102.06p  pd=29.12u   as=35p      ps=19u
+m18 w2     b1     vss    vss n w=18u  l=2.3636u ad=45p      pd=23u      as=131.22p  ps=37.44u
+m19 z      b2     w2     vss n w=18u  l=2.3636u ad=84.6p    pd=33.84u   as=45p      ps=23u
+m20 w3     b2     z      vss n w=18u  l=2.3636u ad=45p      pd=23u      as=84.6p    ps=33.84u
+m21 vss    b1     w3     vss n w=18u  l=2.3636u ad=131.22p  pd=37.44u   as=45p      ps=23u
+m22 w4     a1     vss    vss n w=18u  l=2.3636u ad=45p      pd=23u      as=131.22p  ps=37.44u
+m23 z      a2     w4     vss n w=18u  l=2.3636u ad=84.6p    pd=33.84u   as=45p      ps=23u
+m24 w5     a2     z      vss n w=18u  l=2.3636u ad=45p      pd=23u      as=84.6p    ps=33.84u
+m25 vss    a1     w5     vss n w=18u  l=2.3636u ad=131.22p  pd=37.44u   as=45p      ps=23u
+m26 w6     a1     vss    vss n w=14u  l=2.3636u ad=35p      pd=19u      as=102.06p  ps=29.12u
+m27 z      a2     w6     vss n w=14u  l=2.3636u ad=65.8p    pd=26.32u   as=35p      ps=19u
+C0  w3     b2     0.002f
+C1  vss    a2     0.152f
+C2  b1     vdd    0.058f
+C3  z      a2     0.322f
+C4  vss    b2     0.113f
+C5  w4     vss    0.003f
+C6  w6     z      0.010f
+C7  n3     a1     0.628f
+C8  z      b2     0.553f
+C9  w2     vss    0.003f
+C10 w4     z      0.010f
+C11 w6     a2     0.007f
+C12 n3     b1     0.107f
+C13 z      vdd    0.194f
+C14 a2     b2     0.035f
+C15 w2     z      0.010f
+C16 a2     vdd    0.066f
+C17 a1     b1     0.112f
+C18 vss    n3     0.061f
+C19 w1     z      0.010f
+C20 b2     vdd    0.053f
+C21 vss    a1     0.106f
+C22 w2     b2     0.007f
+C23 z      n3     0.702f
+C24 w5     vss    0.003f
+C25 vss    b1     0.057f
+C26 z      a1     0.161f
+C27 w1     b2     0.008f
+C28 n3     a2     0.113f
+C29 w3     vss    0.003f
+C30 w5     z      0.010f
+C31 z      b1     0.363f
+C32 n3     b2     0.073f
+C33 a2     a1     0.647f
+C34 w3     z      0.010f
+C35 w5     a2     0.006f
+C36 n3     vdd    1.221f
+C37 a2     b1     0.032f
+C38 a1     b2     0.047f
+C39 vss    z      0.752f
+C40 w4     a1     0.003f
+C41 a1     vdd    0.213f
+C42 b2     b1     0.535f
+C44 z      vss    0.009f
+C45 a2     vss    0.074f
+C46 a1     vss    0.060f
+C47 b2     vss    0.054f
+C48 b1     vss    0.073f
+.ends

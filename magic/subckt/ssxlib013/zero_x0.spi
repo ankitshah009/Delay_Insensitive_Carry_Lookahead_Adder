@@ -1,0 +1,8 @@
+.subckt zero_x0 nq vdd vss
+*   SPICE3 file   created from zero_x0.ext -      technology: scmos
+m00 nq     vdd    vss    vss n w=10u  l=2.3636u ad=80p      pd=36u      as=100p     ps=40u
+C0  nq     vdd    0.221f
+C1  nq     vss    0.080f
+C2  vss    vdd    0.020f
+C3  nq     vss    0.027f
+.ends

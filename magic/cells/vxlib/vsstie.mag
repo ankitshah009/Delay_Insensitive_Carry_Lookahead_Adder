@@ -1,0 +1,134 @@
+magic
+tech scmos
+timestamp 1180640175
+<< checkpaint >>
+rect -24 -26 54 126
+<< ab >>
+rect 0 0 30 100
+<< pwell >>
+rect -4 -6 34 49
+<< nwell >>
+rect -4 49 34 106
+<< polysilicon >>
+rect 13 85 15 89
+rect 13 52 15 55
+rect 5 51 15 52
+rect 5 47 6 51
+rect 10 47 15 51
+rect 5 46 15 47
+rect 13 39 15 46
+rect 13 11 15 16
+<< ndiffusion >>
+rect 4 30 13 39
+rect 4 26 6 30
+rect 10 26 13 30
+rect 4 22 13 26
+rect 4 18 6 22
+rect 10 18 13 22
+rect 4 16 13 18
+rect 15 38 24 39
+rect 15 34 18 38
+rect 22 34 24 38
+rect 15 30 24 34
+rect 15 26 18 30
+rect 22 26 24 30
+rect 15 22 24 26
+rect 15 18 18 22
+rect 22 18 24 22
+rect 15 16 24 18
+<< pdiffusion >>
+rect 4 84 13 85
+rect 4 80 6 84
+rect 10 80 13 84
+rect 4 76 13 80
+rect 4 72 6 76
+rect 10 72 13 76
+rect 4 68 13 72
+rect 4 64 6 68
+rect 10 64 13 68
+rect 4 60 13 64
+rect 4 56 6 60
+rect 10 56 13 60
+rect 4 55 13 56
+rect 15 76 24 85
+rect 15 72 18 76
+rect 22 72 24 76
+rect 15 68 24 72
+rect 15 64 18 68
+rect 22 64 24 68
+rect 15 60 24 64
+rect 15 56 18 60
+rect 22 56 24 60
+rect 15 55 24 56
+<< metal1 >>
+rect -2 88 32 100
+rect 6 84 10 88
+rect 6 76 10 80
+rect 6 68 10 72
+rect 6 60 10 64
+rect 6 51 10 56
+rect 6 46 10 47
+rect 18 76 22 83
+rect 18 68 22 72
+rect 18 60 22 64
+rect 18 42 22 56
+rect 6 38 22 42
+rect 6 30 10 31
+rect 6 22 10 26
+rect 6 12 10 18
+rect 18 30 22 34
+rect 18 22 22 26
+rect 18 17 22 18
+rect -2 0 32 12
+<< ntransistor >>
+rect 13 16 15 39
+<< ptransistor >>
+rect 13 55 15 85
+<< polycontact >>
+rect 6 47 10 51
+<< ndcontact >>
+rect 6 26 10 30
+rect 6 18 10 22
+rect 18 34 22 38
+rect 18 26 22 30
+rect 18 18 22 22
+<< pdcontact >>
+rect 6 80 10 84
+rect 6 72 10 76
+rect 6 64 10 68
+rect 6 56 10 60
+rect 18 72 22 76
+rect 18 64 22 68
+rect 18 56 22 60
+<< psubstratepcontact >>
+rect 5 4 9 8
+rect 13 4 17 8
+rect 21 4 25 8
+<< nsubstratencontact >>
+rect 5 92 9 96
+rect 13 92 17 96
+rect 21 92 25 96
+<< psubstratepdiff >>
+rect 4 8 26 9
+rect 4 4 5 8
+rect 9 4 13 8
+rect 17 4 21 8
+rect 25 4 26 8
+rect 4 3 26 4
+<< nsubstratendiff >>
+rect 4 96 26 97
+rect 4 92 5 96
+rect 9 92 13 96
+rect 17 92 21 96
+rect 25 92 26 96
+rect 4 91 26 92
+<< labels >>
+rlabel metal1 10 40 10 40 6 z
+rlabel metal1 10 40 10 40 6 z
+rlabel metal1 15 6 15 6 6 vss
+rlabel metal1 15 6 15 6 6 vss
+rlabel metal1 20 50 20 50 6 z
+rlabel metal1 20 50 20 50 6 z
+rlabel metal1 15 94 15 94 6 vdd
+rlabel metal1 15 94 15 94 6 vdd
+<< end >>

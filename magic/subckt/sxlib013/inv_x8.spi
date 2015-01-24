@@ -1,0 +1,19 @@
+.subckt inv_x8 i nq vdd vss
+*   SPICE3 file   created from inv_x8.ext -      technology: scmos
+m00 nq     i      vdd    vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=238p     ps=73u
+m01 vdd    i      nq     vdd p w=40u  l=2.3636u ad=238p     pd=73u      as=200p     ps=50u
+m02 nq     i      vdd    vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=238p     ps=73u
+m03 vdd    i      nq     vdd p w=40u  l=2.3636u ad=238p     pd=73u      as=200p     ps=50u
+m04 nq     i      vss    vss n w=20u  l=2.3636u ad=100p     pd=30u      as=130p     ps=43u
+m05 vss    i      nq     vss n w=20u  l=2.3636u ad=130p     pd=43u      as=100p     ps=30u
+m06 nq     i      vss    vss n w=20u  l=2.3636u ad=100p     pd=30u      as=130p     ps=43u
+m07 vss    i      nq     vss n w=20u  l=2.3636u ad=130p     pd=43u      as=100p     ps=30u
+C0  vss    nq     0.360f
+C1  vss    i      0.097f
+C2  nq     vdd    0.562f
+C3  vdd    i      0.171f
+C4  vss    vdd    0.037f
+C5  nq     i      0.597f
+C7  nq     vss    0.045f
+C9  i      vss    0.124f
+.ends

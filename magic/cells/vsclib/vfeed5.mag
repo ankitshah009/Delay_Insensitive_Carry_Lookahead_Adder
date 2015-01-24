@@ -1,0 +1,54 @@
+magic
+tech scmos
+timestamp 1179387366
+<< checkpaint >>
+rect -22 -22 62 94
+<< ab >>
+rect 0 0 40 72
+<< pwell >>
+rect -4 -4 44 32
+<< nwell >>
+rect -4 32 44 76
+<< metal1 >>
+rect -2 68 42 72
+rect -2 64 7 68
+rect 11 64 14 68
+rect 18 64 22 68
+rect 26 64 29 68
+rect 33 64 42 68
+rect -2 4 7 8
+rect 11 4 14 8
+rect 18 4 22 8
+rect 26 4 29 8
+rect 33 4 42 8
+rect -2 0 42 4
+<< psubstratepcontact >>
+rect 7 4 11 8
+rect 14 4 18 8
+rect 22 4 26 8
+rect 29 4 33 8
+<< nsubstratencontact >>
+rect 7 64 11 68
+rect 14 64 18 68
+rect 22 64 26 68
+rect 29 64 33 68
+<< psubstratepdiff >>
+rect 6 8 34 26
+rect 6 4 7 8
+rect 11 4 14 8
+rect 18 4 22 8
+rect 26 4 29 8
+rect 33 4 34 8
+rect 6 3 34 4
+<< nsubstratendiff >>
+rect 6 68 34 69
+rect 6 64 7 68
+rect 11 64 14 68
+rect 18 64 22 68
+rect 26 64 29 68
+rect 33 64 34 68
+rect 6 38 34 64
+<< labels >>
+rlabel metal1 20 4 20 4 6 vss
+rlabel metal1 20 68 20 68 6 vdd
+<< end >>

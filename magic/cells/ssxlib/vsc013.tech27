@@ -1,0 +1,1135 @@
+#====================================================================================
+#                   Copyright (c) 2003-2007 Graham Petley
+# graham.petley@vlsitechnology.org
+# based on scmos.tech27, an original work distributed with Magic
+#
+# This technology file has been slimmed down in order to make it simpler and easier
+# to understand. Basically, only layers needed for digital standard cells are
+# supported (so no fancy analog or high voltage stuff). There is only one style
+# for extraction and cifout: the lambda=0.055um one. For cifin, two styles are
+# supported. The default is a lambda=1um style. The other is a lambda=0.055um
+# style so that CIF written with this file can be read back in. If reading CIF
+# from elsewhere, especially from Alliance, it is probably better to use the
+# lambda=1um option as the rules are practically the same.
+# The DRC section has the rules updated to vsclib ones (from the original scmos
+# rules), but it hasn't been extensively tested, so is likely to miss some of the
+# more obscure violations.
+#
+# Starting from scmos.tech27, make the following changes
+#    19-Oct-03
+# 1/ Remove poly2 and associated transistor types and contact types (ec, el)
+# 2/ Remove via on flat surface rules 8.4 and 8.5
+# 3/ Remove all styles from cifoutput section except 1.0(gen) and plot
+# 4/ Remove all styles from cifinput except 1.0(gen)
+# 5/ Remove all styles from extract except 1.0(scna20_orb)
+# 6/ Remove the two versatec plot styles
+# 7/ Remove MOSIS rules 11.*, 12.*, 13.*, 19.*
+# 8/ Remove capwell and MOSIS rules 17.* and 18.*, CWC CIF layer and cw references
+# 9/ Remove highvoltnwell, highvoltpwell and associated diffusions
+#10/ Remove capacitor
+#11/ Remove bipolar transistor references and MOSIS rules 16.*
+#12/ Remove CCD references and MOSIS rules 
+#13/ Remove implant plane
+#14/ Remove enfet and epfet, nffet and pffet
+#15/ Add synonyms polyct, ndifct, pdifct, ntie, ntiect, ptie, ptiect
+#16/ Relabel cifin, cifout and extract styles to lambda=0.055um(vsclib)
+#17/ See extract section for complicated flow needed to create 0.13um spice decks
+#    18-Dec-03
+#17/ Added support for the abutment box layer, AB (GDS 63)
+#18/ Fixed problem with labels over contacts
+#    30-JAN-04
+#19/ Changed implant overlap of AB from 0.04um to 0.07um
+#    16-AUG-04
+#20/ Set implant overlap of AB to 0.125um from 0.07um
+#21/ Add cifoutput section vsclib013 for ndif and pdif output
+#22/ Changed poly from 0.13 to 0.12um
+#23/ For cifout, trimmed metal to AB.
+#    30-AUG-04
+#24/ Trimmed back implant in cifout when AB long way from geometries
+#    2-Feb-05
+#25/ Added support for reading in AB in cifinput style lambda=0.055um(sxlib013)
+#26/ Changed poly undersize on cifinput style lambda=0.055um(sxlib013)
+#    from 10 to 5
+#27/ Changed use of diff & implant layers generating diff contacts in
+#    cifinput
+#    7-Feb-05
+#28/ Shifted the shrink 5 for the 0.055um nfet and pfet in cifinput
+#    5-APR-05
+#29/ Corrected trimming of M1 by the wells for cifoutput
+#    2-OCT-05
+#30/ Changed implant layer generation to handle butting contacts
+#    1-APR-06
+#31/ Changed syntax of edge4way DRC rule from space 0 2 to space/a 0 2
+#    8-JUL-06
+#32/ Metal-1 spacing rule 7.2 changed from 4 to 3
+#    6-FEB-07
+#33/ Added cifout section for rgalib013
+#   14-FEB-07
+#34/ Added Via2, Metal3, Via3 and Metal4 layers
+#   17-JUN-07
+#35/ Added stacked via capability
+#36/ Added vgalib cifout section
+#
+#====================================================================================
+
+tech
+    scmos
+end
+
+version
+    version 17-JUN-07
+    description "vsclib 0.13um Technology file for Lambda=0.055um, 4LM"
+end
+
+planes
+    abutment,ab
+    well,w
+    active,a
+    metal1,m1
+    metal2,m2
+    metal3,m3
+    metal4,m4
+    oxide,ox
+end
+
+types
+    abutment    ab,subcircuit
+    well	pwell,pw
+    well	nwell,nw
+    active	polysilicon,red,poly,p
+    active	ndiffusion,ndiff,green
+    active	pdiffusion,pdiff,brown
+    metal1	metal1,m1,blue
+    metal2	metal2,m2,cyan
+    metal3	metal3,m3,purple
+    metal4	metal4,m4
+    active	ntransistor,nfet
+    active	ptransistor,pfet
+    active	polycontact,pcontact,polycut,polyct,pc
+    active	ndcontact,ndiffcut,ndifct,ndc
+    active	pdcontact,pdiffcut,pdifct,pdc
+    metal1	m2contact,m2cut,m2c,via,v
+    metal2	m3contact,m3cut,m3c,via2,v2
+    metal3	m4contact,m4cut,m4c,via3,v3
+    metal4	m5contact,m5cut,m5c,via4,v4
+    active	psubstratepcontact,ppcontact,ppc,pwcontact,ptiect,pwc,psc
+    active	nsubstratencontact,nncontact,nnc,nwcontact,ntiect,nwc,nsc
+    active	psubstratepdiff,ppdiff,pohmic,ptie,ppd,psd
+    active	nsubstratendiff,nndiff,nohmic,ntie,nnd,nsd
+    active	nplusdoping,ndoping,ndop
+    active	pplusdoping,pdoping,pdop
+    metal1	genericcontact,gcontact,gc
+    oxide	substrateopen,subopen,open
+    oxide	pdiffusionstop,pdiffstop,pstop
+    metal4	pad
+    oxide	glass
+end
+
+contact
+    polyct	poly	metal1
+    ndifct	ndiff	metal1
+    pdifct	pdiff	metal1
+    ntiect	ntie	metal1
+    ptiect	ptie	metal1
+    m2c		metal1	metal2
+    m3c		metal2	metal3
+    m4c		metal3	metal4
+    stackable	polyct	m2c	poly12
+    stackable	ndifct	m2c	ndif12
+    stackable	pdifct	m2c	pdif12
+    stackable	ntiect	m2c	ntie12
+    stackable	ptiect	m2c	ptie12
+end
+
+styles
+    styletype	mos
+    ab          67
+    nwell	12
+    pwell	13
+    poly	1
+    ndiff	2
+    pdiff	4
+    ptie	5
+    ntie	3
+    ndop	2
+    ndop	38
+    pdop	4
+    pdop	38
+    nfet	6
+    nfet	7
+    pfet	8
+    pfet	9
+    metal1	20
+    metal2	21
+    metal3	22
+    metal4	23
+    gc		19
+    polyct	26
+    polyct	32
+    ndifct	2
+    ndifct	20
+    ndifct	32
+    pdifct	4
+    pdifct	20
+    pdifct	32
+    ptiect	5
+    ptiect	20
+    ptiect	32
+    ntiect	3
+    ntiect	20
+    ntiect	32
+    m2contact	20
+    m2contact	21
+    m2contact	33
+    m3contact	21
+    m3contact	22
+    m3contact	37
+    m4contact	22
+    m4contact	23
+    m4contact	38
+    pad		20
+    pad		21
+    pad		33
+    pad		34
+    glass	34
+    open	 2
+    open	20
+    pstop	 8
+    error_p	42
+    error_s	42
+    error_ps	42
+end
+
+compose
+    compose	nfet	poly	ndiff
+    compose	pfet	poly	pdiff
+    paint	pdifct	pwell	ndifct
+    paint	pfet	pwell	nfet
+    paint	pdiff	pwell	ndiff
+    paint	ntie	pwell	ptie
+    paint	ntiect	pwell	ptiect
+    paint	ndifct	nwell	pdifct
+    paint	nfet	nwell	pfet
+    paint	ndiff	nwell	pdiff
+    paint	ptie	nwell	ntie
+    paint	ptiect	nwell	ntiect
+    paint	gc	m1	gc
+    paint	pad	m1	pad
+    paint	pad	m2	pad
+    paint 	pad	m3	pad
+    paint 	pad	m4	pad
+    paint	pad	m3c	pad
+end
+
+connect
+    nwell,ntiect,ntie	nwell,ntiect,ntie
+    pwell,ptiect,ptie	pwell,ptiect,ptie
+    pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m1,m2c/m1,gc	 	pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m1,m2c/m1,gc
+    m2,m2c/m2,m3c/m2,pad	m2,m2c/m2,m3c/m2,pad
+    m3,m3c/m3,m4c/m3,pad	m3,m3c/m3,m4c/m3,pad
+    m4,m4c/m4,pad	m4,m4c/m4,pad
+    poly,polyct/a,nfet,pfet		poly,polyct/a,nfet,pfet
+    ndiff,ndifct/a,ndop			ptie,ptiect/a,pdop,pstop
+    pdiff,pdifct/a,pdop,pstop		ntie,ntiect/a,ndop
+    ndiff		ndifct
+    pdiff		pdifct
+    gc			ndiff,ndifct/a,nfet,pdiff,pdifct/a,pfet,ntie,ntiect/a,ptie,ptiect/a,ntie,ntiect/a,ptie,ptiect/a,metal1
+    gc			poly,polyct/a,nfet,pfet
+    pad			pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m1,m2c/m1,gc
+    pad			m2,m2c/m2,m3c/m2,pad
+    pad			m3,m3c/m3,m4c/m3,pad
+    pad			m4,m4c/m4,pad
+end
+
+cifoutput
+style lambda=0.055um(vsclib013)
+    scalefactor 55 1 nanometers
+    layer AB ab
+	labels ab
+	calma 63 1
+    templayer XW ab
+	grow 220
+	or nwell
+	or pwell
+	shrink 220
+    layer CWN nwell
+	calma 42 1
+    layer CWP pwell
+	calma 41 1
+    layer CPD pdiff,pdifct/a,pfet
+	labels pdiff
+	calma 4 1
+    layer CND ndiff,ndifct/a,nfet
+	labels ndiff
+	calma 3 1
+    layer CNS ntie,ntiect/a
+	calma 5 1
+    layer CPS ptie,ptiect/a
+	calma 6 1
+    layer CAA ndiff,ndifct/a,nfet,pdiff,pdifct/a,pfet,ntie,ntiect/a,ptie,ptiect/a
+	labels ndiff,pdiff
+	calma 43 1
+    layer CPG poly,polyct/a,nfet,pfet
+        grow 5
+	labels poly,nfet,pfet
+	calma 46 1
+    layer CCC ndifct/m1,pdifct/m1,ndif12/m1,pdif12/m1
+	squares 160
+	calma 25 1
+    layer CCC ntiect/m1,ptiect/m1,ntie12/m1,ptie12/m1
+	squares 160
+	calma 25 1
+    layer CCC polyct/m1,poly12/m1
+	squares 160
+	calma 25 1
+    layer CCC gc
+	calma 25 1
+    layer CV1 m2c/m1
+	squares 200
+	calma 50 1
+    layer CM1 m1,pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m2c/m1
+	and XW
+	labels m1,pdifct,ndifct,ptiect,ntiect,polyct,m2c
+	calma 49 1
+    layer CV2 m3c/m2
+	squares 200
+	calma 61 1
+    layer CM2 m2,m2c/m2,m3c/m2
+	labels m2,m2c,m3c
+	calma 51 1
+    layer CV3 m4c/m3
+	squares 200
+	calma 30 1
+    layer CM3 m3,m3c/m3,m4c/m3
+	labels m3,m3c,m4c
+	calma 62 1
+    layer CM4 m4,m4c/m4
+	labels m4c
+	calma 31 1
+    templayer XTN ntie,ntiect/a
+	grow 40
+    templayer XTP ptie,ptiect/a
+	grow 40
+    layer CSN pwell
+        and AB
+        grow 125
+        and CWP
+	and-not XTP
+	calma 45 1
+    layer CSN ntie,ntiect/a
+	grow 40
+	calma 45 1
+    layer CSP nwell
+        and AB
+        grow 125
+        and CWN
+	and-not XTN
+	calma 44 1
+    layer CSP ptie,ptiect/a
+	grow 40
+	calma 44 1
+    layer COG pad
+	shrink 330
+	or glass
+	or open
+	labels pad
+	calma 52 1
+    layer XP pad
+	shrink 330
+	calma 26 1
+
+style lambda=0.055um(rgalib013)
+    scalefactor 55 1 nanometers
+    layer AB ab
+	labels ab
+	calma 63 1
+    layer CWN nwell
+	calma 42 1
+    layer CWP pwell
+	calma 41 1
+    templayer XAB ab
+	grow 205
+    templayer XSP nwell
+	shrink 235
+    templayer XSN pwell
+	shrink 235
+    templayer XWE nwell
+	or pwell
+	shrink 220
+    layer CPD pdiff,pdifct/a,pfet
+	labels pdiff
+	calma 4 1
+    layer CND ndiff,ndifct/a,nfet
+	labels ndiff
+	calma 3 1
+    layer CPS ptie,ptiect/a
+	calma 6 1
+    layer CNS ntie,ntiect/a
+	calma 5 1
+    layer CAA ndiff,ndifct/a,nfet,pdiff,pdifct/a,pfet,ntie,ntiect/a,ptie,ptiect/a
+	labels ndiff,pdiff
+	calma 43 1
+    layer CPG poly,polyct/a,nfet,pfet
+        grow 5
+	labels poly,nfet,pfet
+	calma 46 1
+    layer CCC ndifct/m1,pdifct/m1,ndif12/m1,pdif12/m1
+	squares 160
+	calma 25 1
+    layer CCC ntiect/m1,ptiect/m1,ntie12/m1,ptie12/m1
+	squares 160
+	calma 25 1
+    layer CCC polyct/m1,poly12/m1
+	squares 160
+	calma 25 1
+    layer CCC gc
+	calma 25 1
+    layer CV1 m2c/m1
+	squares 200
+	calma 50 1
+    layer CM1 m1,pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m2c/m1
+	labels m1,pdifct,ndifct,ptiect,ntiect,polyct,m2c
+	and XWE
+	calma 49 1
+    layer CV2 m3c/m2
+	squares 200
+	calma 61 1
+    layer CM2 m2,m2c/m2,m3c/m2
+	labels m2,m2c,m3c
+	and XWE
+	calma 51 1
+    layer CV3 m4c/m3
+	squares 200
+	calma 30 1
+    layer CM3 m3,m3c/m3,m4c/m3
+	labels m3,m3c,m4c
+	calma 62 1
+    layer CM4 m4,m4c/m4
+	labels m4c
+	calma 31 1
+    templayer XTN ntie,ntiect/a
+	grow 40
+    templayer XTP ptie,ptiect/a
+	grow 40
+    layer CSN pwell
+        and AB
+        grow 70
+	or XSN
+        and CWP
+	and-not XTP
+	shrink 120
+	grow 120
+	calma 45 1
+    layer CSP nwell
+        and AB
+        grow 70
+	or XSP
+        and CWN
+	and-not XTN
+	shrink 120
+	grow 120
+	calma 44 1
+    layer CSP ptie,ptiect/a
+	grow 70
+	and-not CSN
+	and XAB
+	calma 44 1
+    layer CSN ntie,ntiect/a
+	grow 70
+	and-not CSP
+	and XAB
+	calma 45 1
+    layer COG pad
+	shrink 330
+	or glass
+	or open
+	labels pad
+	calma 52 1
+    layer XP pad
+	shrink 330
+	calma 26 1
+
+style lambda=0.055um(vgalib013)
+    scalefactor 55 1 nanometers
+    layer AB ab
+	labels ab
+	calma 63 1
+    templayer XW ab
+	grow 220
+	or nwell
+	or pwell
+	shrink 220
+    layer CWN nwell
+	calma 42 1
+    layer CWP pwell
+	calma 41 1
+    templayer XSP nwell
+	and ab
+    templayer XSN pwell
+	and ab
+    layer CPD pdiff,pdifct/a,pfet
+	labels pdiff
+	calma 4 1
+    layer CND ndiff,ndifct/a,nfet
+	labels ndiff
+	calma 3 1
+    layer CNS ntie,ntiect/a
+	calma 5 1
+    layer CPS ptie,ptiect/a
+	calma 6 1
+    layer CAA ndiff,ndifct/a,nfet,pdiff,pdifct/a,pfet,ntie,ntiect/a,ptie,ptiect/a
+	labels ndiff,pdiff
+	calma 43 1
+    layer CPG poly,polyct/a,nfet,pfet
+        grow 5
+	labels poly,nfet,pfet
+	calma 46 1
+    layer CCC ndifct/m1,pdifct/m1,ndif12/m1,pdif12/m1
+	squares 160
+	calma 25 1
+    layer CCC ntiect/m1,ptiect/m1,ntie12/m1,ptie12/m1
+	squares 160
+	calma 25 1
+    layer CCC polyct/m1,poly12/m1
+	squares 160
+	calma 25 1
+    layer CCC gc
+	calma 25 1
+    layer CV1 m2c/m1
+	squares 200
+	calma 50 1
+    layer CM1 m1,pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m2c/m1
+	and XW
+	labels m1,pdifct,ndifct,ptiect,ntiect,polyct,m2c
+	calma 49 1
+    layer CV2 m3c/m2
+	squares 200
+	calma 61 1
+    layer CM2 m2,m2c/m2,m3c/m2
+	labels m2,m2c,m3c
+	calma 51 1
+    layer CV3 m4c/m3
+	squares 200
+	calma 30 1
+    layer CM3 m3,m3c/m3,m4c/m3
+	labels m3,m3c,m4c
+	calma 62 1
+    layer CM4 m4,m4c/m4
+	labels m4c
+	calma 31 1
+    templayer XTN ntie,ntiect/a
+	grow 40
+    templayer XTP ptie,ptiect/a
+	grow 40
+    layer CSN pwell
+        and AB
+	and-not XTP
+	shrink 690
+	grow 855
+        or XSN
+        grow 40
+        and CWP
+	and-not XTP
+	calma 45 1
+    layer CSN ntie,ntiect/a
+	grow 40
+	calma 45 1
+    layer CSP nwell
+        and AB
+	and-not XTN
+	shrink 690
+	grow 855
+        or XSP
+        grow 40
+        and CWN
+	and-not XTN
+	calma 44 1
+    layer CSP ptie,ptiect/a
+	grow 40
+	calma 44 1
+    layer COG pad
+	shrink 330
+	or glass
+	or open
+	labels pad
+	calma 52 1
+    layer XP pad
+	shrink 330
+	calma 26 1
+
+style plot 
+    scalefactor 55 1 nanometers
+    layer CM2 m2,m2c/m2,pad/m2
+	labels m2
+    layer CMF m1,pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m2c/m1
+	labels m1,pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m2c/m1
+    layer CPG poly,polyct/a,nfet,pfet
+        grow 5
+	labels poly,nfet,pfet
+    layer CND ndiff,ndifct,nfet,ptiect,ptie
+	labels ndiff
+    layer CPD pdiff,pdifct,pfet,ntiect,ntie
+	labels pdiff
+    layer CVA m2c
+	squares 200
+    layer CCC ndifct,pdifct,polyct,ptiect,ntiect
+	squares 160
+    layer CNW nwell
+    layer CPW pwell
+end
+
+cifinput
+style lambda=1um(vsclib200)
+    scalefactor 100
+    layer ab AB
+        labels AB 
+    layer nwell CWN
+	labels CWN
+    layer pwell CWP
+	labels CWP
+    layer poly CPG
+        labels CPG
+    layer pdiff CSP
+        and CAA
+        and CWN
+    layer ndiff CWP
+        and CAA
+        and CSN 
+    layer ntie CWN
+        and CSN
+        and CAA
+    layer ptie CWP
+        and CSP
+        and CAA
+    layer nfet CPG
+        and CAA
+        and CSN
+    layer pfet CPG
+        and CAA
+        and CSP
+    layer ndifct CCC
+        grow 100
+        and CM1
+        grow 100
+	and CWP
+        shrink 100
+        and CAA
+        and CSN
+        calma CCC 25 *
+    layer pdifct CCC
+        grow 100
+        and CM1
+        grow 100
+        and CWN
+        shrink 100
+        and CAA
+        and CSP
+        calma CCC 25 *
+    layer ntiect CCC
+        grow 100
+        and CM1
+        grow 100
+        and CWN
+        shrink 100
+        and CAA
+        and CSN
+        calma CCC 25 *
+    layer ptiect CCC
+        grow 100
+        and CM1
+        grow 100
+        and CWP 
+        shrink 100
+        and CAA
+        and CSP
+        calma CCC 25 *
+    layer polyct CCC
+        grow 100
+        and CM1
+        grow 100
+        and CPG
+        shrink 100
+        calma CCC 25 *
+    layer m1 CM1
+        grow 100
+        shrink 100
+        labels CM1
+	calma CM1 49 *
+    layer m2c CV1
+        grow 100
+        and CM2
+        and CM1
+        labels CM2
+        calma CV1 50 *
+    layer m2 CM2
+        grow 100
+        shrink 100
+        labels CM2
+	calma CM2 51 *
+    layer m3c CV2
+        grow 100
+        and CM3
+        and CM2
+        labels CM3
+        calma CV2 61 *
+    layer m3 CM3
+        grow 100
+        shrink 100
+        labels CM3
+	calma CM3 62 *
+    layer m4c CV3
+        grow 100
+        and CM4
+        and CM3
+        labels CM4
+        calma CV3 30 *
+    layer m4 CM4
+        grow 100
+        shrink 100
+        labels CM4
+	calma CM4 31 *
+    layer glass COG
+    layer pad CM1
+        shrink 100
+        and CM2
+        shrink 500
+        and CV1
+        shrink 100
+	and XP
+        and COG
+        grow 600
+   ignore CND,CPD,CNS,CPS,REF,TM1,TM1,TM3,TM4,TM5,TM6
+   calma CCC 25 *
+   calma XP  26 *
+   calma CWP 41 *
+   calma CWN 42 *
+   calma CND  3 *
+   calma CPD  4 *
+   calma CNS  5 *
+   calma CPS  6 *
+   calma CAA 43 *
+   calma CSP 44 *
+   calma CSN 45 *
+   calma CPG 46 *
+   calma CM1 49 *
+   calma CV1 50 *
+   calma CM2 51 *
+   calma COG 52 *
+   calma CV2 61 *
+   calma CM3 62 *
+   calma CV3 30 *
+   calma CM4 31 *
+   calma AB  63 *
+end
+
+mzrouter
+  style irouter
+    layer       m2      32       64     256     1
+    layer       m1      64       32     256     1
+    layer       poly    128     128     512     1
+    contact     m2contact       metal1  metal2  1024
+    contact     polyct        metal1  poly    2056
+    notactive poly polyct
+  style garouter
+    layer       m2      32       64     256     1
+    layer       m1      64       32     256     1
+    contact     m2contact       metal1  metal2  1024
+end
+
+drc
+    edge4way (~nwell)/w nwell 20 nwell nwell 20				"1.1  NWELL  Width < 18"
+    edge4way (~pwell)/w pwell 20 pwell pwell 20				"1.1  PWELL  Width < 18"
+    edge4way nwell (~nwell)/w 9 (~nwell)/w (~nwell)/w 20		"1.2  NWELL  Space < 18"
+    edge4way pwell (~pwell)/w 9 (~pwell)/w (~pwell)/w 20		"1.2  PWELL  Space < 18"
+    width ndiff,ndifct/a,nfet 4 					"2.1  NDIF  Width < 4"
+    width pdiff,pdifct/a,pfet 4 					"2.1  PDIF  Width < 4"
+    width ntie,ntiect/a 4 						"2.1  NTIE  Width < 4"
+    width ptie,ptiect/a 4 						"2.1  PTIE  Width < 4"
+    spacing ndiff,ndifct/a,nfet ndiff,ndifct/a,nfet 4 touching_ok 	"2.2  NDIF  Space < 4"
+    spacing pdiff,pdifct/a,pfet pdiff,pdifct/a,pfet 4 touching_ok 	"2.2  PDIF  Space < 4"
+    spacing ntie,ntiect/a ntie,ntiect/a 4 touching_ok 			"2.2  NTIE  Space < 4"
+    spacing ptie,ptiect/a ptie,ptiect/a 4 touching_ok 			"2.2  PTIE  Space < 4"
+    spacing ndiff,ndifct/a pdiff,pdifct/a 12 touching_illegal 		"2.3  NDIF to PDIF Space < 12 (=rule 2.3+rule 2.3)"
+    spacing ndiff,ndifct/a ntie,ntiect/a 12 touching_illegal 		"2.4  NDIF to NTIE Space < 12 (=rule 2.3+rule 2.4)"
+    spacing pdiff,pdifct/a ptie,ptiect/a 12 touching_illegal 		"2.4  PDIF to PTIE Space < 12 (=rule 2.3+rule 2.4)"
+    spacing ntie,ntiect/a ptie,ptiect/a 12 touching_illegal 		"2.4  NTIE to PTIE Space < 12 (=rule 2.4+rule 2.4)"
+    spacing ndiff,ndifct/a,nfet nwell 6 touching_illegal 		"2.3  NDIF to NWELL Space < 6"
+    spacing pdiff,pdifct/a,pfet pwell 6 touching_illegal 		"2.3  PDIF to PWELL Space < 6"
+    spacing ntie,ntiect/a	pwell 6	touching_illegal 		"2.4  NTIE to PWELL Space < 6"
+    spacing ptie,ptiect/a	nwell 6	touching_illegal 		"2.4  PTIE to NWELL Space < 6"
+    spacing ndiff,ndifct/a,nfet ptie,ptiect/a 4 touching_illegal 	"2.5  NDIF to PTIE Space < 4"
+    spacing pdiff,pdifct/a,pfet ntie,ntiect/a 4 touching_illegal 	"2.5  PDIF to NTIE Space < 4"
+    width poly,polyct/a,nfet,pfet 2 					"3.1  POLY  Width < 2"
+    spacing poly,polyct/a poly,polyct/a 4 touching_ok 			"3.2  POLY  Space < 4"
+    spacing nfet nfet 5 touching_ok 					"3.2.a CHANNEL  Space < 5"
+    spacing pfet pfet 5 touching_ok 					"3.2.a CHANNEL  Space < 5"
+    edge4way nfet,pfet poly,polyct/a  4  poly,polyct/a 0 0 		"3.3  POLY overlap of transistor < 4 (endcap rule)"
+    edge4way nfet ndiff,ndifct/a 5 ndiff,ndifct/a,nfet ndiff,ndifct/a 5 "3.4  NDIF overlap of transistor < 4 (s/d width rule)"
+    edge4way pfet pdiff,pdifct/a 5 pdiff,pdifct/a,pfet ndiff,ndifct/a 5 "3.4  PDIF overlap of transistor < 4 (s/d width rule)"
+    edge4way nfet	space	1	poly	0	0 		"3.4  NDIF overlap of transistor = 0 (s/d width rule)"
+    edge4way pfet	space	1	poly	0	0 		"3.4  PDIF overlap of transistor = 0 (s/d width rule)"
+    edge4way ndiff,ndifct/a poly,polyct 2 space/a 0 2			"3.5  NDIF to POLY Space < 2"
+    edge4way pdiff,pdifct/a poly,polyct 2 space/a 0 2			"3.5  PDIF to POLY Space < 2 first"
+    edge4way ntie,ntiect/a poly,polyct 2 space/a 0 2			"3.5  NTIE to POLY Space < 2"
+    edge4way ptie,ptiect/a poly,polyct 2 space/a 0 2			"3.5  PTIE to POLY Space < 2"
+    spacing pfet ntie,ntiect/a 6 touching_illegal 			"4.2  NTIE to P-Transistor Space  < 6"
+    spacing nfet ptie,ptiect/a 6 touching_illegal 			"4.2  PTIE to N-Transistor Space  < 6"
+    edge4way ptie,ptiect/a ~(ndiff,ndifct,ptiect,ptie)/a 4 ~(nfet)/a ~(ndiff,ndifct,ptiect,ptie)/a 4         "Transistors must be separated from selects(generated by well cont) by 4 (MOSIS rule #4.1.e)"
+    edge4way ntie,ntiect/a ~(pdiff,pdifct,ntiect,ntie)/act 4 ~(pfet)/act ~(pdiff,pdifct,ntiect,ntie)/act 4         "Transistors must be separated from selects(generated by well cont) by 4 (MOSIS rule #4.1.f)"
+    edge4way ~(pdiff,pdifct/a,pfet)/act pdiff,pdifct,pfet 4 ~(ntie,ntiect/a)/act pdiff,pdifct/a,pfet 2 	"Backedge of diffusion must be 4 from substrate diff (MOSIS rule #4.2.a)"
+    edge4way ~(ndiff,ndifct/a,nfet)/act ndiff,ndifct,nfet 4 ~(ptie,ptiect/a)/act ndiff,ndifct/a,nfet 2 	"Backedge of diffusion must be 4 from substrate diff (MOSIS rule #4.2.b)"
+    width polyct 4 	"Poly contact width must be at least 4 (MOSIS rule #5B.1,2,3)"
+    edge4way  poly,polyct/a,nfet,pfet  ~(poly,polyct/a,nfet,pfet)/a  3  ~polyct/a  ~(poly,polyct/a,nfet,pfet)/a  3 	"Poly contact must be at least 3 from other poly (MOSIS rule #5B.4,5)"
+    spacing polyct ndiff,ndifct/a,nfet,pdiff,pdifct/a,pfet,ntie,ntiect/a,ptie,ptiect/a 1 touching_illegal 	"Poly contact must be 1 unit from diffusion (MOSIS rule #5B.6)"
+    width ndifct,pdifct 4 	"Diffusion contact width must be at least 4 (MOSIS rule #6B.1,2,3)"
+    width ntiect,ptiect 4 	"Substrate contact width must be at least 4 (MOSIS rule #6B.1,2,3)"
+    edge4way  ndiff,ndifct/a,nfet,pdiff,pdifct/a,pfet,ntie,ntiect/a,ptie,ptiect/a  ~(ndiff,ndifct/a,nfet,pdiff,pdifct/a,pfet,ntie,ntiect/a,ptie,ptiect/a)/act  4  ~(ndifct,pdifct,ntiect,ptiect)/act 	~(ndiff,ndifct/a,nfet,pdiff,pdifct/a,pfet,ntie,ntiect/a,ptie,ptiect/a)/act  4         "Diffusion contacts must be 4 from other diffusions (MOSIS rule #6B.4,5)"
+    spacing pdifct pfet 2 touching_illegal 				"6.4  CONTACT to P-Transistor Space  < 3"
+    spacing ndifct nfet 2 touching_illegal 				"6.4  CONTACT to N-Transistor Space  < 3"
+    spacing ndifct polyct/a 4 touching_illegal 	"3.5  NDIF to POLY Space < 2"
+    spacing pdifct polyct/a 4 touching_illegal 	"3.5  PDIF to POLY Space < 2"
+    spacing ntiect polyct/a 4 touching_illegal 	"3.5  NTIE to POLY Space < 2"
+    spacing ptiect polyct/a 4 touching_illegal 	"3.5  PTIE to POLY Space < 2"
+    edge4way 	m3c/m3	~m3c/m3	1  ~m3c/m3  (~m3c,m3c)/m3  1 	"Metal3 contacts must be rectangular (Magic rules)"
+    edge4way 	m2c/m2	~m2c/m2	1  ~m2c/m2  (~m2c,m2c)/m2  1 	"Metal2 contacts must be rectangular (Magic rules)"
+    edge4way 	ndifct/m1	~ndifct/m1	1  ~ndifct/m1  (~ndifct,ndifct)/m1  1 	"N-diffusion contacts must be rectangular (Magic rules)"
+    edge4way 	pdifct/m1	~pdifct/m1	1  ~pdifct/m1  (~pdifct,pdifct)/m1  1 	"P-diffusion contacts must be rectangular (Magic rules)"
+    edge4way 	ptiect/m1  ~ptiect/m1 1  ~ptiect/m1  (~ptiect,ptiect)/m1  1 	"P-substrate contacts must be rectangular (Magic rules)"
+    edge4way 	ntiect/m1	~ntiect/m1	1  ~ntiect/m1  (~ntiect,ntiect)/m1  1 	"N-substrate contacts must be rectangular (Magic rules)"
+    edge4way 	polyct/m1	~polyct/m1	1  ~polyct/m1   (~polyct,polyct)/m1	   1 	"Polysilicon contacts must be rectangular (Magic rules)"
+    width pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m1,m2c/m1,gc,pad/m1 4 	"7.1  METAL1  Width < 4"
+    spacing pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m1,m2c/m1,gc,pad/m1 pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m1,m2c/m1,gc,pad/m1 3 touching_ok 	"7.2  METAL1  Space < 3"
+    width m2c 4 							"9.3  METAL2 overlap of VIA  < 1"
+    width m2,m2c/m2,m3c/m2 4	 					"9.1  METAL2  Width < 4"
+    spacing m2,m2c/m2,m3c/m2 m2,m2c/m2,m3c/m2 4 touching_ok	 	"9.2  METAL2  Space < 4"
+    width m3c 4         						"15.3  METAL3 overlap of VIA2  < 1"
+    width m3,m3c/m3,m4c/m3 4       					"15.1  METAL3  Width < 4"
+    spacing m3,m3c/m3,m4c/m3 m3,m3c/m3,m4c/m3 4 touching_ok		"15.2  METAL3  Space < 4"
+    width m4c 4         						"22.3  METAL4 overlap of VIA3  < 1"
+    width m4,m4c/m4 4		       					"22.1  METAL4  Width < 4"
+    spacing m4,m4c/m4 m4,m4c/m4 4 touching_ok				"22.2  METAL4  Space < 4"
+    exact_overlap m3c,m2c,ndifct,pdifct,polyct,ptiect,ntiect
+    no_overlap	pfet,nfet	pfet,nfet
+end
+
+extract
+# Horrible kludge in order to produce spice decks with the right transistor sizes and
+# parasitic diffusion areas, and substrate connections.
+# 1/ There is a feature in Magic's extract which checks for correct substrate
+#    connections. This is documented on p13 of the Magic Tutorial #8. If no wells are
+#    drawn, then transistor substrate connections are to vdd! and vss! (and fortunately
+#    the ! is removed before writing a spice deck). But if wells are drawn, extract
+#    checks whether the well is connected to a supply. If not, the well connection is
+#    made to a dummy node like w_n8_32# rather than vdd.
+#    This is fine for LVS, but a disaster for spice. Many vsclib cells do not have their
+#    wells connected to a supply, as this connection is made outside the cell. You either
+#    want to do an LVS check, or you want to simulate your cell, but this Magic feature
+#    confuses the two. There is no way to turn it off. 
+#    The only solution is to edit the cell and delete the wells; extract; and quit the
+#    cell without saving. The cell edit is done with the TCL script below:
+#    ;box 0 0 1 1
+#    ;select more box pwell
+#    ;delete
+#    ;box 0 71 1 72
+#    ;select more box nwell
+#    ;delete
+#    ;extract do capacitance
+#    ;extract do coupling
+#    ;extract do adjust
+#    ;extract do resistance
+#    ;extract all
+#    This works OK for the vsclib as the well positions are fixed in each cell.
+# 2/ The desired scaling factor lambda is 5.5, which corresponds to the lambda value of
+#    0.055um for this technology. This doesn't work for two reasons:
+#    - lambda must be an integer, so either 5 or 6. But this gives wrong diffusion area
+#      and perimeter parasitics.
+#    - There is no way to over or undersize the poly and diffusion, as is done in the
+#      cifout section. This is a serious, even fatal, limitation. Thus, even if lambda
+#      could be set to 5.5 for correct diffusion parasitics, the transistor length
+#      would still be 0.11um instead of 0.13um because there is no way to oversize the
+#      poly width.
+#      The spice deck could be hacked by a script to change the transistor lengths since
+#      they are all 0.11um. But if the cifoutput flow is doing a diffusion over or
+#      undersize, then the transistor width will be bigger or smaller correspondingly
+#      and making this adjustemnt by a script hack is far more difficult.
+#    So the flow that follows only works well if there is no diffusion over or undersize.
+#    If there is, the bigger it is, the greater the error in the transistor widths.
+# 3/ The EXT file written from Magic is the same whatever the chosen scale except for a
+#    scale keyword near the top:
+#    scale 1000 1 6
+#    The third number is the lambda scaling, which must be an integer (if a real like 5.5
+#    is used, it is truncated to 5 with no warning). This lambda scaling is simply copied
+#    from the lambda keyword in the technology file extract section.
+# 4/ We choose to write out the EXT file with physical co-ordinates in a 2um technology,
+#    and then scale the transistor sizes in spice. This is done by setting lambda in the
+#    extract section to 100.
+# 5/ The spice scale factor is 0.055, and is selected by:
+#    .OPTIONS scale=0.055
+#    This scales all transistor L, W, AD, AS, PD and PS values, so that spice descriptions
+#    using regular sized transistors cannot be simulated in the same deck as ones using
+#    2um descriptions.
+# 6/ This flow will scale the 2um transistor length to 0.11um. What we need is a
+#    transistor length of 0.13um. This is achieved if the spice description has the
+#    transistor length changed from 2um to 2.3636um. Scaling by 0.055 gives a resulting
+#    transistor length of 0.129998um, close enough to 0.13um. This change is done by
+#    hacking the spice deck produced by ext2spice with a script.
+# 7/ This isn't quite so bad as it sounds, since the spice deck coming from ext2spice in
+#    any case needs to be hacked. These hacks are shown below in a before and after
+#    spice listing for a simple inverter.
+#
+#    from ext2spice                       after hacking
+#    --------------                       -------------
+#    m1000 z a vdd vdd pfet w=16u l=2u    .subckt iv1v0x1 a vdd vss z
+#    + ad=92p pd=46u as=170p ps=62u       m00 z    a    vdd  vdd  p  w=16u    l=2.3636u     ad=92p       pd=46u       as=170p      ps=62u
+#    m1001 vss a z vss nfet w=8u l=2u     m01 vss  a    z    vss  n  w=8u     l=2.3636u     ad=64p       pd=32u       as=52p       ps=30u
+#    + ad=64p pd=32u as=52p ps=30u        C1  vdd  a    0.012f
+#    C0 vdd vss 0.002fF                   C2  a    vss  0.036f
+#    C1 vdd a 0.012fF                     C3  vdd  z    0.076f
+#    C2 a vss 0.036fF                     C4  z    vss  0.044f
+#    C3 vdd z 0.076fF                     C5  a    z    0.073f
+#    C4 z vss 0.044fF                     C7  z    vss  0.012f
+#    C5 a z 0.073fF                       C8  a    vss  0.023f
+#    C6 vss GND 0.039fF                   .ends
+#    C7 z GND 0.012fF
+#    C8 a GND 0.023fF **FLOATING
+#    C9 vdd GND 0.038fF
+#
+#    - A .subckt ... .ends wrapper is put around the spice deck. This allows multiple
+#      instances to be simulated together, and a single control deck to run with cells
+#      from different technologies by simply including different subckts. The .subckt
+#      header is grepped from the spice deck produced by the Alliance software (s2r).
+#      It has to be noted that the Alliance s2r program directly produces a subckt file
+#      without the need for hacks.
+#    - The mosfet continuation line is removed, and the fields are aligned. This
+#      substantially improves the readibility and eases any grepping. The mosfet
+#      identifiers are also made more reasonable (why start at 1000??).
+#    - Some fixed capacitors to GND appear. There is no GND in the vsclib cells, so
+#      this is probably some error connected with a hard coding of the horrid gnd!
+#      string into the software. GND is replaced with vss.
+#    - The nasty string **FLOATING is removed. The pin is an input and obvioulsy not
+#      connected to any diffusion. This only seems to appear because the wells have
+#      been removed prior to making the EXT file.
+#    - The capacitors between vdd and vss are removed. This reduces the component count.
+#      They are pointless, even if investigating supply line IR drop with resistances
+#      in the supply, since the well capacitances are missing (and these are bigger
+#      than the fixed caps in the spice deck).
+#    - The edit to change GND to vss has also produced a capacitance between vss and
+#      vss. This can cause spice to choke, so this too is removed.
+#    - The transistor lengths are changed from 2u to 2.3636u so that they become 0.13u
+#      after applying the scale factor of 0.055. As noted before, there is no adjustment
+#      to the transistor widths caused by diffusion over or undersizes.
+#    The script I have used is shown below. The magic ext2spice command writes cell.spice,
+#    and the following commands manipulate it into cell.spi.
+#    
+#    /usr/local/magic/bin-7.2/ext2spice -c 0.001 -r 1 -y 3 -d -f spice3 $1
+#    sed 's/GND/vss/g' <$1.spice | \
+#    grep -v '^C.*vss.*vss' | \
+#    grep -v '^C.*vdd.*vss' | \
+#    sed 's/\*\*FLOATING//g' | \
+#    sed 's/fF/f/g' | \
+#    sed 's/fet\ /\ /g' | \
+#    awk '$1 ~ /^m/ {printf "%-5s %-4s %-4s %-4s %-4s %-2s %-8s %-8s", $1, $2, $3, $4, $5, $6, $7, $8}
+#    $1 !~ /^m/ {print}' | \
+#    sed s/+//g | \
+#    sed s/^m../m/g | \
+#    awk '{printf "%-3s %-4s %-4s %-4s %-4s %-2s %-8s %-8s %-12s %-12s %-12s %-12s\n", $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12}' | \
+#    sed 's/l=2u/l=2.3636u/g' > $1.spi
+#    sort -m -o $1.spi $1.spi /home/dev/magic/etc/$1.subckt
+#    echo ".ends" >> $1.spi
+#
+#    The file magic/etc/$1.subckt contains the subckt header grepped from the
+#    Alliance spice circuit.
+
+style	lambda=0.055um(vsclib)
+	cscale		1
+	lambda		100
+	step		100
+	sidehalo	44
+	
+	planeorder	abutment	0
+	planeorder	well		1
+	planeorder	active		2
+	planeorder	metal1		3
+	planeorder	metal2		4
+	planeorder	metal3		5
+	planeorder	metal4		6
+	planeorder	oxide		7
+
+	resist	(ndiff,ntie,ndifct,ntiect)/a		7000
+	resist	(pdiff,ptie,pdifct,ptiect)/a		7000
+	resist	(nwell)/well				1200000
+	resist	(pwell)/well				10
+	resist	(poly,polyct,pfet,nfet)/a		7000
+	resist	(m1,m2c/m1)				75
+	resist	(m2,via/m2)				60
+
+	contact	ndifct		4   15000
+        contact pdifct		4   15000
+	contact	polyct		4   15000
+	contact	m2c		4   1000
+	contact	m3c		4   1000
+
+        areacap (nwell)/well   0.907
+
+#poly
+	sidewall (poly,polyct)/a ~(poly,polyct)/a ~(poly,polyct)/a (poly,polyct)/a	8.277
+	areacap	(poly,polyct)/a			0.2104
+	overlap	(poly,polyct)/a	 ~space/well	0.2104
+	sideoverlap	(poly,polyct)/a	 ~(poly,polyct)/a	~space/well	0.6050 
+#metal1
+	sidewall (m1,ndifct,pdifct,polyct,m2c)/m1 ~(m1,ndifct,pdifct,polyct,m2c)/m1 ~(m1,ndifct,pdifct,polyct,m2c)/m1 (m1,ndifct,pdifct,polyct,m2c)/m1  15.17
+	areacap	(m1,ndifct,pdifct,polyct,via)/m1	0.1219
+#metal1 over whitespace
+	overlap	(m1,ndifct,pdifct,ntiect,ptiect,polyct,via)/m1	~space/well	0.1219	~space/a
+	sideoverlap (m1,ndifct,pdifct,polyct,m2c)/m1 ~(m1,ndifct,pdifct,polyct,m2c)/m1 ~space/well   0.3526 ~space/a
+#metal1 over ndiff
+	overlap (m1,ndifct,pdifct,polyct,m2c)/m1 (ndiff,ndifct)/a   0.2288
+	sideoverlap (m1,ndifct,pdifct,polyct,m2c)/m1 ~(m1,ndifct,pdifct,polyct,m2c)/m1 (ndiff,ndifct)/a   0.5159
+#metal1 over pdiff
+	overlap (m1,ndifct,pdifct,polyct,m2c)/m1 (pdiff,pdifct)/a   0.2288
+	sideoverlap (m1,ndifct,pdifct,polyct,m2c)/m1 ~(m1,ndifct,pdifct,polyct,m2c)/m1 (pdiff,pdifct)/a   0.5159
+#metal1 over poly
+	overlap (m1,ndifct,pdifct,polyct,m2c)/m1 (poly,polyct)/a   0.1373
+	overlap (m1,ndifct,pdifct,polyct,m2c)/m1 (nfet,pfet)/a   0.1308
+	sideoverlap (m1,ndifct,pdifct,polyct,m2c)/m1 ~(m1,ndifct,pdifct,polyct,m2c)/m1 (poly,polyct)/a   1.111
+	sideoverlap (m1,ndifct,pdifct,polyct,m2c)/m1 ~(m1,ndifct,pdifct,polyct,m2c)/m1 (nfet,pfet)/a   1.045
+
+#metal2
+	sidewall (m2,m2c)/m2 ~(m2,m2c)/m2 ~(m2,m2c)/m2 (m2,m2c)/m2  22.05
+	areacap (m2,m2c)/m2	0.06640
+#metal2 over whitespace
+	overlap (m2,m3c)/m2 ~space/well	0.06640 ~space/a,~space/m1
+	sideoverlap (m2,m2c,m3c)/m2 ~(m2,m2c,m3c)/m2 ~space/well	0.2904 ~space/a,~space/m1
+#metal2 over ndiff
+	overlap (m2,m2c,m3c)/m2 (ndiff,ndifct)/a   0.08924 ~space/m1
+	sideoverlap (m2,m2c,m3c)/m2 ~(m2,m2c,m3c)/m2 (ndiff,ndifct)/a   0.3295 ~space/m1
+#metal2 over pdiff
+	overlap (m2,m2c,m3c)/m2 (pdiff,pdifct)/a   0.08924 ~space/m1
+	sideoverlap (m2,m2c,m3c)/m2 ~(m2,m2c,m3c)/m2 (pdiff,pdifct)/a   0.3295 ~space/m1
+#metal2 over poly
+	overlap (m2,m2c,m3c)/m2 (poly,polyct)/a	0.1060 ~space/m1
+	overlap (m2,m2c,m3c)/m2 (nfet,pfet)/a	0.1041 ~space/m1
+	sideoverlap (m2,m2c,m3c)/m2 ~(m2,m2c,m3c)/m2 (poly,polyct)/a	0.3597 ~space/m1
+	sideoverlap (m2,m2c,m3c)/m2 ~(m2,m2c,m3c)/m2 (nfet,pfet)/a	0.3559 ~space/m1
+#metal2 over metal1
+	overlap (m2,m2c,m3c)/m2 (m1,ndifct,ntiect,pdifct,ptiect,polyct,m2c)/m1   0.2344
+	sideoverlap (m2,m2c,m3c)/m2 ~(m2,m2c,m3c)/m2 (m1,ndifct,ntiect,pdifct,ptiect,polyct,m2c)/m1   0.5830
+
+	fet	pfet	pdiff,pdifct	2 pfet	vdd!	nwell	79	83
+	fet	nfet	ndiff,ndifct	2 nfet	vss!	pwell	73	87
+
+	fetresis	pfet	linear		20000
+	fetresis	pfet	saturation	41000
+	fetresis	nfet	linear		8889
+	fetresis	nfet	saturation	17000
+
+end
+
+wiring
+    contact pdifct  4 metal1 0 pdiff  1
+    contact ndifct  4 metal1 0 ndiff  1
+    contact polyct  4 metal1 0 poly   1
+    contact m2c     4 metal1 0 metal2 0
+    contact m3c     4 metal2 0 metal3 0
+    contact m4c     4 metal3 0 metal4 0
+end
+
+router
+    layer1 metal1 4 pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m1,m2c/m1,gc 4
+    layer2 metal2 4 m2,m2c/m2,m3c/m2 4
+    contacts m2contact 4
+    gridspacing 8
+end
+
+plowing
+    fixed	nfet,pfet,glass,pad
+    covered	nfet,pfet
+    drag	nfet,pfet
+end
+
+plot
+    style gremlin
+	pfet			9
+	nfet			10
+	m2c			11
+	pwell			15
+	nwell			16
+	poly,polyct/a,nfet,pfet			19
+	pdifct/m1,ndifct/m1,ptiect/m1,ntiect/m1,polyct/m1,m1,m2c/m1,gc		22
+	pad,glass		23
+	ntie,ntiect			24
+	m2,m2c/m2,m3c/m2,pad		28
+	pdiff,pdifct,pfet		29
+	ptie,ptiect			30
+	ndiff,nfet,ndifct		31
+	m2c/m1,polyct/m1,ndifct/m1,pdifct/m1,ptiect/m1,ntiect/m1,pad/m1  X
+
+    style postscript
+	 1 C0C0C0C0 C0C0C0C0 00000000 00000000 0C0C0C0C 0C0C0C0C 00000000 00000000
+	 2 A0A0A0A0 0A0A0A0A A0A0A0A0 0A0A0A0A A0A0A0A0 0A0A0A0A A0A0A0A0 0A0A0A0A
+	 3 00030003 000C000C 00300030 00C000C0 03000300 0C000C00 30003000 C000C000
+	 4 00000000 00000000 C0C0C0C0 00000000 00000000 00000000 0C0C0C0C 00000000
+	 5 FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+	 6 07070707 0E0E0E0E 1C1C1C1C 38383838 70707070 E0E0E0E0 C1C1C1C1 83838383
+	 7 18181818 30303030 60606060 C0C0C0C0 81818181 03030303 06060606 0C0C0C0C
+	 8 18181818 0C0C0C0C 06060606 03030303 81818181 C0C0C0C0 60606060 30303030
+	 9 18181818 3C3C3C3C 3C3C3C3C 18181818 81818181 C3C3C3C3 C3C3C3C3 81818181
+	10 F0F0F0F0 60606060 06060606 0F0F0F0F 0F0F0F0F 06060606 60606060 F0F0F0F0
+	11 01000080 02000040 0C000030 F000000F 000FF000 00300C00 00400200 00800100
+	12 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	13 00000000 00000000 33333333 33333333 00000000 00000000 CCCCCCCC CCCCCCCC
+
+	 1  47  95 111   0	
+	 2 223  31 223   0	
+	 3   0   0   0 192	
+	 4  31 111  31   0	
+	 5  31 111 255   0	
+	 6  63  95 191   0	
+	 7 255  63 255   0	
+	 8   0   0   0 127	
+	 9 223  47 223   0	
+	10   0 255 255   0	
+	11   0   0 255   0	
+	12 191 127   0   0	
+	13  95 223  63   0	
+	14   0   0   0 255	
+	15 191 127  63   0	
+	16 111 151 244   0	
+	17  23 175 183   0	
+
+	polyct,ndifct,pdifct,ptiect,ntiect	14	X
+	m2c,pad,glass		14	B
+	pad,glass		14	11
+	m2c			14	13
+	m2,m2c,pad		13	10
+	pdifct,ndifct,ptiect,ntiect,polyct,m1,m2c,gc  12  9
+	ntie,ntiect			 7	1
+	ptie,ptiect			 6	1
+	nfet		         9	8
+	pfet     		 1	7
+	poly,polyct 		10	5
+	nfet			16	5
+	pfet    		17	5
+	pdiff,pdifct		 1	5
+	ndiff,ndifct		 9	5
+	pwell			 1	4
+	nwell			 2	4
+
+    style pnm
+	 draw metal1
+	 draw metal2
+	 draw polysilicon
+	 draw ndiffusion
+	 draw pdiffusion
+	 draw ntransistor
+	 draw ptransistor
+	 map psubstratepdiff pdiffusion
+	 map nsubstratendiff ndiffusion
+	 map polycontact polysilicon metal1
+	 map m2contact metal1 metal2
+	 map m3contact metal2 metal3
+	 map ndifct ndiffusion metal1
+	 map pdifct pdiffusion metal1
+	 map nsubstratencontact ndiffusion metal1
+	 map psubstratepcontact pdiffusion metal1
+end

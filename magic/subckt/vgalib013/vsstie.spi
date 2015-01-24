@@ -1,0 +1,14 @@
+.subckt vsstie vdd vss z
+*   SPICE3 file   created from vsstie.ext -      technology: scmos
+m00 w1     z      vdd    vdd p w=26u  l=2.3636u ad=130p     pd=36u      as=182p     ps=66u
+m01 vdd    z      w1     vdd p w=26u  l=2.3636u ad=182p     pd=66u      as=130p     ps=36u
+m02 z      w1     vss    vss n w=18u  l=2.3636u ad=90p      pd=28u      as=126p     ps=50u
+m03 vss    w1     z      vss n w=18u  l=2.3636u ad=126p     pd=50u      as=90p      ps=28u
+C0  vss    w1     0.075f
+C1  w1     z      0.531f
+C2  z      vdd    0.114f
+C3  vss    z      0.154f
+C4  w1     vdd    0.130f
+C6  w1     vss    0.063f
+C7  z      vss    0.065f
+.ends

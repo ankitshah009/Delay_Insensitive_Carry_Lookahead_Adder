@@ -1,0 +1,13 @@
+# Use the following Alliance variables to view these cells with DREAL.
+# You can 
+# $ source ./README
+# to set them.
+export RDS_IN=gds
+export RDS_TECHNO_NAME=/usr/share/pharosc/alliance/etc/vsc013.rds
+export DREAL_TECHNO_NAME=/usr/share/pharosc/alliance/etc/s013.dreal
+# The layout has been written from Magic using the command
+# ;cif ostyle lambda=0.055um(vsclib)
+# ;gds write cell_name
+# from within Magic.
+# The geometries are cleaner than the layout written from
+# Alliance in directory vsclib013_alliance, but otherwise is the same.

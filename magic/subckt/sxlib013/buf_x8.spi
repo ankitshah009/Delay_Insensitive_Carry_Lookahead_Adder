@@ -1,0 +1,26 @@
+.subckt buf_x8 i q vdd vss
+*   SPICE3 file   created from buf_x8.ext -      technology: scmos
+m00 vdd    i      w1     vdd p w=40u  l=2.3636u ad=206.4p   pd=59.2u    as=320p     ps=96u
+m01 q      w1     vdd    vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=206.4p   ps=59.2u
+m02 vdd    w1     q      vdd p w=40u  l=2.3636u ad=206.4p   pd=59.2u    as=200p     ps=50u
+m03 q      w1     vdd    vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=206.4p   ps=59.2u
+m04 vdd    w1     q      vdd p w=40u  l=2.3636u ad=206.4p   pd=59.2u    as=200p     ps=50u
+m05 vss    i      w1     vss n w=20u  l=2.3636u ad=112p     pd=35.2u    as=160p     ps=56u
+m06 q      w1     vss    vss n w=20u  l=2.3636u ad=100p     pd=30u      as=112p     ps=35.2u
+m07 vss    w1     q      vss n w=20u  l=2.3636u ad=112p     pd=35.2u    as=100p     ps=30u
+m08 q      w1     vss    vss n w=20u  l=2.3636u ad=100p     pd=30u      as=112p     ps=35.2u
+m09 vss    w1     q      vss n w=20u  l=2.3636u ad=112p     pd=35.2u    as=100p     ps=30u
+C0  vdd    i      0.159f
+C1  vss    q      0.360f
+C2  vss    w1     0.093f
+C3  q      vdd    0.562f
+C4  q      i      0.548f
+C5  vdd    w1     0.117f
+C6  w1     i      0.511f
+C7  vss    vdd    0.037f
+C8  q      w1     0.198f
+C9  vss    i      0.094f
+C11 q      vss    0.035f
+C13 w1     vss    0.135f
+C14 i      vss    0.039f
+.ends

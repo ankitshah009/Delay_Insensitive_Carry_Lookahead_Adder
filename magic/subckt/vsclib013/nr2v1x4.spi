@@ -1,0 +1,40 @@
+.subckt nr2v1x4 a b vdd vss z
+*   SPICE3 file   created from nr2v1x4.ext -      technology: scmos
+m00 w1     a      vdd    vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=155.25p  ps=52u
+m01 z      b      w1     vdd p w=27u  l=2.3636u ad=108p     pd=35u      as=67.5p    ps=32u
+m02 w2     b      z      vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=108p     ps=35u
+m03 vdd    a      w2     vdd p w=27u  l=2.3636u ad=155.25p  pd=52u      as=67.5p    ps=32u
+m04 w3     a      vdd    vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=155.25p  ps=52u
+m05 z      b      w3     vdd p w=27u  l=2.3636u ad=108p     pd=35u      as=67.5p    ps=32u
+m06 w4     b      z      vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=108p     ps=35u
+m07 vdd    a      w4     vdd p w=27u  l=2.3636u ad=155.25p  pd=52u      as=67.5p    ps=32u
+m08 z      a      vss    vss n w=15u  l=2.3636u ad=60p      pd=21.7925u as=95.9434p ps=31.1321u
+m09 vss    b      z      vss n w=15u  l=2.3636u ad=95.9434p pd=31.1321u as=60p      ps=21.7925u
+m10 z      a      vss    vss n w=19u  l=2.3636u ad=76p      pd=27.6038u as=121.528p ps=39.434u
+m11 vss    b      z      vss n w=19u  l=2.3636u ad=121.528p pd=39.434u  as=76p      ps=27.6038u
+m12 z      b      vss    vss n w=19u  l=2.3636u ad=76p      pd=27.6038u as=121.528p ps=39.434u
+m13 vss    a      z      vss n w=19u  l=2.3636u ad=121.528p pd=39.434u  as=76p      ps=27.6038u
+C0  z      b      0.377f
+C1  w1     vdd    0.005f
+C2  vdd    b      0.072f
+C3  vss    z      0.592f
+C4  b      a      0.682f
+C5  vss    vdd    0.005f
+C6  w3     z      0.010f
+C7  w3     vdd    0.005f
+C8  vss    a      0.167f
+C9  w2     b      0.006f
+C10 z      vdd    0.215f
+C11 z      a      0.590f
+C12 vdd    a      0.066f
+C13 w4     z      0.004f
+C14 w2     z      0.010f
+C15 w4     vdd    0.005f
+C16 vss    b      0.055f
+C17 z      w1     0.007f
+C18 w3     b      0.006f
+C19 w2     vdd    0.005f
+C21 z      vss    0.012f
+C23 b      vss    0.065f
+C24 a      vss    0.064f
+.ends

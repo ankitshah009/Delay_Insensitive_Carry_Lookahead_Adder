@@ -1,0 +1,3 @@
+.subckt vfeed2 vdd vss
+*   SPICE3 file   created from vfeed2.ext -      technology: scmos
+.ends

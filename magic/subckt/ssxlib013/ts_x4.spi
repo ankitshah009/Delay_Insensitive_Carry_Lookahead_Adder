@@ -1,0 +1,48 @@
+.subckt ts_x4 cmd i q vdd vss
+*   SPICE3 file   created from ts_x4.ext -      technology: scmos
+m00 q      w1     vdd    vdd p w=39u  l=2.3636u ad=195p     pd=49u      as=259.905p ps=76.8613u
+m01 vdd    w1     q      vdd p w=39u  l=2.3636u ad=259.905p pd=76.8613u as=195p     ps=49u
+m02 w2     cmd    vdd    vdd p w=19u  l=2.3636u ad=152p     pd=54u      as=126.62p  ps=37.4453u
+m03 w1     w2     w3     vdd p w=19u  l=2.3636u ad=114.322p pd=37.3559u as=152p     ps=54u
+m04 vdd    cmd    w1     vdd p w=20u  l=2.3636u ad=133.285p pd=39.4161u as=120.339p ps=39.322u
+m05 w1     i      vdd    vdd p w=20u  l=2.3636u ad=120.339p pd=39.322u  as=133.285p ps=39.4161u
+m06 q      w3     vss    vss n w=19u  l=2.3636u ad=95p      pd=29u      as=133.585p ps=48.5231u
+m07 vss    w3     q      vss n w=19u  l=2.3636u ad=133.585p pd=48.5231u as=95p      ps=29u
+m08 w2     cmd    vss    vss n w=9u   l=2.3636u ad=72p      pd=34u      as=63.2769p ps=22.9846u
+m09 vss    w2     w3     vss n w=9u   l=2.3636u ad=63.2769p pd=22.9846u as=53.6786p ps=23.7857u
+m10 w3     i      vss    vss n w=9u   l=2.3636u ad=53.6786p pd=23.7857u as=63.2769p ps=22.9846u
+m11 w1     cmd    w3     vss n w=10u  l=2.3636u ad=80p      pd=36u      as=59.6429p ps=26.4286u
+C0  w3     w1     0.278f
+C1  i      cmd    0.224f
+C2  w2     vdd    0.094f
+C3  q      cmd    0.334f
+C4  w2     w1     0.123f
+C5  vss    w3     0.189f
+C6  vdd    w1     0.183f
+C7  w3     i      0.110f
+C8  vss    w2     0.067f
+C9  w3     q      0.064f
+C10 i      w2     0.075f
+C11 vss    vdd    0.004f
+C12 w2     q      0.085f
+C13 w3     cmd    0.357f
+C14 vss    w1     0.029f
+C15 i      vdd    0.034f
+C16 w2     cmd    0.387f
+C17 i      w1     0.253f
+C18 q      vdd    0.162f
+C19 q      w1     0.006f
+C20 vdd    cmd    0.143f
+C21 vss    i      0.012f
+C22 cmd    w1     0.260f
+C23 w3     w2     0.424f
+C24 vss    q      0.082f
+C25 w3     vdd    0.024f
+C26 vss    cmd    0.067f
+C28 w3     vss    0.053f
+C29 i      vss    0.039f
+C30 w2     vss    0.056f
+C31 q      vss    0.013f
+C33 cmd    vss    0.094f
+C34 w1     vss    0.068f
+.ends

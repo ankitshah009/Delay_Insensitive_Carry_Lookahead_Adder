@@ -1,0 +1,49 @@
+.subckt xoon21v0x05 a1 a2 b vdd vss z
+*   SPICE3 file   created from xoon21v0x05.ext -      technology: scmos
+m00 z      an     bn     vdd p w=16u  l=2.3636u ad=66.8718p pd=25.4359u as=99p      ps=46u
+m01 an     bn     z      vdd p w=23u  l=2.3636u ad=92p      pd=31u      as=96.1282p ps=36.5641u
+m02 w1     a2     an     vdd p w=23u  l=2.3636u ad=57.5p    pd=28u      as=92p      ps=31u
+m03 vdd    a1     w1     vdd p w=23u  l=2.3636u ad=250.641p pd=83.7436u as=57.5p    ps=28u
+m04 bn     b      vdd    vdd p w=16u  l=2.3636u ad=99p      pd=46u      as=174.359p ps=58.2564u
+m05 w2     an     vss    vss n w=7u   l=2.3636u ad=17.5p    pd=12u      as=64.75p   ps=30u
+m06 z      bn     w2     vss n w=7u   l=2.3636u ad=28p      pd=15u      as=17.5p    ps=12u
+m07 an     b      z      vss n w=7u   l=2.3636u ad=35p      pd=19.3333u as=28p      ps=15u
+m08 vss    a2     an     vss n w=7u   l=2.3636u ad=64.75p   pd=30u      as=35p      ps=19.3333u
+m09 vss    a1     an     vss n w=7u   l=2.3636u ad=64.75p   pd=30u      as=35p      ps=19.3333u
+m10 bn     b      vss    vss n w=7u   l=2.3636u ad=49p      pd=28u      as=64.75p   ps=30u
+C0  b      an     0.059f
+C1  vss    a1     0.012f
+C2  z      an     0.423f
+C3  b      a2     0.081f
+C4  vss    bn     0.081f
+C5  an     a1     0.026f
+C6  w1     bn     0.023f
+C7  b      vdd    0.020f
+C8  z      a2     0.019f
+C9  an     bn     0.533f
+C10 z      vdd    0.040f
+C11 a1     a2     0.185f
+C12 w2     z      0.010f
+C13 a1     vdd    0.042f
+C14 a2     bn     0.260f
+C15 vss    an     0.205f
+C16 bn     vdd    0.456f
+C17 vss    a2     0.025f
+C18 b      a1     0.108f
+C19 z      a1     0.004f
+C20 b      bn     0.285f
+C21 w1     vdd    0.005f
+C22 z      bn     0.222f
+C23 an     a2     0.152f
+C24 vss    b      0.105f
+C25 an     vdd    0.069f
+C26 a1     bn     0.206f
+C27 vss    z      0.156f
+C28 a2     vdd    0.041f
+C30 b      vss    0.048f
+C31 z      vss    0.013f
+C32 an     vss    0.044f
+C33 a1     vss    0.040f
+C34 a2     vss    0.036f
+C35 bn     vss    0.048f
+.ends

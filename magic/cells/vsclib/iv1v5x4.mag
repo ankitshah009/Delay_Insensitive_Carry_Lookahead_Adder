@@ -1,0 +1,133 @@
+magic
+tech scmos
+timestamp 1179386012
+<< checkpaint >>
+rect -22 -22 54 94
+<< ab >>
+rect 0 0 32 72
+<< pwell >>
+rect -4 -4 36 32
+<< nwell >>
+rect -4 32 36 76
+<< polysilicon >>
+rect 9 66 11 70
+rect 19 66 21 70
+rect 9 35 11 38
+rect 19 35 21 38
+rect 9 34 22 35
+rect 9 30 17 34
+rect 21 30 22 34
+rect 9 29 22 30
+rect 10 26 12 29
+rect 20 26 22 29
+rect 10 11 12 15
+rect 20 11 22 15
+<< ndiffusion >>
+rect 2 18 10 26
+rect 2 14 3 18
+rect 7 15 10 18
+rect 12 25 20 26
+rect 12 21 14 25
+rect 18 21 20 25
+rect 12 15 20 21
+rect 22 21 29 26
+rect 22 17 24 21
+rect 28 17 29 21
+rect 22 15 29 17
+rect 7 14 8 15
+rect 2 13 8 14
+<< pdiffusion >>
+rect 2 65 9 66
+rect 2 61 3 65
+rect 7 61 9 65
+rect 2 58 9 61
+rect 2 54 3 58
+rect 7 54 9 58
+rect 2 38 9 54
+rect 11 58 19 66
+rect 11 54 13 58
+rect 17 54 19 58
+rect 11 51 19 54
+rect 11 47 13 51
+rect 17 47 19 51
+rect 11 38 19 47
+rect 21 65 28 66
+rect 21 61 23 65
+rect 27 61 28 65
+rect 21 58 28 61
+rect 21 54 23 58
+rect 27 54 28 58
+rect 21 38 28 54
+<< metal1 >>
+rect -2 65 34 72
+rect -2 64 3 65
+rect 2 61 3 64
+rect 7 64 23 65
+rect 7 61 8 64
+rect 2 58 8 61
+rect 22 61 23 64
+rect 27 64 34 65
+rect 27 61 28 64
+rect 2 54 3 58
+rect 7 54 8 58
+rect 13 58 17 59
+rect 22 58 28 61
+rect 22 54 23 58
+rect 27 54 28 58
+rect 13 51 17 54
+rect 2 47 13 50
+rect 17 47 23 50
+rect 2 46 23 47
+rect 2 25 6 46
+rect 17 35 23 42
+rect 17 34 30 35
+rect 21 30 30 34
+rect 17 29 30 30
+rect 2 21 14 25
+rect 18 21 19 25
+rect 24 21 28 22
+rect 2 14 3 18
+rect 7 14 8 18
+rect 2 8 8 14
+rect 24 8 28 17
+rect -2 4 4 8
+rect 8 4 24 8
+rect 28 4 34 8
+rect -2 0 34 4
+<< ntransistor >>
+rect 10 15 12 26
+rect 20 15 22 26
+<< ptransistor >>
+rect 9 38 11 66
+rect 19 38 21 66
+<< polycontact >>
+rect 17 30 21 34
+<< ndcontact >>
+rect 3 14 7 18
+rect 14 21 18 25
+rect 24 17 28 21
+<< pdcontact >>
+rect 3 61 7 65
+rect 3 54 7 58
+rect 13 54 17 58
+rect 13 47 17 51
+rect 23 61 27 65
+rect 23 54 27 58
+<< psubstratepcontact >>
+rect 4 4 8 8
+rect 24 4 28 8
+<< psubstratepdiff >>
+rect 3 8 29 9
+rect 3 4 4 8
+rect 8 4 24 8
+rect 28 4 29 8
+rect 3 3 29 4
+<< labels >>
+rlabel metal1 4 32 4 32 6 z
+rlabel metal1 12 48 12 48 6 z
+rlabel metal1 16 4 16 4 6 vss
+rlabel metal1 20 36 20 36 6 a
+rlabel metal1 20 48 20 48 6 z
+rlabel metal1 16 68 16 68 6 vdd
+rlabel metal1 28 32 28 32 6 a
+<< end >>

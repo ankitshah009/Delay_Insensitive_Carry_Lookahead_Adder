@@ -1,0 +1,167 @@
+.subckt fulladder_x2 a1 a2 a3 a4 b1 b2 b3 b4 cin1 cin2 cin3 cout sout vdd vss
+*   SPICE3 file   created from fulladder_x2.ext -      technology: scmos
+m00 vdd    a1     w1     vdd p w=18u  l=2.3636u ad=120.353p pd=36.9412u as=119.7p   ps=39.6u
+m01 w1     b1     vdd    vdd p w=18u  l=2.3636u ad=119.7p   pd=39.6u    as=120.353p ps=36.9412u
+m02 w2     cin1   w1     vdd p w=18u  l=2.3636u ad=96.5455p pd=29.4545u as=119.7p   ps=39.6u
+m03 w3     a2     w2     vdd p w=26u  l=2.3636u ad=104p     pd=34u      as=139.455p ps=42.5455u
+m04 w1     b2     w3     vdd p w=26u  l=2.3636u ad=172.9p   pd=57.2u    as=104p     ps=34u
+m05 w4     a1     vss    vss n w=10u  l=2.3636u ad=40.9091p pd=18.1818u as=82p      ps=33.0526u
+m06 w2     b1     w4     vss n w=12u  l=2.3636u ad=67.2p    pd=26.4u    as=49.0909p ps=21.8182u
+m07 vdd    w2     cout   vdd p w=38u  l=2.3636u ad=254.078p pd=77.9869u as=304p     ps=92u
+m08 sout   w5     vdd    vdd p w=39u  l=2.3636u ad=312p     pd=94u      as=260.765p ps=80.0392u
+m09 w6     a3     vdd    vdd p w=14u  l=2.3636u ad=85.75p   pd=30.3333u as=93.6078p ps=28.732u
+m10 vdd    b3     w6     vdd p w=13u  l=2.3636u ad=86.9216p pd=26.6797u as=79.625p  ps=28.1667u
+m11 w6     cin2   vdd    vdd p w=13u  l=2.3636u ad=79.625p  pd=28.1667u as=86.9216p ps=26.6797u
+m12 w5     w2     w6     vdd p w=18u  l=2.3636u ad=95.625p  pd=32.625u  as=110.25p  ps=39u
+m13 w7     cin3   w5     vdd p w=14u  l=2.3636u ad=56p      pd=22u      as=74.375p  ps=25.375u
+m14 w8     a4     w7     vdd p w=14u  l=2.3636u ad=56p      pd=22u      as=56p      ps=22u
+m15 w6     b4     w8     vdd p w=14u  l=2.3636u ad=85.75p   pd=30.3333u as=56p      ps=22u
+m16 w9     cin1   w2     vss n w=8u   l=2.3636u ad=48p      pd=22.6667u as=44.8p    ps=17.6u
+m17 vss    a2     w9     vss n w=8u   l=2.3636u ad=65.6p    pd=26.4421u as=48p      ps=22.6667u
+m18 w9     b2     vss    vss n w=8u   l=2.3636u ad=48p      pd=22.6667u as=65.6p    ps=26.4421u
+m19 vss    w2     cout   vss n w=19u  l=2.3636u ad=155.8p   pd=62.8u    as=152p     ps=54u
+m20 sout   w5     vss    vss n w=19u  l=2.3636u ad=152p     pd=54u      as=155.8p   ps=62.8u
+m21 w10    a3     vss    vss n w=8u   l=2.3636u ad=32p      pd=16u      as=65.6p    ps=26.4421u
+m22 w11    b3     w10    vss n w=8u   l=2.3636u ad=32p      pd=16u      as=32p      ps=16u
+m23 w5     cin2   w11    vss n w=8u   l=2.3636u ad=40p      pd=17.7778u as=32p      ps=16u
+m24 w12    w2     w5     vss n w=10u  l=2.3636u ad=50p      pd=23.0303u as=50p      ps=22.2222u
+m25 vss    cin3   w12    vss n w=8u   l=2.3636u ad=65.6p    pd=26.4421u as=40p      ps=18.4242u
+m26 w12    a4     vss    vss n w=7u   l=2.3636u ad=35p      pd=16.1212u as=57.4p    ps=23.1368u
+m27 vss    b4     w12    vss n w=8u   l=2.3636u ad=65.6p    pd=26.4421u as=40p      ps=18.4242u
+C0  cout   b2     0.186f
+C1  vss    cin1   0.011f
+C2  w3     w1     0.016f
+C3  b3     w5     0.126f
+C4  cin2   w2     0.252f
+C5  b4     w6     0.041f
+C6  a4     cin3   0.286f
+C7  b1     vdd    0.026f
+C8  cin1   w2     0.224f
+C9  a3     vss    0.008f
+C10 w9     a1     0.005f
+C11 w10    w5     0.016f
+C12 sout   vdd    0.023f
+C13 cout   cin1   0.044f
+C14 sout   w5     0.132f
+C15 w3     a2     0.009f
+C16 w4     b1     0.004f
+C17 vss    a1     0.037f
+C18 w1     b2     0.022f
+C19 a3     w2     0.117f
+C20 w9     vss    0.176f
+C21 cin3   w6     0.013f
+C22 a4     cin2   0.052f
+C23 w5     vdd    0.021f
+C24 a1     w2     0.104f
+C25 w9     w2     0.024f
+C26 a3     cout   0.008f
+C27 w12    cin3   0.029f
+C28 vss    w2     0.057f
+C29 w1     cin1   0.013f
+C30 b2     a2     0.271f
+C31 w9     cout   0.020f
+C32 w6     cin2   0.013f
+C33 cin3   b3     0.053f
+C34 b4     vdd    0.008f
+C35 b4     w5     0.054f
+C36 vss    cout   0.084f
+C37 cout   w2     0.182f
+C38 w1     a1     0.041f
+C39 a2     cin1   0.261f
+C40 b2     b1     0.049f
+C41 a4     vss    0.008f
+C42 cin2   b3     0.306f
+C43 cin3   vdd    0.006f
+C44 cin3   w5     0.179f
+C45 sout   b2     0.030f
+C46 a4     w2     0.073f
+C47 b2     vdd    0.005f
+C48 w1     w2     0.258f
+C49 b2     w5     0.015f
+C50 cin1   b1     0.148f
+C51 a2     a1     0.049f
+C52 cin2   sout   0.030f
+C53 w9     a2     0.029f
+C54 b3     a3     0.300f
+C55 cin2   vdd    0.005f
+C56 vss    a2     0.008f
+C57 w6     w2     0.179f
+C58 cin2   w5     0.138f
+C59 w12    vss    0.183f
+C60 w7     w6     0.006f
+C61 b4     cin3   0.112f
+C62 cin1   vdd    0.007f
+C63 a2     w2     0.128f
+C64 b1     a1     0.325f
+C65 b3     vss    0.010f
+C66 a3     sout   0.068f
+C67 w11    w5     0.016f
+C68 a3     vdd    0.005f
+C69 cout   a2     0.071f
+C70 vss    b1     0.011f
+C71 a3     w5     0.185f
+C72 b3     w2     0.133f
+C73 w9     sout   0.004f
+C74 a4     w6     0.030f
+C75 a1     vdd    0.008f
+C76 b1     w2     0.228f
+C77 w9     w5     0.003f
+C78 sout   vss    0.039f
+C79 w12    a4     0.029f
+C80 vss    w5     0.289f
+C81 sout   w2     0.154f
+C82 w1     a2     0.013f
+C83 a4     b3     0.003f
+C84 cin3   cin2   0.074f
+C85 w2     vdd    0.444f
+C86 w5     w2     0.305f
+C87 sout   cout   0.069f
+C88 cout   vdd    0.028f
+C89 cout   w5     0.028f
+C90 w1     b1     0.029f
+C91 b2     cin1   0.102f
+C92 b4     vss    0.010f
+C93 w6     b3     0.013f
+C94 cin3   a3     0.011f
+C95 a4     vdd    0.008f
+C96 a4     w5     0.088f
+C97 b4     w2     0.051f
+C98 w8     a4     0.011f
+C99 w1     vdd    0.365f
+C100 w3     w2     0.016f
+C101 a2     b1     0.069f
+C102 cin3   vss    0.008f
+C103 w9     b2     0.029f
+C104 cin2   a3     0.117f
+C105 w6     vdd    0.401f
+C106 vss    b2     0.008f
+C107 w6     w5     0.055f
+C108 cin3   w2     0.116f
+C109 w8     w6     0.006f
+C110 b4     a4     0.342f
+C111 a2     vdd    0.006f
+C112 a2     w5     0.002f
+C113 b2     w2     0.116f
+C114 cin1   a1     0.079f
+C115 w12    w5     0.050f
+C116 cin2   vss    0.010f
+C117 b3     sout   0.042f
+C118 w9     cin1   0.024f
+C119 b3     vdd    0.005f
+C120 b4     vss    0.037f
+C121 a4     vss    0.038f
+C122 cin3   vss    0.039f
+C123 w6     vss    0.008f
+C124 cin2   vss    0.039f
+C125 b3     vss    0.039f
+C126 a3     vss    0.038f
+C127 sout   vss    0.014f
+C129 cout   vss    0.024f
+C130 b2     vss    0.031f
+C131 a2     vss    0.033f
+C132 cin1   vss    0.043f
+C133 b1     vss    0.040f
+C134 a1     vss    0.036f
+C135 w5     vss    0.061f
+C136 w2     vss    0.095f
+.ends

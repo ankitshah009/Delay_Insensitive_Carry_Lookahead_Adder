@@ -1,0 +1,56 @@
+.subckt mxi2v2x1 a0 a1 s vdd vss z
+*   SPICE3 file   created from mxi2v2x1.ext -      technology: scmos
+m00 a0n    a0     vdd    vdd p w=22u  l=2.3636u ad=88p      pd=30u      as=130.37p  ps=48.8889u
+m01 z      s      a0n    vdd p w=22u  l=2.3636u ad=88p      pd=30u      as=88p      ps=30u
+m02 a1n    sn     z      vdd p w=22u  l=2.3636u ad=99p      pd=31u      as=88p      ps=30u
+m03 vdd    a1     a1n    vdd p w=22u  l=2.3636u ad=130.37p  pd=48.8889u as=99p      ps=31u
+m04 sn     s      vdd    vdd p w=10u  l=2.3636u ad=62p      pd=34u      as=59.2593p ps=22.2222u
+m05 a0n    a0     vss    vss n w=11u  l=2.3636u ad=53p      pd=25u      as=89.1379p ps=37.1724u
+m06 z      sn     a0n    vss n w=11u  l=2.3636u ad=44p      pd=19u      as=53p      ps=25u
+m07 a1n    s      z      vss n w=11u  l=2.3636u ad=46p      pd=21u      as=44p      ps=19u
+m08 vss    a1     a1n    vss n w=11u  l=2.3636u ad=89.1379p pd=37.1724u as=46p      ps=21u
+m09 sn     s      vss    vss n w=7u   l=2.3636u ad=49p      pd=28u      as=56.7241p ps=23.6552u
+C0  z      vdd    0.080f
+C1  a1     a0     0.013f
+C2  a0n    s      0.013f
+C3  vss    a1n    0.028f
+C4  sn     s      0.306f
+C5  a1     vdd    0.011f
+C6  a1n    z      0.168f
+C7  vss    a0n    0.087f
+C8  a0     vdd    0.157f
+C9  z      a0n    0.221f
+C10 vss    sn     0.044f
+C11 a1n    a1     0.159f
+C12 z      sn     0.356f
+C13 a1n    a0     0.017f
+C14 a0n    a1     0.020f
+C15 vss    s      0.030f
+C16 a1n    vdd    0.007f
+C17 a1     sn     0.098f
+C18 a0n    a0     0.197f
+C19 z      s      0.059f
+C20 a1     s      0.158f
+C21 sn     a0     0.055f
+C22 a0n    vdd    0.009f
+C23 vss    z      0.056f
+C24 a0     s      0.040f
+C25 sn     vdd    0.134f
+C26 a1n    a0n    0.050f
+C27 vss    a1     0.126f
+C28 s      vdd    0.050f
+C29 a1n    sn     0.251f
+C30 vss    a0     0.022f
+C31 z      a1     0.044f
+C32 a0n    sn     0.058f
+C33 vss    vdd    0.004f
+C34 z      a0     0.100f
+C35 a1n    s      0.063f
+C37 a1n    vss    0.008f
+C38 z      vss    0.011f
+C39 a0n    vss    0.005f
+C40 a1     vss    0.017f
+C41 sn     vss    0.031f
+C42 a0     vss    0.021f
+C43 s      vss    0.062f
+.ends

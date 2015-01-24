@@ -1,0 +1,45 @@
+.subckt xnr2v0x1 a b vdd vss z
+*   SPICE3 file   created from xnr2v0x1.ext -      technology: scmos
+m00 vdd    vdd    w1     vdd p w=28u  l=2.3636u ad=186p     pd=60u      as=196p     ps=70u
+m01 w2     b      vdd    vdd p w=28u  l=2.3636u ad=196p     pd=70u      as=186p     ps=60u
+m02 w3     w4     vdd    vdd p w=28u  l=2.3636u ad=176p     pd=50u      as=186p     ps=60u
+m03 z      w2     w3     vdd p w=28u  l=2.3636u ad=196p     pd=70u      as=176p     ps=50u
+m04 w4     b      z      vdd p w=28u  l=2.3636u ad=176p     pd=50u      as=196p     ps=70u
+m05 vdd    a      w4     vdd p w=28u  l=2.3636u ad=186p     pd=60u      as=176p     ps=50u
+m06 vss    vdd    w5     vss n w=20u  l=2.3636u ad=136p     pd=42u      as=140p     ps=54u
+m07 w2     b      vss    vss n w=20u  l=2.3636u ad=140p     pd=54u      as=136p     ps=42u
+m08 z      w4     w2     vss n w=20u  l=2.3636u ad=136p     pd=42u      as=140p     ps=54u
+m09 w4     w2     z      vss n w=20u  l=2.3636u ad=140p     pd=54u      as=136p     ps=42u
+m10 vss    b      w2     vss n w=20u  l=2.3636u ad=136p     pd=42u      as=140p     ps=54u
+m11 w4     a      vss    vss n w=20u  l=2.3636u ad=140p     pd=54u      as=136p     ps=42u
+C0  z      vdd    0.058f
+C1  a      w4     0.234f
+C2  vss    z      0.018f
+C3  w2     b      0.233f
+C4  a      vdd    0.041f
+C5  w3     w4     0.019f
+C6  vss    a      0.011f
+C7  w3     vdd    0.008f
+C8  w4     b      0.242f
+C9  z      a      0.023f
+C10 b      vdd    0.570f
+C11 vss    b      0.043f
+C12 z      w3     0.021f
+C13 z      b      0.117f
+C14 a      b      0.065f
+C15 w2     w4     0.427f
+C16 w3     b      0.012f
+C17 w2     vdd    0.074f
+C18 vss    w2     0.205f
+C19 w4     vdd    0.130f
+C20 z      w2     0.191f
+C21 vss    w4     0.139f
+C22 vss    vdd    0.010f
+C23 a      w2     0.020f
+C24 z      w4     0.582f
+C26 z      vss    0.010f
+C27 a      vss    0.045f
+C28 w2     vss    0.056f
+C29 w4     vss    0.054f
+C30 b      vss    0.098f
+.ends

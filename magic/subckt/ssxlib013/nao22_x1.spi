@@ -1,0 +1,35 @@
+.subckt nao22_x1 i0 i1 i2 nq vdd vss
+*   SPICE3 file   created from nao22_x1.ext -      technology: scmos
+m00 w1     i0     vdd    vdd p w=39u  l=2.3636u ad=195p     pd=49u      as=312p     ps=94u
+m01 nq     i1     w1     vdd p w=39u  l=2.3636u ad=195p     pd=49u      as=195p     ps=49u
+m02 vdd    i2     nq     vdd p w=39u  l=2.3636u ad=312p     pd=94u      as=195p     ps=49u
+m03 nq     i0     w2     vss n w=19u  l=2.3636u ad=119p     pd=37u      as=114p     ps=37.3333u
+m04 w2     i1     nq     vss n w=19u  l=2.3636u ad=114p     pd=37.3333u as=119p     ps=37u
+m05 vss    i2     w2     vss n w=19u  l=2.3636u ad=152p     pd=54u      as=114p     ps=37.3333u
+C0  vdd    i1     0.055f
+C1  w2     vss    0.192f
+C2  i2     i0     0.082f
+C3  vss    nq     0.064f
+C4  vss    vdd    0.012f
+C5  w2     i2     0.024f
+C6  w2     i0     0.013f
+C7  w1     vdd    0.019f
+C8  nq     i2     0.283f
+C9  vss    i1     0.010f
+C10 w1     i1     0.057f
+C11 vdd    i2     0.164f
+C12 nq     i0     0.087f
+C13 i2     i1     0.150f
+C14 vdd    i0     0.084f
+C15 w2     nq     0.109f
+C16 i1     i0     0.310f
+C17 nq     vdd    0.083f
+C18 vss    i2     0.101f
+C19 w2     i1     0.013f
+C20 vss    i0     0.010f
+C21 nq     i1     0.262f
+C23 nq     vss    0.016f
+C25 i2     vss    0.035f
+C26 i1     vss    0.029f
+C27 i0     vss    0.025f
+.ends

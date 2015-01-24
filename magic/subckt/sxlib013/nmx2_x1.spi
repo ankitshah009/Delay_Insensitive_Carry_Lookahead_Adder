@@ -1,0 +1,48 @@
+.subckt nmx2_x1 cmd i0 i1 nq vdd vss
+*   SPICE3 file   created from nmx2_x1.ext -      technology: scmos
+m00 vdd    cmd    w1     vdd p w=20u  l=2.3636u ad=136p     pd=39.2u    as=160p     ps=56u
+m01 w2     i0     vdd    vdd p w=40u  l=2.3636u ad=160p     pd=48u      as=272p     ps=78.4u
+m02 nq     cmd    w2     vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=160p     ps=48u
+m03 w3     w1     nq     vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=200p     ps=50u
+m04 vdd    i1     w3     vdd p w=40u  l=2.3636u ad=272p     pd=78.4u    as=200p     ps=50u
+m05 vss    cmd    w1     vss n w=10u  l=2.3636u ad=68p      pd=23.2u    as=80p      ps=36u
+m06 w4     i0     vss    vss n w=20u  l=2.3636u ad=80p      pd=28u      as=136p     ps=46.4u
+m07 nq     w1     w4     vss n w=20u  l=2.3636u ad=100p     pd=30u      as=80p      ps=28u
+m08 w5     cmd    nq     vss n w=20u  l=2.3636u ad=100p     pd=30u      as=100p     ps=30u
+m09 vss    i1     w5     vss n w=20u  l=2.3636u ad=136p     pd=46.4u    as=100p     ps=30u
+C0  cmd    i0     0.398f
+C1  i1     i0     0.051f
+C2  vss    nq     0.102f
+C3  vss    w1     0.225f
+C4  vss    i0     0.018f
+C5  nq     w1     0.393f
+C6  w3     i1     0.014f
+C7  nq     vdd    0.036f
+C8  nq     i0     0.095f
+C9  vdd    w1     0.337f
+C10 w2     cmd    0.035f
+C11 w4     vss    0.019f
+C12 w1     i0     0.330f
+C13 i1     cmd    0.071f
+C14 vdd    i0     0.052f
+C15 w4     w1     0.018f
+C16 w5     i1     0.004f
+C17 vss    cmd    0.015f
+C18 w3     w1     0.055f
+C19 vss    i1     0.053f
+C20 w3     vdd    0.023f
+C21 w2     w1     0.016f
+C22 nq     cmd    0.295f
+C23 w2     vdd    0.019f
+C24 nq     i1     0.149f
+C25 w5     vss    0.023f
+C26 w1     cmd    0.262f
+C27 vdd    cmd    0.020f
+C28 i1     w1     0.283f
+C29 vdd    i1     0.082f
+C31 nq     vss    0.025f
+C33 i1     vss    0.032f
+C34 w1     vss    0.042f
+C35 cmd    vss    0.062f
+C36 i0     vss    0.031f
+.ends

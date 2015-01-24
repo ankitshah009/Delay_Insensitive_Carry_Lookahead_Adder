@@ -1,0 +1,222 @@
+magic
+tech scmos
+timestamp 1179386951
+<< checkpaint >>
+rect -22 -25 78 105
+<< ab >>
+rect 0 0 56 80
+<< pwell >>
+rect -4 -7 60 36
+<< nwell >>
+rect -4 36 60 87
+<< polysilicon >>
+rect 18 70 20 74
+rect 25 70 27 74
+rect 32 70 34 74
+rect 39 70 41 74
+rect 18 45 20 48
+rect 9 44 20 45
+rect 9 40 10 44
+rect 14 43 20 44
+rect 14 40 15 43
+rect 9 39 15 40
+rect 25 39 27 48
+rect 9 25 11 39
+rect 19 38 27 39
+rect 19 34 20 38
+rect 24 36 27 38
+rect 24 34 25 36
+rect 19 33 25 34
+rect 19 25 21 33
+rect 32 32 34 48
+rect 39 45 41 48
+rect 39 44 47 45
+rect 39 40 42 44
+rect 46 40 47 44
+rect 39 39 47 40
+rect 29 31 35 32
+rect 29 27 30 31
+rect 34 27 35 31
+rect 29 26 35 27
+rect 29 23 31 26
+rect 39 23 41 39
+rect 9 15 11 19
+rect 19 15 21 19
+rect 29 12 31 17
+rect 39 12 41 17
+<< ndiffusion >>
+rect 2 24 9 25
+rect 2 20 3 24
+rect 7 20 9 24
+rect 2 19 9 20
+rect 11 24 19 25
+rect 11 20 13 24
+rect 17 20 19 24
+rect 11 19 19 20
+rect 21 23 27 25
+rect 21 19 29 23
+rect 23 17 29 19
+rect 31 22 39 23
+rect 31 18 33 22
+rect 37 18 39 22
+rect 31 17 39 18
+rect 41 17 50 23
+rect 23 13 27 17
+rect 21 12 27 13
+rect 44 12 50 17
+rect 21 8 22 12
+rect 26 8 27 12
+rect 21 7 27 8
+rect 44 8 45 12
+rect 49 8 50 12
+rect 44 7 50 8
+<< pdiffusion >>
+rect 13 63 18 70
+rect 11 62 18 63
+rect 11 58 12 62
+rect 16 58 18 62
+rect 11 57 18 58
+rect 13 48 18 57
+rect 20 48 25 70
+rect 27 48 32 70
+rect 34 48 39 70
+rect 41 69 48 70
+rect 41 65 43 69
+rect 47 65 48 69
+rect 41 61 48 65
+rect 41 57 43 61
+rect 47 57 48 61
+rect 41 48 48 57
+<< metal1 >>
+rect -2 78 2 82
+rect 6 78 10 82
+rect 14 78 18 82
+rect 22 78 26 82
+rect 30 78 34 82
+rect 38 78 42 82
+rect 46 78 50 82
+rect 54 78 58 82
+rect -2 69 58 78
+rect -2 68 43 69
+rect 47 68 58 69
+rect 2 62 17 63
+rect 2 58 12 62
+rect 16 58 17 62
+rect 2 34 6 58
+rect 10 50 23 54
+rect 10 44 14 50
+rect 34 46 38 63
+rect 43 61 47 65
+rect 43 56 47 57
+rect 10 39 14 40
+rect 20 42 38 46
+rect 42 44 46 47
+rect 20 38 24 42
+rect 42 38 46 40
+rect 33 34 46 38
+rect 2 30 17 34
+rect 20 33 24 34
+rect 29 30 30 31
+rect 3 24 7 25
+rect 3 12 7 20
+rect 13 24 17 30
+rect 25 27 30 30
+rect 34 30 35 31
+rect 34 27 47 30
+rect 25 26 47 27
+rect 17 20 33 22
+rect 13 18 33 20
+rect 37 18 38 22
+rect 42 17 47 26
+rect -2 8 22 12
+rect 26 8 45 12
+rect 49 8 58 12
+rect -2 2 58 8
+rect -2 -2 2 2
+rect 6 -2 10 2
+rect 14 -2 18 2
+rect 22 -2 26 2
+rect 30 -2 34 2
+rect 38 -2 42 2
+rect 46 -2 50 2
+rect 54 -2 58 2
+<< ntransistor >>
+rect 9 19 11 25
+rect 19 19 21 25
+rect 29 17 31 23
+rect 39 17 41 23
+<< ptransistor >>
+rect 18 48 20 70
+rect 25 48 27 70
+rect 32 48 34 70
+rect 39 48 41 70
+<< polycontact >>
+rect 10 40 14 44
+rect 20 34 24 38
+rect 42 40 46 44
+rect 30 27 34 31
+<< ndcontact >>
+rect 3 20 7 24
+rect 13 20 17 24
+rect 33 18 37 22
+rect 22 8 26 12
+rect 45 8 49 12
+<< pdcontact >>
+rect 12 58 16 62
+rect 43 65 47 69
+rect 43 57 47 61
+<< psubstratepcontact >>
+rect 2 -2 6 2
+rect 10 -2 14 2
+rect 18 -2 22 2
+rect 26 -2 30 2
+rect 34 -2 38 2
+rect 42 -2 46 2
+rect 50 -2 54 2
+<< nsubstratencontact >>
+rect 2 78 6 82
+rect 10 78 14 82
+rect 18 78 22 82
+rect 26 78 30 82
+rect 34 78 38 82
+rect 42 78 46 82
+rect 50 78 54 82
+<< psubstratepdiff >>
+rect 0 2 56 3
+rect 0 -2 2 2
+rect 6 -2 10 2
+rect 14 -2 18 2
+rect 22 -2 26 2
+rect 30 -2 34 2
+rect 38 -2 42 2
+rect 46 -2 50 2
+rect 54 -2 56 2
+rect 0 -3 56 -2
+<< nsubstratendiff >>
+rect 0 82 56 83
+rect 0 78 2 82
+rect 6 78 10 82
+rect 14 78 18 82
+rect 22 78 26 82
+rect 30 78 34 82
+rect 38 78 42 82
+rect 46 78 50 82
+rect 54 78 56 82
+rect 0 77 56 78
+<< labels >>
+rlabel metal1 4 48 4 48 6 z
+rlabel metal1 12 44 12 44 6 d
+rlabel metal1 12 60 12 60 6 z
+rlabel metal1 28 6 28 6 6 vss
+rlabel metal1 20 20 20 20 6 z
+rlabel metal1 28 20 28 20 6 z
+rlabel metal1 28 28 28 28 6 b
+rlabel metal1 28 44 28 44 6 c
+rlabel metal1 20 52 20 52 6 d
+rlabel metal1 28 74 28 74 6 vdd
+rlabel metal1 36 28 36 28 6 b
+rlabel metal1 44 24 44 24 6 b
+rlabel metal1 36 36 36 36 6 a
+rlabel metal1 44 44 44 44 6 a
+rlabel metal1 36 56 36 56 6 c
+<< end >>

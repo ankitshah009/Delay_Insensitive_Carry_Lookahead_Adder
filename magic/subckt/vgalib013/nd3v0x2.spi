@@ -1,0 +1,36 @@
+.subckt nd3v0x2 a b c vdd vss z
+*   SPICE3 file   created from nd3v0x2.ext -      technology: scmos
+m00 vdd    vdd    w1     vdd p w=26u  l=2.3636u ad=156p     pd=51u      as=182p     ps=66u
+m01 z      a      vdd    vdd p w=26u  l=2.3636u ad=147.333p pd=46u      as=156p     ps=51u
+m02 z      b      vdd    vdd p w=26u  l=2.3636u ad=147.333p pd=46u      as=156p     ps=51u
+m03 vdd    c      z      vdd p w=26u  l=2.3636u ad=156p     pd=51u      as=147.333p ps=46u
+m04 vss    vss    w2     vss n w=18u  l=2.3636u ad=90p      pd=28u      as=126p     ps=50u
+m05 w3     a      vss    vss n w=18u  l=2.3636u ad=126p     pd=50u      as=90p      ps=28u
+m06 w4     b      w3     vss n w=18u  l=2.3636u ad=90p      pd=28u      as=126p     ps=50u
+m07 z      c      w4     vss n w=18u  l=2.3636u ad=126p     pd=50u      as=90p      ps=28u
+C0  a      vdd    0.144f
+C1  w3     b      0.043f
+C2  z      c      0.251f
+C3  vss    b      0.026f
+C4  vss    vdd    0.047f
+C5  z      a      0.107f
+C6  c      a      0.052f
+C7  w3     z      0.035f
+C8  b      vdd    0.043f
+C9  vss    z      0.011f
+C10 vss    c      0.014f
+C11 w3     a      0.005f
+C12 vss    a      0.111f
+C13 z      b      0.234f
+C14 z      vdd    0.178f
+C15 c      b      0.168f
+C16 w3     vss    0.103f
+C17 w4     z      0.019f
+C18 c      vdd    0.057f
+C19 b      a      0.121f
+C20 w3     vss    0.002f
+C22 z      vss    0.008f
+C23 c      vss    0.061f
+C24 b      vss    0.061f
+C25 a      vss    0.062f
+.ends

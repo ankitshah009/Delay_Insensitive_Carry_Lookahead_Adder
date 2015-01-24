@@ -1,0 +1,44 @@
+.subckt nd2av0x6 a b vdd vss z
+*   SPICE3 file   created from nd2av0x6.ext -      technology: scmos
+m00 z      b      vdd    vdd p w=24u  l=2.3636u ad=96p      pd=32u      as=113.739p ps=39.3913u
+m01 vdd    an     z      vdd p w=24u  l=2.3636u ad=113.739p pd=39.3913u as=96p      ps=32u
+m02 z      an     vdd    vdd p w=24u  l=2.3636u ad=96p      pd=32u      as=113.739p ps=39.3913u
+m03 vdd    b      z      vdd p w=24u  l=2.3636u ad=113.739p pd=39.3913u as=96p      ps=32u
+m04 z      b      vdd    vdd p w=24u  l=2.3636u ad=96p      pd=32u      as=113.739p ps=39.3913u
+m05 vdd    an     z      vdd p w=24u  l=2.3636u ad=113.739p pd=39.3913u as=96p      ps=32u
+m06 an     a      vdd    vdd p w=24u  l=2.3636u ad=100.8p   pd=38.4u    as=113.739p ps=39.3913u
+m07 vdd    a      an     vdd p w=16u  l=2.3636u ad=75.8261p pd=26.2609u as=67.2p    ps=25.6u
+m08 w1     b      z      vss n w=20u  l=2.3636u ad=50p      pd=25u      as=95.3333p ps=36.6667u
+m09 vss    an     w1     vss n w=20u  l=2.3636u ad=95p      pd=29.5u    as=50p      ps=25u
+m10 w2     an     vss    vss n w=20u  l=2.3636u ad=50p      pd=25u      as=95p      ps=29.5u
+m11 z      b      w2     vss n w=20u  l=2.3636u ad=95.3333p pd=36.6667u as=50p      ps=25u
+m12 w3     b      z      vss n w=20u  l=2.3636u ad=50p      pd=25u      as=95.3333p ps=36.6667u
+m13 vss    an     w3     vss n w=20u  l=2.3636u ad=95p      pd=29.5u    as=50p      ps=25u
+m14 an     a      vss    vss n w=20u  l=2.3636u ad=126p     pd=54u      as=95p      ps=29.5u
+C0  vss    an     0.195f
+C1  w2     b      0.007f
+C2  vss    vdd    0.007f
+C3  w1     b      0.005f
+C4  z      an     0.364f
+C5  z      vdd    0.449f
+C6  a      b      0.045f
+C7  w2     vss    0.005f
+C8  an     vdd    0.211f
+C9  vss    w1     0.005f
+C10 w2     z      0.010f
+C11 vss    a      0.048f
+C12 w1     z      0.010f
+C13 z      a      0.010f
+C14 vss    b      0.103f
+C15 z      b      0.531f
+C16 a      an     0.180f
+C17 w3     vss    0.005f
+C18 a      vdd    0.031f
+C19 an     b      0.648f
+C20 b      vdd    0.058f
+C21 vss    z      0.333f
+C23 z      vss    0.008f
+C24 a      vss    0.040f
+C25 an     vss    0.048f
+C26 b      vss    0.052f
+.ends

@@ -1,0 +1,29 @@
+.subckt an2v2x2 a b vdd vss z
+*   SPICE3 file   created from an2v2x2.ext -      technology: scmos
+m00 vdd    zn     z      vdd p w=28u  l=2.3636u ad=144.968p pd=54.1935u as=166p     ps=70u
+m01 zn     a      vdd    vdd p w=17u  l=2.3636u ad=68p      pd=25u      as=88.0161p ps=32.9032u
+m02 vdd    b      zn     vdd p w=17u  l=2.3636u ad=88.0161p pd=32.9032u as=68p      ps=25u
+m03 vss    zn     z      vss n w=14u  l=2.3636u ad=108.5p   pd=34u      as=98p      ps=42u
+m04 w1     a      vss    vss n w=14u  l=2.3636u ad=35p      pd=19u      as=108.5p   ps=34u
+m05 zn     b      w1     vss n w=14u  l=2.3636u ad=82p      pd=42u      as=35p      ps=19u
+C0  b      a      0.138f
+C1  b      z      0.016f
+C2  a      vdd    0.017f
+C3  vss    zn     0.180f
+C4  vdd    z      0.049f
+C5  a      zn     0.269f
+C6  z      zn     0.350f
+C7  vss    a      0.027f
+C8  w1     zn     0.010f
+C9  b      vdd    0.043f
+C10 vss    z      0.084f
+C11 a      z      0.025f
+C12 b      zn     0.097f
+C13 vdd    zn     0.118f
+C14 w1     a      0.008f
+C15 vss    b      0.016f
+C17 b      vss    0.023f
+C18 a      vss    0.022f
+C20 z      vss    0.008f
+C21 zn     vss    0.016f
+.ends

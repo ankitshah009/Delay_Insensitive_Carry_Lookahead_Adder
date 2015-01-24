@@ -1,0 +1,51 @@
+.subckt o4_x2 i0 i1 i2 i3 q vdd vss
+*   SPICE3 file   created from o4_x2.ext -      technology: scmos
+m00 w1     i3     w2     vdd p w=29u  l=2.3636u ad=87p      pd=35u      as=232p     ps=74u
+m01 w3     i1     w1     vdd p w=29u  l=2.3636u ad=87p      pd=35u      as=87p      ps=35u
+m02 w4     i0     w3     vdd p w=29u  l=2.3636u ad=87p      pd=35u      as=87p      ps=35u
+m03 vdd    i2     w4     vdd p w=29u  l=2.3636u ad=320.706p pd=50.3235u as=87p      ps=35u
+m04 q      w2     vdd    vdd p w=39u  l=2.3636u ad=312p     pd=94u      as=431.294p ps=67.6765u
+m05 w2     i3     vss    vss n w=10u  l=2.3636u ad=51.5385p pd=21.0256u as=73.2759p ps=29.3103u
+m06 vss    i1     w2     vss n w=10u  l=2.3636u ad=73.2759p pd=29.3103u as=51.5385p ps=21.0256u
+m07 w2     i0     vss    vss n w=10u  l=2.3636u ad=51.5385p pd=21.0256u as=73.2759p ps=29.3103u
+m08 vss    i2     w2     vss n w=9u   l=2.3636u ad=65.9483p pd=26.3793u as=46.3846p ps=18.9231u
+m09 q      w2     vss    vss n w=19u  l=2.3636u ad=152p     pd=54u      as=139.224p ps=55.6897u
+C0  w2     vdd    0.347f
+C1  w3     i1     0.013f
+C2  q      w2     0.470f
+C3  vss    q      0.065f
+C4  i2     i1     0.125f
+C5  w3     w2     0.012f
+C6  i0     i3     0.127f
+C7  i2     w2     0.335f
+C8  vss    i2     0.011f
+C9  i1     w2     0.126f
+C10 i0     vdd    0.013f
+C11 vss    i1     0.011f
+C12 q      i0     0.054f
+C13 i3     vdd    0.011f
+C14 vss    w2     0.230f
+C15 w1     i1     0.013f
+C16 q      vdd    0.080f
+C17 i2     i0     0.330f
+C18 w4     w2     0.012f
+C19 i0     i1     0.335f
+C20 i2     i3     0.078f
+C21 w1     w2     0.012f
+C22 i0     w2     0.165f
+C23 i1     i3     0.340f
+C24 i2     vdd    0.046f
+C25 q      i2     0.087f
+C26 vss    i0     0.011f
+C27 i3     w2     0.092f
+C28 i1     vdd    0.012f
+C29 q      i1     0.039f
+C30 vss    i3     0.011f
+C31 w4     i0     0.022f
+C33 q      vss    0.011f
+C34 i2     vss    0.035f
+C35 i0     vss    0.032f
+C36 i1     vss    0.029f
+C37 i3     vss    0.030f
+C38 w2     vss    0.041f
+.ends

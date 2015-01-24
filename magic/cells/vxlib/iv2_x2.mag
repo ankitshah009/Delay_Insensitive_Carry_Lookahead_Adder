@@ -1,0 +1,72 @@
+magic
+tech scmos
+magscale 1 11
+timestamp 1066583233
+<< checkpaint >>
+rect -275 -220 605 1381
+<< nwell >>
+rect -55 555 385 1161
+<< polysilicon >>
+rect 165 1034 187 1078
+rect 165 822 173 1034
+rect 165 718 187 822
+rect 179 616 187 718
+rect 165 583 187 616
+rect 165 572 253 583
+rect 165 528 198 572
+rect 242 528 253 572
+rect 165 517 253 528
+rect 165 399 187 517
+rect 165 289 173 399
+rect 179 151 187 261
+rect 165 77 187 151
+<< pdiffusion >>
+rect 187 1023 275 1034
+rect 187 979 220 1023
+rect 264 979 275 1023
+rect 187 968 275 979
+rect 187 924 242 968
+rect 187 913 275 924
+rect 187 869 220 913
+rect 264 869 275 913
+rect 187 858 275 869
+rect 187 822 242 858
+rect 110 682 165 718
+rect 77 671 165 682
+rect 77 627 88 671
+rect 132 627 165 671
+rect 77 616 165 627
+<< metal1 >>
+rect -22 1023 352 1100
+rect -22 979 220 1023
+rect 264 979 352 1023
+rect -22 968 352 979
+rect 220 913 264 968
+rect 88 671 132 913
+rect 220 858 264 869
+rect 88 352 132 627
+rect 198 572 242 803
+rect 198 407 242 528
+rect 88 308 275 352
+rect 88 132 132 253
+rect -22 0 352 132
+<< ntransistor >>
+rect 173 289 187 399
+rect 165 261 187 289
+rect 165 151 179 261
+<< ptransistor >>
+rect 173 822 187 1034
+rect 165 616 179 718
+<< polycontact >>
+rect 198 528 242 572
+<< pdcontact >>
+rect 220 979 264 1023
+rect 220 869 264 913
+rect 88 627 132 671
+<< labels >>
+rlabel metal1 110 605 110 605 6 z
+rlabel metal1 165 66 165 66 6 vss
+rlabel metal1 187 330 187 330 6 z
+rlabel metal1 220 605 220 605 6 a
+rlabel metal1 165 1034 165 1034 6 vdd
+<< end >>

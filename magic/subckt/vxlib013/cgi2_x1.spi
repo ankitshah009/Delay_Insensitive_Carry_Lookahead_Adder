@@ -1,0 +1,47 @@
+.subckt cgi2_x1 a b c vdd vss z
+*   SPICE3 file   created from cgi2_x1.ext -      technology: scmos
+m00 vdd    a      n2     vdd p w=39u  l=2.3636u ad=234p     pd=64u      as=209p     ps=64u
+m01 w1     a      vdd    vdd p w=39u  l=2.3636u ad=117p     pd=45u      as=234p     ps=64u
+m02 z      b      w1     vdd p w=39u  l=2.3636u ad=195p     pd=49u      as=117p     ps=45u
+m03 n2     c      z      vdd p w=39u  l=2.3636u ad=209p     pd=64u      as=195p     ps=49u
+m04 vdd    b      n2     vdd p w=39u  l=2.3636u ad=234p     pd=64u      as=209p     ps=64u
+m05 vss    a      n4     vss n w=18u  l=2.3636u ad=128p     pd=42.6667u as=104p     ps=36u
+m06 w2     a      vss    vss n w=18u  l=2.3636u ad=54p      pd=24u      as=128p     ps=42.6667u
+m07 z      b      w2     vss n w=18u  l=2.3636u ad=90p      pd=28u      as=54p      ps=24u
+m08 n4     c      z      vss n w=18u  l=2.3636u ad=104p     pd=36u      as=90p      ps=28u
+m09 vss    b      n4     vss n w=18u  l=2.3636u ad=128p     pd=42.6667u as=104p     ps=36u
+C0  vss    n4     0.342f
+C1  w2     z      0.017f
+C2  n2     b      0.023f
+C3  vdd    a      0.025f
+C4  n4     z      0.148f
+C5  c      a      0.055f
+C6  z      w1     0.017f
+C7  z      n2     0.107f
+C8  n4     c      0.017f
+C9  w1     vdd    0.011f
+C10 vss    b      0.040f
+C11 z      b      0.249f
+C12 n4     a      0.039f
+C13 vdd    n2     0.326f
+C14 w2     n4     0.012f
+C15 vdd    b      0.031f
+C16 n2     c      0.095f
+C17 vss    z      0.039f
+C18 n2     a      0.069f
+C19 c      b      0.337f
+C20 b      a      0.158f
+C21 z      vdd    0.039f
+C22 n4     n2     0.004f
+C23 vss    c      0.010f
+C24 w1     n2     0.031f
+C25 vss    a      0.019f
+C26 z      c      0.111f
+C27 n4     b      0.071f
+C28 z      a      0.074f
+C29 vdd    c      0.049f
+C31 z      vss    0.010f
+C33 c      vss    0.022f
+C34 b      vss    0.057f
+C35 a      vss    0.047f
+.ends

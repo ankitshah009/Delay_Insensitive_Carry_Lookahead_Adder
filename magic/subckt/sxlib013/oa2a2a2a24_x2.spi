@@ -1,0 +1,109 @@
+.subckt oa2a2a2a24_x2 i0 i1 i2 i3 i4 i5 i6 i7 q vdd vss
+*   SPICE3 file   created from oa2a2a2a24_x2.ext -      technology: scmos
+m00 w1     i7     w2     vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=260p     ps=73u
+m01 w2     i6     w1     vdd p w=40u  l=2.3636u ad=260p     pd=73u      as=200p     ps=50u
+m02 w2     i5     w3     vdd p w=40u  l=2.3636u ad=260p     pd=73u      as=260p     ps=73u
+m03 w3     i4     w2     vdd p w=40u  l=2.3636u ad=260p     pd=73u      as=260p     ps=73u
+m04 w4     i3     w3     vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=260p     ps=73u
+m05 w3     i2     w4     vdd p w=40u  l=2.3636u ad=260p     pd=73u      as=200p     ps=50u
+m06 w4     i1     vdd    vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=240p     ps=65.3333u
+m07 vdd    i0     w4     vdd p w=40u  l=2.3636u ad=240p     pd=65.3333u as=200p     ps=50u
+m08 q      w1     vdd    vdd p w=40u  l=2.3636u ad=320p     pd=96u      as=240p     ps=65.3333u
+m09 w5     i7     vss    vss n w=20u  l=2.3636u ad=100p     pd=30u      as=136p     ps=45.6u
+m10 w1     i6     w5     vss n w=20u  l=2.3636u ad=130p     pd=43u      as=100p     ps=30u
+m11 w6     i5     vss    vss n w=20u  l=2.3636u ad=60p      pd=26u      as=136p     ps=45.6u
+m12 w1     i4     w6     vss n w=20u  l=2.3636u ad=130p     pd=43u      as=60p      ps=26u
+m13 w7     i3     w1     vss n w=20u  l=2.3636u ad=60p      pd=26u      as=130p     ps=43u
+m14 vss    i2     w7     vss n w=20u  l=2.3636u ad=136p     pd=45.6u    as=60p      ps=26u
+m15 w8     i1     w1     vss n w=20u  l=2.3636u ad=60p      pd=26u      as=130p     ps=43u
+m16 vss    i0     w8     vss n w=20u  l=2.3636u ad=136p     pd=45.6u    as=60p      ps=26u
+m17 q      w1     vss    vss n w=20u  l=2.3636u ad=160p     pd=56u      as=136p     ps=45.6u
+C0  w1     i1     0.159f
+C1  vdd    i5     0.012f
+C2  w3     i3     0.039f
+C3  vss    i7     0.053f
+C4  i5     i6     0.100f
+C5  w5     w1     0.016f
+C6  vdd    w4     0.277f
+C7  i0     i2     0.017f
+C8  w3     i5     0.020f
+C9  w1     i3     0.065f
+C10 vdd    i7     0.012f
+C11 w2     i4     0.008f
+C12 w8     vss    0.014f
+C13 i6     i7     0.133f
+C14 q      w1     0.095f
+C15 vss    i0     0.030f
+C16 w4     w3     0.177f
+C17 vdd    w2     0.319f
+C18 w1     i5     0.091f
+C19 w2     i6     0.062f
+C20 i1     i3     0.040f
+C21 w6     vss    0.014f
+C22 q      i1     0.046f
+C23 vss    i2     0.017f
+C24 w4     w1     0.007f
+C25 w3     w2     0.209f
+C26 vdd    i0     0.089f
+C27 i2     i4     0.108f
+C28 w1     i7     0.273f
+C29 w2     w1     0.129f
+C30 vss    i4     0.017f
+C31 w4     i1     0.043f
+C32 vdd    i2     0.012f
+C33 i3     i5     0.108f
+C34 w1     i0     0.108f
+C35 vdd    i4     0.012f
+C36 w3     i2     0.017f
+C37 w4     i3     0.004f
+C38 w5     i7     0.004f
+C39 vss    i6     0.017f
+C40 i4     i6     0.062f
+C41 q      w4     0.027f
+C42 w6     w1     0.012f
+C43 vdd    i6     0.012f
+C44 w3     i4     0.024f
+C45 i0     i1     0.147f
+C46 w1     i2     0.087f
+C47 i5     i7     0.047f
+C48 vss    w1     0.709f
+C49 vdd    w3     0.446f
+C50 i1     i2     0.056f
+C51 w1     i4     0.083f
+C52 w2     i5     0.050f
+C53 w7     vss    0.014f
+C54 q      i0     0.340f
+C55 w4     w2     0.012f
+C56 vdd    w1     0.043f
+C57 vss    i1     0.027f
+C58 w2     i7     0.039f
+C59 w1     i6     0.248f
+C60 i2     i3     0.360f
+C61 w5     vss    0.023f
+C62 vss    i3     0.017f
+C63 w4     i0     0.017f
+C64 w3     w1     0.004f
+C65 vdd    i1     0.026f
+C66 i3     i4     0.332f
+C67 i2     i5     0.065f
+C68 vss    q      0.079f
+C69 w4     i2     0.056f
+C70 vss    i5     0.017f
+C71 vdd    i3     0.012f
+C72 i3     i6     0.033f
+C73 i4     i5     0.360f
+C74 w7     w1     0.012f
+C75 q      vdd    0.138f
+C77 q      vss    0.022f
+C79 w4     vss    0.005f
+C80 w2     vss    0.003f
+C81 w1     vss    0.073f
+C82 i0     vss    0.035f
+C83 i1     vss    0.032f
+C84 i2     vss    0.032f
+C85 i3     vss    0.030f
+C86 i4     vss    0.030f
+C87 i5     vss    0.030f
+C88 i6     vss    0.041f
+C89 i7     vss    0.032f
+.ends

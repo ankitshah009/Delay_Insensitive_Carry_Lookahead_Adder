@@ -1,0 +1,16 @@
+.subckt rowend_x0 vdd vss
+*   SPICE3 file   created from rowend_x0.ext -      technology: scmos
+m00 w1     w2     w3     vdd p w=28u  l=2.3636u ad=176p     pd=50u      as=196p     ps=70u
+m01 w4     w5     w1     vdd p w=28u  l=2.3636u ad=196p     pd=70u      as=176p     ps=50u
+m02 w6     w2     w7     vss n w=20u  l=2.3636u ad=136p     pd=42u      as=140p     ps=54u
+m03 w8     w5     w6     vss n w=20u  l=2.3636u ad=140p     pd=54u      as=136p     ps=42u
+C0  vss    w6     0.017f
+C1  w5     vdd    0.025f
+C2  vss    w5     0.007f
+C3  w2     vdd    0.025f
+C4  vss    w2     0.007f
+C5  w5     w2     0.065f
+C6  w1     vdd    0.020f
+C8  w5     vss    0.043f
+C9  w2     vss    0.043f
+.ends

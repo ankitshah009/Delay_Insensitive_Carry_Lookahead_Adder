@@ -1,0 +1,46 @@
+.subckt aon21bv0x3 a1 a2 b vdd vss z
+*   SPICE3 file   created from aon21bv0x3.ext -      technology: scmos
+m00 z      an     vdd    vdd p w=17u  l=2.3636u ad=68p      pd=25u      as=92.0593p ps=33.1356u
+m01 vdd    b      z      vdd p w=17u  l=2.3636u ad=92.0593p pd=33.1356u as=68p      ps=25u
+m02 z      b      vdd    vdd p w=17u  l=2.3636u ad=68p      pd=25u      as=92.0593p ps=33.1356u
+m03 vdd    an     z      vdd p w=17u  l=2.3636u ad=92.0593p pd=33.1356u as=68p      ps=25u
+m04 an     a1     vdd    vdd p w=25u  l=2.3636u ad=100p     pd=33u      as=135.381p ps=48.7288u
+m05 vdd    a2     an     vdd p w=25u  l=2.3636u ad=135.381p pd=48.7288u as=100p     ps=33u
+m06 w1     an     vss    vss n w=11u  l=2.3636u ad=27.5p    pd=16u      as=86.3958p ps=28.4167u
+m07 z      b      w1     vss n w=11u  l=2.3636u ad=46.3571p pd=19.6429u as=27.5p    ps=16u
+m08 w2     b      z      vss n w=17u  l=2.3636u ad=42.5p    pd=22u      as=71.6429p ps=30.3571u
+m09 vss    an     w2     vss n w=17u  l=2.3636u ad=133.521p pd=43.9167u as=42.5p    ps=22u
+m10 w3     a1     vss    vss n w=20u  l=2.3636u ad=50p      pd=25u      as=157.083p ps=51.6667u
+m11 an     a2     w3     vss n w=20u  l=2.3636u ad=112p     pd=54u      as=50p      ps=25u
+C0  w3     vss    0.005f
+C1  vdd    an     0.185f
+C2  a2     b      0.023f
+C3  a1     an     0.345f
+C4  w3     a1     0.009f
+C5  vss    z      0.177f
+C6  vss    a2     0.032f
+C7  z      vdd    0.221f
+C8  w3     an     0.010f
+C9  vdd    a2     0.017f
+C10 vss    b      0.020f
+C11 w1     an     0.006f
+C12 z      a1     0.003f
+C13 vdd    b      0.029f
+C14 z      an     0.409f
+C15 a2     a1     0.145f
+C16 a2     an     0.117f
+C17 a1     b      0.046f
+C18 w1     z      0.006f
+C19 b      an     0.352f
+C20 vss    vdd    0.003f
+C21 vss    a1     0.029f
+C22 w2     an     0.011f
+C23 vss    an     0.278f
+C24 z      b      0.168f
+C25 vdd    a1     0.031f
+C27 z      vss    0.012f
+C29 a2     vss    0.026f
+C30 a1     vss    0.019f
+C31 b      vss    0.039f
+C32 an     vss    0.043f
+.ends

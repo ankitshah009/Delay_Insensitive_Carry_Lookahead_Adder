@@ -1,0 +1,52 @@
+.subckt mx2_x4 cmd i0 i1 q vdd vss
+*   SPICE3 file   created from mx2_x4.ext -      technology: scmos
+m00 vdd    cmd    w1     vdd p w=20u  l=2.3636u ad=166.857p pd=41.1429u as=160p     ps=56u
+m01 w2     i0     vdd    vdd p w=20u  l=2.3636u ad=60p      pd=26u      as=166.857p ps=41.1429u
+m02 w3     cmd    w2     vdd p w=20u  l=2.3636u ad=140p     pd=34u      as=60p      ps=26u
+m03 w4     w1     w3     vdd p w=20u  l=2.3636u ad=60p      pd=26u      as=140p     ps=34u
+m04 vdd    i1     w4     vdd p w=20u  l=2.3636u ad=166.857p pd=41.1429u as=60p      ps=26u
+m05 q      w3     vdd    vdd p w=40u  l=2.3636u ad=200p     pd=50u      as=333.714p ps=82.2857u
+m06 vdd    w3     q      vdd p w=40u  l=2.3636u ad=333.714p pd=82.2857u as=200p     ps=50u
+m07 vss    cmd    w1     vss n w=10u  l=2.3636u ad=85.7143p pd=24.5714u as=140p     ps=56u
+m08 w5     i0     vss    vss n w=10u  l=2.3636u ad=30p      pd=16u      as=85.7143p ps=24.5714u
+m09 w3     w1     w5     vss n w=10u  l=2.3636u ad=142p     pd=42u      as=30p      ps=16u
+m10 w6     cmd    w3     vss n w=10u  l=2.3636u ad=30p      pd=16u      as=142p     ps=42u
+m11 vss    i1     w6     vss n w=10u  l=2.3636u ad=85.7143p pd=24.5714u as=30p      ps=16u
+m12 q      w3     vss    vss n w=20u  l=2.3636u ad=100p     pd=30u      as=171.429p ps=49.1429u
+m13 vss    w3     q      vss n w=20u  l=2.3636u ad=171.429p pd=49.1429u as=100p     ps=30u
+C0  q      w1     0.049f
+C1  vss    i0     0.018f
+C2  q      vdd    0.410f
+C3  vss    w3     0.058f
+C4  w5     vss    0.014f
+C5  i1     i0     0.066f
+C6  w2     cmd    0.026f
+C7  vss    q      0.160f
+C8  w1     vdd    0.060f
+C9  i1     w3     0.165f
+C10 w1     cmd    0.279f
+C11 cmd    vdd    0.068f
+C12 i0     w3     0.115f
+C13 vss    w1     0.357f
+C14 q      i1     0.139f
+C15 vss    vdd    0.011f
+C16 vss    cmd    0.022f
+C17 w6     vss    0.014f
+C18 i1     w1     0.283f
+C19 q      w3     0.124f
+C20 i1     vdd    0.291f
+C21 i1     cmd    0.141f
+C22 w1     i0     0.315f
+C23 i0     vdd    0.074f
+C24 w1     w3     0.320f
+C25 i0     cmd    0.570f
+C26 vss    i1     0.097f
+C27 w3     vdd    0.098f
+C28 cmd    w3     0.481f
+C30 q      vss    0.020f
+C31 i1     vss    0.046f
+C32 w1     vss    0.063f
+C33 i0     vss    0.043f
+C34 cmd    vss    0.083f
+C35 w3     vss    0.067f
+.ends

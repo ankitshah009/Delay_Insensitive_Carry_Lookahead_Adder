@@ -1,0 +1,56 @@
+.subckt nd3v5x6 a b c vdd vss z
+*   SPICE3 file   created from nd3v5x6.ext -      technology: scmos
+m00 z      a      vdd    vdd p w=27u  l=2.3636u ad=113.889p pd=38.6667u as=168p     ps=48.4444u
+m01 vdd    a      z      vdd p w=27u  l=2.3636u ad=168p     pd=48.4444u as=113.889p ps=38.6667u
+m02 z      a      vdd    vdd p w=27u  l=2.3636u ad=113.889p pd=38.6667u as=168p     ps=48.4444u
+m03 vdd    b      z      vdd p w=27u  l=2.3636u ad=168p     pd=48.4444u as=113.889p ps=38.6667u
+m04 z      b      vdd    vdd p w=27u  l=2.3636u ad=113.889p pd=38.6667u as=168p     ps=48.4444u
+m05 vdd    b      z      vdd p w=27u  l=2.3636u ad=168p     pd=48.4444u as=113.889p ps=38.6667u
+m06 vdd    c      z      vdd p w=27u  l=2.3636u ad=168p     pd=48.4444u as=113.889p ps=38.6667u
+m07 z      c      vdd    vdd p w=27u  l=2.3636u ad=113.889p pd=38.6667u as=168p     ps=48.4444u
+m08 vdd    c      z      vdd p w=27u  l=2.3636u ad=168p     pd=48.4444u as=113.889p ps=38.6667u
+m09 vss    a      n1     vss n w=20u  l=2.3636u ad=80p      pd=28u      as=85.75p   ps=32.25u
+m10 n1     a      vss    vss n w=20u  l=2.3636u ad=85.75p   pd=32.25u   as=80p      ps=28u
+m11 vss    a      n1     vss n w=20u  l=2.3636u ad=80p      pd=28u      as=85.75p   ps=32.25u
+m12 n1     a      vss    vss n w=20u  l=2.3636u ad=85.75p   pd=32.25u   as=80p      ps=28u
+m13 n2     b      n1     vss n w=20u  l=2.3636u ad=88.25p   pd=34.75u   as=85.75p   ps=32.25u
+m14 n1     b      n2     vss n w=20u  l=2.3636u ad=85.75p   pd=32.25u   as=88.25p   ps=34.75u
+m15 n2     b      n1     vss n w=20u  l=2.3636u ad=88.25p   pd=34.75u   as=85.75p   ps=32.25u
+m16 n1     b      n2     vss n w=10u  l=2.3636u ad=42.875p  pd=16.125u  as=44.125p  ps=17.375u
+m17 n2     b      n1     vss n w=10u  l=2.3636u ad=44.125p  pd=17.375u  as=42.875p  ps=16.125u
+m18 z      c      n2     vss n w=20u  l=2.3636u ad=80p      pd=28u      as=88.25p   ps=34.75u
+m19 n2     c      z      vss n w=20u  l=2.3636u ad=88.25p   pd=34.75u   as=80p      ps=28u
+m20 z      c      n2     vss n w=20u  l=2.3636u ad=80p      pd=28u      as=88.25p   ps=34.75u
+m21 n2     c      z      vss n w=20u  l=2.3636u ad=88.25p   pd=34.75u   as=80p      ps=28u
+C0  vss    vdd    0.007f
+C1  z      b      0.186f
+C2  n1     a      0.213f
+C3  z      vdd    0.401f
+C4  n2     vss    0.383f
+C5  b      vdd    0.036f
+C6  vss    n1     0.551f
+C7  n2     z      0.485f
+C8  vss    c      0.038f
+C9  n2     b      0.120f
+C10 n1     z      0.105f
+C11 n2     vdd    0.052f
+C12 z      c      0.161f
+C13 n1     b      0.126f
+C14 vss    a      0.053f
+C15 z      a      0.040f
+C16 c      b      0.064f
+C17 n1     vdd    0.035f
+C18 b      a      0.128f
+C19 c      vdd    0.037f
+C20 n2     n1     0.412f
+C21 a      vdd    0.040f
+C22 n2     c      0.066f
+C23 vss    z      0.168f
+C24 vss    b      0.046f
+C25 n2     vss    0.008f
+C27 n1     vss    0.002f
+C28 z      vss    0.005f
+C29 c      vss    0.069f
+C30 b      vss    0.085f
+C31 a      vss    0.071f
+.ends

@@ -1,0 +1,63 @@
+.subckt xaon22_x1 a1 a2 b1 b2 vdd vss z
+*   SPICE3 file   created from xaon22_x1.ext -      technology: scmos
+m00 vdd    a1     an     vdd p w=35u  l=2.3636u ad=245p     pd=49u      as=189p     ps=58.6667u
+m01 an     a2     vdd    vdd p w=35u  l=2.3636u ad=189p     pd=58.6667u as=245p     ps=49u
+m02 z      bn     an     vdd p w=35u  l=2.3636u ad=175p     pd=45u      as=189p     ps=58.6667u
+m03 bn     an     z      vdd p w=35u  l=2.3636u ad=235.667p pd=61.3333u as=175p     ps=45u
+m04 vdd    b1     bn     vdd p w=35u  l=2.3636u ad=245p     pd=49u      as=235.667p ps=61.3333u
+m05 bn     b2     vdd    vdd p w=35u  l=2.3636u ad=235.667p pd=61.3333u as=245p     ps=49u
+m06 w1     a1     vss    vss n w=33u  l=2.3636u ad=99p      pd=39u      as=230.554p ps=66.8919u
+m07 an     a2     w1     vss n w=33u  l=2.3636u ad=165p     pd=50.6786u as=99p      ps=39u
+m08 w2     b2     an     vss n w=23u  l=2.3636u ad=69p      pd=29u      as=115p     ps=35.3214u
+m09 z      b1     w2     vss n w=23u  l=2.3636u ad=115p     pd=37.0244u as=69p      ps=29u
+m10 w3     bn     z      vss n w=18u  l=2.3636u ad=54p      pd=24u      as=90p      ps=28.9756u
+m11 vss    an     w3     vss n w=18u  l=2.3636u ad=125.757p pd=36.4865u as=54p      ps=24u
+m12 w4     b1     vss    vss n w=23u  l=2.3636u ad=69p      pd=29u      as=160.689p ps=46.6216u
+m13 bn     b2     w4     vss n w=23u  l=2.3636u ad=133p     pd=62u      as=69p      ps=29u
+C0  b1     a2     0.010f
+C1  b2     a1     0.005f
+C2  an     bn     0.500f
+C3  w3     an     0.022f
+C4  an     a1     0.065f
+C5  bn     a2     0.059f
+C6  z      b2     0.033f
+C7  vss    b1     0.028f
+C8  a2     a1     0.142f
+C9  vss    bn     0.024f
+C10 vdd    b1     0.091f
+C11 z      an     0.551f
+C12 vss    a1     0.053f
+C13 b2     an     0.085f
+C14 vdd    bn     0.267f
+C15 z      a2     0.131f
+C16 w4     b2     0.029f
+C17 w1     vss    0.011f
+C18 w2     z      0.016f
+C19 vdd    a1     0.018f
+C20 b2     a2     0.008f
+C21 b1     bn     0.341f
+C22 vss    z      0.044f
+C23 an     a2     0.212f
+C24 vss    b2     0.236f
+C25 z      vdd    0.039f
+C26 w2     an     0.012f
+C27 bn     a1     0.023f
+C28 vss    an     0.265f
+C29 vdd    b2     0.005f
+C30 z      b1     0.032f
+C31 z      bn     0.058f
+C32 vss    a2     0.010f
+C33 vdd    an     0.327f
+C34 b2     b1     0.322f
+C35 b2     bn     0.121f
+C36 b1     an     0.109f
+C37 vdd    a2     0.041f
+C38 z      a1     0.035f
+C40 z      vss    0.007f
+C42 b2     vss    0.050f
+C43 b1     vss    0.044f
+C44 an     vss    0.032f
+C45 bn     vss    0.048f
+C46 a2     vss    0.027f
+C47 a1     vss    0.027f
+.ends

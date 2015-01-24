@@ -1,0 +1,4 @@
+.subckt tie_x0 vdd vss
+*   SPICE3 file   created from tie_x0.ext -      technology: scmos
+C0  vss    vdd    0.015f
+.ends

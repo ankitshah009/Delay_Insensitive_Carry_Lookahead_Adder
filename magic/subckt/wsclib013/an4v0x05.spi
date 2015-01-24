@@ -1,0 +1,51 @@
+.subckt an4v0x05 a b c d vdd vss z
+*   SPICE3 file   created from an4v0x05.ext -      technology: scmos
+m00 vdd    zn     z      vdd p w=12u  l=2.3636u ad=79.8462p pd=32.7692u as=72p      ps=38u
+m01 zn     a      vdd    vdd p w=10u  l=2.3636u ad=40p      pd=18u      as=66.5385p ps=27.3077u
+m02 vdd    b      zn     vdd p w=10u  l=2.3636u ad=66.5385p pd=27.3077u as=40p      ps=18u
+m03 zn     c      vdd    vdd p w=10u  l=2.3636u ad=40p      pd=18u      as=66.5385p ps=27.3077u
+m04 vdd    d      zn     vdd p w=10u  l=2.3636u ad=66.5385p pd=27.3077u as=40p      ps=18u
+m05 vss    zn     z      vss n w=6u   l=2.3636u ad=88.6667p pd=24.6667u as=42p      ps=26u
+m06 w1     a      vss    vss n w=12u  l=2.3636u ad=30p      pd=17u      as=177.333p ps=49.3333u
+m07 w2     b      w1     vss n w=12u  l=2.3636u ad=30p      pd=17u      as=30p      ps=17u
+m08 w3     c      w2     vss n w=12u  l=2.3636u ad=30p      pd=17u      as=30p      ps=17u
+m09 zn     d      w3     vss n w=12u  l=2.3636u ad=72p      pd=38u      as=30p      ps=17u
+C0  a      vdd    0.019f
+C1  vss    c      0.021f
+C2  z      d      0.003f
+C3  w2     a      0.007f
+C4  zn     c      0.079f
+C5  z      b      0.016f
+C6  vss    a      0.034f
+C7  z      vdd    0.053f
+C8  d      b      0.054f
+C9  zn     a      0.252f
+C10 w3     zn     0.006f
+C11 c      a      0.043f
+C12 d      vdd    0.026f
+C13 vss    z      0.081f
+C14 w1     zn     0.006f
+C15 b      vdd    0.044f
+C16 z      zn     0.212f
+C17 vss    d      0.048f
+C18 z      c      0.003f
+C19 vss    b      0.020f
+C20 zn     d      0.131f
+C21 w1     a      0.007f
+C22 d      c      0.272f
+C23 zn     b      0.215f
+C24 z      a      0.020f
+C25 d      a      0.047f
+C26 c      b      0.204f
+C27 zn     vdd    0.297f
+C28 w2     zn     0.006f
+C29 b      a      0.163f
+C30 c      vdd    0.045f
+C31 vss    zn     0.274f
+C33 z      vss    0.019f
+C34 zn     vss    0.034f
+C35 d      vss    0.038f
+C36 c      vss    0.032f
+C37 b      vss    0.032f
+C38 a      vss    0.026f
+.ends

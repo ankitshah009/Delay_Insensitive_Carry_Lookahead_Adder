@@ -1,0 +1,216 @@
+magic
+tech scmos
+timestamp 1180640052
+<< checkpaint >>
+rect -24 -26 84 126
+<< ab >>
+rect 0 0 60 100
+<< pwell >>
+rect -4 -6 64 49
+<< nwell >>
+rect -4 49 64 106
+<< polysilicon >>
+rect 7 82 13 83
+rect 7 78 8 82
+rect 12 78 13 82
+rect 7 77 13 78
+rect 11 73 13 77
+rect 23 75 25 80
+rect 35 75 37 80
+rect 47 73 49 78
+rect 11 39 13 55
+rect 23 52 25 55
+rect 17 51 25 52
+rect 17 47 18 51
+rect 22 48 25 51
+rect 22 47 29 48
+rect 17 46 29 47
+rect 11 25 13 30
+rect 27 24 29 46
+rect 35 42 37 55
+rect 47 52 49 55
+rect 42 51 49 52
+rect 42 47 43 51
+rect 47 47 49 51
+rect 42 46 49 47
+rect 35 41 43 42
+rect 35 37 38 41
+rect 42 37 43 41
+rect 35 36 43 37
+rect 35 24 37 36
+rect 47 33 49 46
+rect 47 19 49 24
+rect 27 2 29 7
+rect 35 2 37 7
+<< ndiffusion >>
+rect 3 35 11 39
+rect 3 31 4 35
+rect 8 31 11 35
+rect 3 30 11 31
+rect 13 38 21 39
+rect 13 34 16 38
+rect 20 34 21 38
+rect 13 33 21 34
+rect 13 30 18 33
+rect 39 32 47 33
+rect 39 28 40 32
+rect 44 28 47 32
+rect 39 24 47 28
+rect 49 32 57 33
+rect 49 28 52 32
+rect 56 28 57 32
+rect 49 27 57 28
+rect 49 24 54 27
+rect 19 23 27 24
+rect 19 19 20 23
+rect 24 19 27 23
+rect 19 18 27 19
+rect 22 7 27 18
+rect 29 7 35 24
+rect 37 22 45 24
+rect 37 18 40 22
+rect 44 18 45 22
+rect 37 12 45 18
+rect 37 8 40 12
+rect 44 8 45 12
+rect 37 7 45 8
+<< pdiffusion >>
+rect 15 82 21 83
+rect 15 78 16 82
+rect 20 78 21 82
+rect 39 82 45 83
+rect 15 75 21 78
+rect 39 78 40 82
+rect 44 78 45 82
+rect 39 75 45 78
+rect 15 73 23 75
+rect 6 61 11 73
+rect 3 60 11 61
+rect 3 56 4 60
+rect 8 56 11 60
+rect 3 55 11 56
+rect 13 55 23 73
+rect 25 72 35 75
+rect 25 68 28 72
+rect 32 68 35 72
+rect 25 62 35 68
+rect 25 58 28 62
+rect 32 58 35 62
+rect 25 55 35 58
+rect 37 73 45 75
+rect 37 55 47 73
+rect 49 61 54 73
+rect 49 60 57 61
+rect 49 56 52 60
+rect 56 56 57 60
+rect 49 55 57 56
+<< metal1 >>
+rect -2 88 62 100
+rect 8 82 12 83
+rect 8 73 12 78
+rect 16 82 20 88
+rect 16 77 20 78
+rect 40 82 44 88
+rect 40 77 44 78
+rect 8 67 22 73
+rect 4 60 8 61
+rect 18 57 22 67
+rect 28 72 32 73
+rect 28 62 32 68
+rect 4 51 8 56
+rect 4 47 18 51
+rect 22 47 23 51
+rect 16 38 20 47
+rect 4 35 8 36
+rect 16 33 20 34
+rect 4 12 8 31
+rect 28 23 32 58
+rect 38 68 53 73
+rect 38 51 42 68
+rect 52 60 56 61
+rect 38 47 43 51
+rect 47 47 48 51
+rect 52 41 56 56
+rect 37 37 38 41
+rect 42 37 56 41
+rect 18 19 20 23
+rect 24 19 32 23
+rect 18 17 32 19
+rect 40 32 44 33
+rect 40 22 44 28
+rect 52 32 56 37
+rect 52 27 56 28
+rect 40 12 44 18
+rect -2 8 40 12
+rect 44 8 62 12
+rect -2 0 62 8
+<< ntransistor >>
+rect 11 30 13 39
+rect 47 24 49 33
+rect 27 7 29 24
+rect 35 7 37 24
+<< ptransistor >>
+rect 11 55 13 73
+rect 23 55 25 75
+rect 35 55 37 75
+rect 47 55 49 73
+<< polycontact >>
+rect 8 78 12 82
+rect 18 47 22 51
+rect 43 47 47 51
+rect 38 37 42 41
+<< ndcontact >>
+rect 4 31 8 35
+rect 16 34 20 38
+rect 40 28 44 32
+rect 52 28 56 32
+rect 20 19 24 23
+rect 40 18 44 22
+rect 40 8 44 12
+<< pdcontact >>
+rect 16 78 20 82
+rect 40 78 44 82
+rect 4 56 8 60
+rect 28 68 32 72
+rect 28 58 32 62
+rect 52 56 56 60
+<< psubstratepcontact >>
+rect 8 4 12 8
+<< nsubstratencontact >>
+rect 8 92 12 96
+rect 18 92 22 96
+<< psubstratepdiff >>
+rect 7 8 13 9
+rect 7 4 8 8
+rect 12 4 13 8
+rect 7 3 13 4
+<< nsubstratendiff >>
+rect 7 96 23 97
+rect 7 92 8 96
+rect 12 92 18 96
+rect 22 92 23 96
+rect 7 91 23 92
+<< labels >>
+rlabel polycontact 21 49 21 49 6 bn
+rlabel metal1 6 54 6 54 6 bn
+rlabel metal1 10 75 10 75 6 b
+rlabel metal1 10 75 10 75 6 b
+rlabel metal1 20 20 20 20 6 z
+rlabel metal1 20 20 20 20 6 z
+rlabel metal1 18 42 18 42 6 bn
+rlabel metal1 13 49 13 49 6 bn
+rlabel metal1 20 65 20 65 6 b
+rlabel metal1 20 65 20 65 6 b
+rlabel metal1 30 6 30 6 6 vss
+rlabel metal1 30 6 30 6 6 vss
+rlabel metal1 30 45 30 45 6 z
+rlabel metal1 30 45 30 45 6 z
+rlabel metal1 40 60 40 60 6 a
+rlabel metal1 40 60 40 60 6 a
+rlabel metal1 30 94 30 94 6 vdd
+rlabel metal1 30 94 30 94 6 vdd
+rlabel metal1 46 39 46 39 6 an
+rlabel metal1 54 44 54 44 6 an
+rlabel metal1 50 70 50 70 6 a
+rlabel metal1 50 70 50 70 6 a
+<< end >>

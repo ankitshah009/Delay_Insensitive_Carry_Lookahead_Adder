@@ -1,0 +1,1 @@
+.subckt sff3_x4 ck cmd0 cmd1 i0 i1 i2 q vdd vss

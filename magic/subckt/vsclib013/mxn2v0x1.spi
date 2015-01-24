@@ -1,0 +1,53 @@
+.subckt mxn2v0x1 a0 a1 s vdd vss z
+*   SPICE3 file   created from mxn2v0x1.ext -      technology: scmos
+m00 vdd    zn     z      vdd p w=18u  l=2.3636u ad=96.2069p pd=39.1034u as=102p     ps=50u
+m01 w1     a0     vdd    vdd p w=16u  l=2.3636u ad=40p      pd=21u      as=85.5172p ps=34.7586u
+m02 zn     s      w1     vdd p w=16u  l=2.3636u ad=64p      pd=24u      as=40p      ps=21u
+m03 w2     sn     zn     vdd p w=16u  l=2.3636u ad=40p      pd=21u      as=64p      ps=24u
+m04 vdd    a1     w2     vdd p w=16u  l=2.3636u ad=85.5172p pd=34.7586u as=40p      ps=21u
+m05 sn     s      vdd    vdd p w=8u   l=2.3636u ad=52p      pd=30u      as=42.7586p ps=17.3793u
+m06 vss    zn     z      vss n w=9u   l=2.3636u ad=37.4516p pd=19.1613u as=57p      ps=32u
+m07 w3     a0     vss    vss n w=8u   l=2.3636u ad=20p      pd=13u      as=33.2903p ps=17.0323u
+m08 zn     sn     w3     vss n w=8u   l=2.3636u ad=32p      pd=16u      as=20p      ps=13u
+m09 w4     s      zn     vss n w=8u   l=2.3636u ad=20p      pd=13u      as=32p      ps=16u
+m10 vss    a1     w4     vss n w=8u   l=2.3636u ad=33.2903p pd=17.0323u as=20p      ps=13u
+m11 sn     s      vss    vss n w=6u   l=2.3636u ad=42p      pd=26u      as=24.9677p ps=12.7742u
+C0  z      sn     0.026f
+C1  vdd    s      0.060f
+C2  vdd    zn     0.105f
+C3  z      a0     0.037f
+C4  a1     s      0.178f
+C5  vss    vdd    0.006f
+C6  sn     a0     0.151f
+C7  a1     zn     0.035f
+C8  vss    a1     0.078f
+C9  w1     vdd    0.005f
+C10 s      zn     0.063f
+C11 vss    s      0.023f
+C12 vdd    z      0.096f
+C13 vdd    sn     0.064f
+C14 z      a1     0.011f
+C15 vss    zn     0.220f
+C16 a1     sn     0.298f
+C17 vdd    a0     0.022f
+C18 w1     zn     0.009f
+C19 z      s      0.006f
+C20 a1     a0     0.038f
+C21 z      zn     0.324f
+C22 sn     s      0.295f
+C23 vss    z      0.059f
+C24 w2     vdd    0.005f
+C25 sn     zn     0.158f
+C26 s      a0     0.114f
+C27 vss    sn     0.106f
+C28 a0     zn     0.371f
+C29 vss    a0     0.018f
+C30 vdd    a1     0.016f
+C31 w3     zn     0.012f
+C34 z      vss    0.015f
+C35 a1     vss    0.028f
+C36 sn     vss    0.040f
+C37 s      vss    0.058f
+C38 a0     vss    0.028f
+C39 zn     vss    0.035f
+.ends

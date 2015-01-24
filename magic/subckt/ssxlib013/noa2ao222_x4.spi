@@ -1,0 +1,85 @@
+.subckt noa2ao222_x4 i0 i1 i2 i3 i4 nq vdd vss
+*   SPICE3 file   created from noa2ao222_x4.ext -      technology: scmos
+m00 vdd    i0     w1     vdd p w=29u  l=2.3636u ad=186.269p pd=53.5385u as=188.822p ps=56.7111u
+m01 w1     i1     vdd    vdd p w=29u  l=2.3636u ad=188.822p pd=56.7111u as=186.269p ps=53.5385u
+m02 w2     i4     w1     vdd p w=38u  l=2.3636u ad=190p     pd=48.3636u as=247.422p ps=74.3111u
+m03 w3     i2     w2     vdd p w=39u  l=2.3636u ad=156p     pd=47u      as=195p     ps=49.6364u
+m04 w1     i3     w3     vdd p w=39u  l=2.3636u ad=253.933p pd=76.2667u as=156p     ps=47u
+m05 vdd    w2     w4     vdd p w=20u  l=2.3636u ad=128.462p pd=36.9231u as=160p     ps=56u
+m06 nq     w4     vdd    vdd p w=39u  l=2.3636u ad=195p     pd=49u      as=250.5p   ps=72u
+m07 vdd    w4     nq     vdd p w=39u  l=2.3636u ad=250.5p   pd=72u      as=195p     ps=49u
+m08 w5     i0     vss    vss n w=18u  l=2.3636u ad=72.5143p pd=26.7429u as=147p     ps=51.6u
+m09 w2     i1     w5     vss n w=17u  l=2.3636u ad=93.7931p pd=31.6552u as=68.4857p ps=25.2571u
+m10 w6     i4     w2     vss n w=12u  l=2.3636u ad=92p      pd=34.6667u as=66.2069p ps=22.3448u
+m11 vss    i2     w6     vss n w=12u  l=2.3636u ad=98p      pd=34.4u    as=92p      ps=34.6667u
+m12 w6     i3     vss    vss n w=12u  l=2.3636u ad=92p      pd=34.6667u as=98p      ps=34.4u
+m13 vss    w2     w4     vss n w=10u  l=2.3636u ad=81.6667p pd=28.6667u as=80p      ps=36u
+m14 nq     w4     vss    vss n w=19u  l=2.3636u ad=95p      pd=29u      as=155.167p ps=54.4667u
+m15 vss    w4     nq     vss n w=19u  l=2.3636u ad=155.167p pd=54.4667u as=95p      ps=29u
+C0  vdd    i4     0.013f
+C1  i3     i2     0.252f
+C2  w6     nq     0.004f
+C3  w1     i0     0.053f
+C4  nq     i3     0.030f
+C5  w2     w4     0.275f
+C6  w3     vdd    0.015f
+C7  vss    i2     0.029f
+C8  i2     i4     0.094f
+C9  vss    nq     0.150f
+C10 w6     w2     0.067f
+C11 w3     i2     0.011f
+C12 w2     i3     0.136f
+C13 w1     vdd    0.377f
+C14 vss    w2     0.069f
+C15 i0     vdd    0.010f
+C16 i1     i3     0.041f
+C17 w1     i2     0.013f
+C18 w2     i4     0.206f
+C19 w3     w2     0.016f
+C20 nq     w1     0.004f
+C21 vss    i1     0.008f
+C22 i1     i4     0.234f
+C23 i0     i2     0.041f
+C24 w4     i3     0.104f
+C25 w2     w1     0.182f
+C26 w6     i3     0.037f
+C27 vss    w4     0.083f
+C28 w4     i4     0.019f
+C29 vdd    i2     0.010f
+C30 w6     vss    0.184f
+C31 w2     i0     0.075f
+C32 vss    i3     0.016f
+C33 w1     i1     0.029f
+C34 nq     vdd    0.165f
+C35 i3     i4     0.053f
+C36 i1     i0     0.299f
+C37 w2     vdd    0.179f
+C38 vss    i4     0.006f
+C39 i1     vdd    0.046f
+C40 w1     i3     0.024f
+C41 w2     i2     0.235f
+C42 w6     i0     0.005f
+C43 nq     w2     0.076f
+C44 w5     i1     0.010f
+C45 w4     vdd    0.025f
+C46 i1     i2     0.057f
+C47 w1     i4     0.065f
+C48 vss    i0     0.048f
+C49 w3     w1     0.016f
+C50 w4     i2     0.053f
+C51 i0     i4     0.088f
+C52 vdd    i3     0.010f
+C53 nq     w4     0.089f
+C54 w2     i1     0.101f
+C55 vss    vdd    0.005f
+C56 w6     i2     0.027f
+C57 w6     vss    0.004f
+C59 nq     vss    0.007f
+C60 w2     vss    0.035f
+C61 i1     vss    0.025f
+C62 i0     vss    0.023f
+C63 w4     vss    0.058f
+C65 i3     vss    0.023f
+C66 i2     vss    0.024f
+C67 i4     vss    0.027f
+.ends

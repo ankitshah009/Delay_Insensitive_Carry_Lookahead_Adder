@@ -1,0 +1,53 @@
+.subckt or4v0x05 a b c d vdd vss z
+*   SPICE3 file   created from or4v0x05.ext -      technology: scmos
+m00 vdd    zn     z      vdd p w=12u  l=2.3636u ad=97.2308p pd=36.3077u as=72p      ps=38u
+m01 w1     d      zn     vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=147p     ps=68u
+m02 w2     c      w1     vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=67.5p    ps=32u
+m03 w3     b      w2     vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=67.5p    ps=32u
+m04 vdd    a      w3     vdd p w=27u  l=2.3636u ad=218.769p pd=81.6923u as=67.5p    ps=32u
+m05 vss    zn     z      vss n w=6u   l=2.3636u ad=72p      pd=32u      as=42p      ps=26u
+m06 zn     d      vss    vss n w=6u   l=2.3636u ad=24p      pd=14u      as=72p      ps=32u
+m07 vss    c      zn     vss n w=6u   l=2.3636u ad=72p      pd=32u      as=24p      ps=14u
+m08 zn     b      vss    vss n w=6u   l=2.3636u ad=24p      pd=14u      as=72p      ps=32u
+m09 vss    a      zn     vss n w=6u   l=2.3636u ad=72p      pd=32u      as=24p      ps=14u
+C0  d      vdd    0.066f
+C1  z      a      0.011f
+C2  zn     b      0.101f
+C3  z      c      0.015f
+C4  w1     d      0.019f
+C5  w2     vdd    0.005f
+C6  z      vdd    0.013f
+C7  zn     d      0.270f
+C8  a      c      0.086f
+C9  vss    zn     0.226f
+C10 a      vdd    0.043f
+C11 b      d      0.024f
+C12 w3     a      0.015f
+C13 vss    b      0.071f
+C14 c      vdd    0.019f
+C15 z      zn     0.263f
+C16 vss    d      0.020f
+C17 z      b      0.007f
+C18 zn     a      0.045f
+C19 w2     d      0.015f
+C20 w3     vdd    0.005f
+C21 a      b      0.157f
+C22 z      d      0.036f
+C23 w1     vdd    0.005f
+C24 zn     c      0.136f
+C25 vss    z      0.092f
+C26 a      d      0.123f
+C27 zn     vdd    0.078f
+C28 b      c      0.146f
+C29 vss    a      0.019f
+C30 b      vdd    0.021f
+C31 c      d      0.139f
+C32 vss    c      0.030f
+C33 w2     a      0.006f
+C35 z      vss    0.014f
+C36 zn     vss    0.036f
+C37 a      vss    0.021f
+C38 b      vss    0.025f
+C39 c      vss    0.027f
+C40 d      vss    0.022f
+.ends

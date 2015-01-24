@@ -1,0 +1,31 @@
+.subckt bf1v0x12 a vdd vss z
+*   SPICE3 file   created from bf1v0x12.ext -      technology: scmos
+m00 z      an     vdd    vdd p w=28u  l=2.3636u ad=112.859p pd=37.1043u as=123.709p ps=42u
+m01 vdd    an     z      vdd p w=28u  l=2.3636u ad=123.709p pd=42u      as=112.859p ps=37.1043u
+m02 z      an     vdd    vdd p w=28u  l=2.3636u ad=112.859p pd=37.1043u as=123.709p ps=42u
+m03 vdd    an     z      vdd p w=28u  l=2.3636u ad=123.709p pd=42u      as=112.859p ps=37.1043u
+m04 z      an     vdd    vdd p w=28u  l=2.3636u ad=112.859p pd=37.1043u as=123.709p ps=42u
+m05 vdd    an     z      vdd p w=23u  l=2.3636u ad=101.618p pd=34.5u    as=92.7055p ps=30.4785u
+m06 an     a      vdd    vdd p w=19u  l=2.3636u ad=91p      pd=35.3333u as=83.9455p ps=28.5u
+m07 vdd    a      an     vdd p w=19u  l=2.3636u ad=83.9455p pd=28.5u    as=91p      ps=35.3333u
+m08 an     a      vdd    vdd p w=19u  l=2.3636u ad=91p      pd=35.3333u as=83.9455p ps=28.5u
+m09 z      an     vss    vss n w=20u  l=2.3636u ad=80p      pd=28u      as=104.286p ps=38.2143u
+m10 vss    an     z      vss n w=20u  l=2.3636u ad=104.286p pd=38.2143u as=80p      ps=28u
+m11 z      an     vss    vss n w=20u  l=2.3636u ad=80p      pd=28u      as=104.286p ps=38.2143u
+m12 vss    an     z      vss n w=20u  l=2.3636u ad=104.286p pd=38.2143u as=80p      ps=28u
+m13 an     a      vss    vss n w=16u  l=2.3636u ad=64p      pd=24u      as=83.4286p ps=30.5714u
+m14 vss    a      an     vss n w=16u  l=2.3636u ad=83.4286p pd=30.5714u as=64p      ps=24u
+C0  vss    vdd    0.025f
+C1  a      z      0.005f
+C2  z      vdd    0.243f
+C3  a      an     0.252f
+C4  vdd    an     0.292f
+C5  vss    z      0.417f
+C6  a      vdd    0.024f
+C7  vss    an     0.282f
+C8  z      an     0.495f
+C9  vss    a      0.080f
+C11 a      vss    0.050f
+C12 z      vss    0.004f
+C14 an     vss    0.079f
+.ends

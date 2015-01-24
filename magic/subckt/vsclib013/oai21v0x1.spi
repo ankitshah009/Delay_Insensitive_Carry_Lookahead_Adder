@@ -1,0 +1,35 @@
+.subckt oai21v0x1 a1 a2 b vdd vss z
+*   SPICE3 file   created from oai21v0x1.ext -      technology: scmos
+m00 z      b      vdd    vdd p w=14u  l=2.3636u ad=60.439p  pd=23.9024u as=102.78p  ps=38.2439u
+m01 w1     a2     z      vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=116.561p ps=46.0976u
+m02 vdd    a1     w1     vdd p w=27u  l=2.3636u ad=198.22p  pd=73.7561u as=67.5p    ps=32u
+m03 n1     b      z      vss n w=12u  l=2.3636u ad=56p      pd=26u      as=72p      ps=38u
+m04 vss    a2     n1     vss n w=12u  l=2.3636u ad=48p      pd=20u      as=56p      ps=26u
+m05 n1     a1     vss    vss n w=12u  l=2.3636u ad=56p      pd=26u      as=48p      ps=20u
+C0  vdd    a2     0.033f
+C1  z      b      0.212f
+C2  vss    n1     0.198f
+C3  a1     b      0.056f
+C4  vss    z      0.042f
+C5  n1     vdd    0.005f
+C6  vss    a1     0.026f
+C7  vss    b      0.032f
+C8  z      vdd    0.176f
+C9  n1     a2     0.029f
+C10 z      a2     0.072f
+C11 vdd    a1     0.020f
+C12 a1     a2     0.170f
+C13 vdd    b      0.018f
+C14 a2     b      0.208f
+C15 n1     z      0.048f
+C16 w1     vdd    0.005f
+C17 n1     a1     0.069f
+C18 vss    a2     0.019f
+C19 n1     b      0.083f
+C20 z      a1     0.016f
+C21 w1     a2     0.017f
+C23 z      vss    0.018f
+C25 a1     vss    0.027f
+C26 a2     vss    0.021f
+C27 b      vss    0.033f
+.ends

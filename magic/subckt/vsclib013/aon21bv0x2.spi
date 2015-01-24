@@ -1,0 +1,40 @@
+.subckt aon21bv0x2 a1 a2 b vdd vss z
+*   SPICE3 file   created from aon21bv0x2.ext -      technology: scmos
+m00 z      b      vdd    vdd p w=24u  l=2.3636u ad=96p      pd=32u      as=148.909p ps=50.7273u
+m01 vdd    an     z      vdd p w=24u  l=2.3636u ad=148.909p pd=50.7273u as=96p      ps=32u
+m02 an     a2     vdd    vdd p w=20u  l=2.3636u ad=80p      pd=28u      as=124.091p ps=42.2727u
+m03 vdd    a1     an     vdd p w=20u  l=2.3636u ad=124.091p pd=42.2727u as=80p      ps=28u
+m04 w1     b      z      vss n w=20u  l=2.3636u ad=50p      pd=25u      as=112p     ps=54u
+m05 vss    an     w1     vss n w=20u  l=2.3636u ad=114.595p pd=35.6757u as=50p      ps=25u
+m06 w2     a2     vss    vss n w=17u  l=2.3636u ad=42.5p    pd=22u      as=97.4054p ps=30.3243u
+m07 an     a1     w2     vss n w=17u  l=2.3636u ad=97p      pd=48u      as=42.5p    ps=22u
+C0  vdd    an     0.220f
+C1  a1     a2     0.192f
+C2  z      b      0.180f
+C3  a2     an     0.319f
+C4  a1     b      0.013f
+C5  vss    z      0.074f
+C6  an     b      0.228f
+C7  vss    a1     0.015f
+C8  w2     a2     0.008f
+C9  z      a1     0.015f
+C10 vss    an     0.176f
+C11 w1     b      0.018f
+C12 vdd    a2     0.021f
+C13 z      an     0.120f
+C14 a1     an     0.143f
+C15 vdd    b      0.014f
+C16 vss    w1     0.005f
+C17 a2     b      0.044f
+C18 vss    a2     0.034f
+C19 z      vdd    0.164f
+C20 w2     an     0.010f
+C21 vss    b      0.053f
+C22 vdd    a1     0.049f
+C23 z      a2     0.023f
+C25 z      vss    0.014f
+C27 a1     vss    0.020f
+C28 a2     vss    0.024f
+C29 an     vss    0.023f
+C30 b      vss    0.016f
+.ends

@@ -1,0 +1,87 @@
+.subckt cgi2abv0x2 a b c vdd vss z
+*   SPICE3 file   created from cgi2abv0x2.ext -      technology: scmos
+m00 an     a      vdd    vdd p w=17u  l=2.3636u ad=71.8636p pd=27.0455u as=83.912p  ps=26.656u
+m01 vdd    a      an     vdd p w=27u  l=2.3636u ad=133.272p pd=42.336u  as=114.136p ps=42.9545u
+m02 n1     an     vdd    vdd p w=27u  l=2.3636u ad=108p     pd=35u      as=133.272p ps=42.336u
+m03 z      c      n1     vdd p w=27u  l=2.3636u ad=108p     pd=35u      as=108p     ps=35u
+m04 n1     c      z      vdd p w=27u  l=2.3636u ad=108p     pd=35u      as=108p     ps=35u
+m05 vdd    an     n1     vdd p w=27u  l=2.3636u ad=133.272p pd=42.336u  as=108p     ps=35u
+m06 w1     an     vdd    vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=133.272p ps=42.336u
+m07 z      bn     w1     vdd p w=27u  l=2.3636u ad=108p     pd=35u      as=67.5p    ps=32u
+m08 w2     bn     z      vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=108p     ps=35u
+m09 vdd    an     w2     vdd p w=27u  l=2.3636u ad=133.272p pd=42.336u  as=67.5p    ps=32u
+m10 n1     bn     vdd    vdd p w=27u  l=2.3636u ad=108p     pd=35u      as=133.272p ps=42.336u
+m11 vdd    bn     n1     vdd p w=27u  l=2.3636u ad=133.272p pd=42.336u  as=108p     ps=35u
+m12 bn     b      vdd    vdd p w=27u  l=2.3636u ad=114.136p pd=42.9545u as=133.272p ps=42.336u
+m13 vdd    b      bn     vdd p w=17u  l=2.3636u ad=83.912p  pd=26.656u  as=71.8636p ps=27.0455u
+m14 an     a      vss    vss n w=11u  l=2.3636u ad=44p      pd=19u      as=69.6371p ps=28.0323u
+m15 vss    a      an     vss n w=11u  l=2.3636u ad=69.6371p pd=28.0323u as=44p      ps=19u
+m16 n3     an     vss    vss n w=14u  l=2.3636u ad=56p      pd=22u      as=88.629p  ps=35.6774u
+m17 z      c      n3     vss n w=14u  l=2.3636u ad=56.5385p pd=23.1538u as=56p      ps=22u
+m18 n3     c      z      vss n w=14u  l=2.3636u ad=56p      pd=22u      as=56.5385p ps=23.1538u
+m19 vss    an     n3     vss n w=14u  l=2.3636u ad=88.629p  pd=35.6774u as=56p      ps=22u
+m20 w3     an     vss    vss n w=11u  l=2.3636u ad=27.5p    pd=16u      as=69.6371p ps=28.0323u
+m21 z      bn     w3     vss n w=11u  l=2.3636u ad=44.4231p pd=18.1923u as=27.5p    ps=16u
+m22 w4     bn     z      vss n w=13u  l=2.3636u ad=32.5p    pd=18u      as=52.5p    ps=21.5u
+m23 vss    an     w4     vss n w=13u  l=2.3636u ad=82.2984p pd=33.129u  as=32.5p    ps=18u
+m24 n3     bn     vss    vss n w=14u  l=2.3636u ad=56p      pd=22u      as=88.629p  ps=35.6774u
+m25 vss    bn     n3     vss n w=14u  l=2.3636u ad=88.629p  pd=35.6774u as=56p      ps=22u
+m26 bn     b      vss    vss n w=11u  l=2.3636u ad=44p      pd=19u      as=69.6371p ps=28.0323u
+m27 vss    b      bn     vss n w=11u  l=2.3636u ad=69.6371p pd=28.0323u as=44p      ps=19u
+C0  z      n1     0.175f
+C1  n3     vdd    0.004f
+C2  vss    a      0.064f
+C3  b      an     0.020f
+C4  z      c      0.229f
+C5  w1     an     0.010f
+C6  b      vdd    0.021f
+C7  n1     bn     0.095f
+C8  w3     z      0.008f
+C9  w1     vdd    0.004f
+C10 bn     c      0.031f
+C11 n1     an     0.758f
+C12 z      a      0.018f
+C13 vss    z      0.149f
+C14 n3     n1     0.072f
+C15 c      an     0.398f
+C16 n1     vdd    0.541f
+C17 n3     c      0.053f
+C18 vss    bn     0.190f
+C19 an     a      0.145f
+C20 c      vdd    0.032f
+C21 w3     n3     0.006f
+C22 w1     n1     0.010f
+C23 vss    an     0.172f
+C24 n3     a      0.004f
+C25 a      vdd    0.034f
+C26 n3     vss    0.516f
+C27 w2     an     0.010f
+C28 vss    vdd    0.016f
+C29 z      bn     0.174f
+C30 vss    b      0.033f
+C31 n1     c      0.049f
+C32 w2     vdd    0.004f
+C33 z      an     0.741f
+C34 n3     z      0.530f
+C35 w4     bn     0.009f
+C36 z      vdd    0.090f
+C37 bn     an     0.451f
+C38 vss    n1     0.009f
+C39 n3     bn     0.292f
+C40 c      a      0.035f
+C41 bn     vdd    0.179f
+C42 w4     n3     0.010f
+C43 vss    c      0.028f
+C44 w1     z      0.009f
+C45 w2     n1     0.010f
+C46 n3     an     0.103f
+C47 b      bn     0.234f
+C48 an     vdd    0.422f
+C49 n3     vss    0.001f
+C51 b      vss    0.042f
+C52 z      vss    0.011f
+C53 bn     vss    0.081f
+C54 c      vss    0.035f
+C55 an     vss    0.069f
+C56 a      vss    0.034f
+.ends

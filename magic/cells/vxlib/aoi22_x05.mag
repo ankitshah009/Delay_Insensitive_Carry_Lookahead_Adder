@@ -1,0 +1,210 @@
+magic
+tech scmos
+timestamp 1180639959
+<< checkpaint >>
+rect -24 -26 84 126
+<< ab >>
+rect 0 0 60 100
+<< pwell >>
+rect -4 -6 64 49
+<< nwell >>
+rect -4 49 64 106
+<< polysilicon >>
+rect 11 83 13 88
+rect 23 83 25 88
+rect 35 83 37 88
+rect 47 83 49 88
+rect 11 38 13 63
+rect 23 48 25 63
+rect 35 58 37 63
+rect 35 57 43 58
+rect 35 55 38 57
+rect 37 53 38 55
+rect 42 53 43 57
+rect 37 52 43 53
+rect 23 47 33 48
+rect 23 45 28 47
+rect 25 43 28 45
+rect 32 43 33 47
+rect 25 42 33 43
+rect 11 37 21 38
+rect 11 36 16 37
+rect 15 33 16 36
+rect 20 33 21 37
+rect 15 32 21 33
+rect 17 26 19 32
+rect 25 26 27 42
+rect 37 26 39 52
+rect 47 38 49 63
+rect 47 37 53 38
+rect 47 35 48 37
+rect 45 33 48 35
+rect 52 33 53 37
+rect 45 32 53 33
+rect 45 26 47 32
+rect 17 12 19 17
+rect 25 12 27 17
+rect 37 12 39 17
+rect 45 12 47 17
+<< ndiffusion >>
+rect 9 17 17 26
+rect 19 17 25 26
+rect 27 22 37 26
+rect 27 18 30 22
+rect 34 18 37 22
+rect 27 17 37 18
+rect 39 17 45 26
+rect 47 22 56 26
+rect 47 18 50 22
+rect 54 18 56 22
+rect 47 17 56 18
+rect 9 12 15 17
+rect 9 8 10 12
+rect 14 8 15 12
+rect 9 7 15 8
+<< pdiffusion >>
+rect 3 82 11 83
+rect 3 78 4 82
+rect 8 78 11 82
+rect 3 77 11 78
+rect 6 63 11 77
+rect 13 72 23 83
+rect 13 68 16 72
+rect 20 68 23 72
+rect 13 63 23 68
+rect 25 82 35 83
+rect 25 78 28 82
+rect 32 78 35 82
+rect 25 72 35 78
+rect 25 68 28 72
+rect 32 68 35 72
+rect 25 63 35 68
+rect 37 82 47 83
+rect 37 78 40 82
+rect 44 78 47 82
+rect 37 63 47 78
+rect 49 82 57 83
+rect 49 78 52 82
+rect 56 78 57 82
+rect 49 74 57 78
+rect 49 70 52 74
+rect 56 70 57 74
+rect 49 69 57 70
+rect 49 63 54 69
+<< metal1 >>
+rect -2 88 62 100
+rect 40 82 44 88
+rect 3 78 4 82
+rect 8 78 28 82
+rect 32 78 33 82
+rect 8 72 23 73
+rect 8 68 16 72
+rect 20 68 23 72
+rect 27 72 33 78
+rect 40 77 44 78
+rect 52 82 56 83
+rect 52 74 56 78
+rect 27 68 28 72
+rect 32 70 52 72
+rect 32 68 56 70
+rect 8 23 12 68
+rect 17 58 32 63
+rect 18 38 22 53
+rect 16 37 22 38
+rect 28 47 32 58
+rect 28 37 32 43
+rect 38 58 53 63
+rect 38 57 42 58
+rect 38 37 42 53
+rect 48 37 52 43
+rect 20 33 22 37
+rect 16 32 22 33
+rect 18 27 33 32
+rect 38 27 52 33
+rect 8 22 34 23
+rect 8 18 30 22
+rect 8 17 34 18
+rect 38 17 42 27
+rect 50 22 54 23
+rect 50 12 54 18
+rect -2 8 10 12
+rect 14 8 62 12
+rect -2 0 62 8
+<< ntransistor >>
+rect 17 17 19 26
+rect 25 17 27 26
+rect 37 17 39 26
+rect 45 17 47 26
+<< ptransistor >>
+rect 11 63 13 83
+rect 23 63 25 83
+rect 35 63 37 83
+rect 47 63 49 83
+<< polycontact >>
+rect 38 53 42 57
+rect 28 43 32 47
+rect 16 33 20 37
+rect 48 33 52 37
+<< ndcontact >>
+rect 30 18 34 22
+rect 50 18 54 22
+rect 10 8 14 12
+<< pdcontact >>
+rect 4 78 8 82
+rect 16 68 20 72
+rect 28 78 32 82
+rect 28 68 32 72
+rect 40 78 44 82
+rect 52 78 56 82
+rect 52 70 56 74
+<< psubstratepcontact >>
+rect 38 4 42 8
+rect 48 4 52 8
+<< nsubstratencontact >>
+rect 8 92 12 96
+rect 18 92 22 96
+<< psubstratepdiff >>
+rect 37 8 53 9
+rect 37 4 38 8
+rect 42 4 48 8
+rect 52 4 53 8
+rect 37 3 53 4
+<< nsubstratendiff >>
+rect 7 96 23 97
+rect 7 92 8 96
+rect 12 92 18 96
+rect 22 92 23 96
+rect 7 91 23 92
+<< labels >>
+rlabel metal1 20 20 20 20 6 z
+rlabel metal1 20 20 20 20 6 z
+rlabel metal1 20 40 20 40 6 b1
+rlabel metal1 20 40 20 40 6 b1
+rlabel metal1 10 45 10 45 6 z
+rlabel metal1 10 45 10 45 6 z
+rlabel metal1 20 60 20 60 6 b2
+rlabel metal1 20 60 20 60 6 b2
+rlabel metal1 20 70 20 70 6 z
+rlabel metal1 20 70 20 70 6 z
+rlabel metal1 30 6 30 6 6 vss
+rlabel metal1 30 6 30 6 6 vss
+rlabel metal1 30 20 30 20 6 z
+rlabel metal1 30 20 30 20 6 z
+rlabel metal1 30 30 30 30 6 b1
+rlabel metal1 30 30 30 30 6 b1
+rlabel metal1 30 50 30 50 6 b2
+rlabel metal1 30 50 30 50 6 b2
+rlabel metal1 30 75 30 75 6 n3
+rlabel metal1 18 80 18 80 6 n3
+rlabel metal1 30 94 30 94 6 vdd
+rlabel metal1 30 94 30 94 6 vdd
+rlabel metal1 40 25 40 25 6 a1
+rlabel metal1 40 25 40 25 6 a1
+rlabel metal1 40 50 40 50 6 a2
+rlabel metal1 40 50 40 50 6 a2
+rlabel polycontact 50 35 50 35 6 a1
+rlabel polycontact 50 35 50 35 6 a1
+rlabel metal1 50 60 50 60 6 a2
+rlabel metal1 50 60 50 60 6 a2
+rlabel metal1 54 75 54 75 6 n3
+<< end >>

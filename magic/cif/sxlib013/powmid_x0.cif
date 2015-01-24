@@ -1,0 +1,27 @@
+( @@user : graham );
+( @@machine : ? );
+( @@source : powmid_x0.mag );
+( @@tool : Magic 7.4.33 );
+( @@compiled : Thu Feb  1 20:26:32 CET 2007 );
+( @@technology : scmos );
+( @@version : 21-JUL-07 );
+( @@techdesc : sxlib013 0.13um Technology file for Lambda=0.055um, 3LM );
+( @@style : lambda=0.055um(sxlib013) );
+( @@date : Sat Jul 21 19:32:26 2007 );
+DS 1 1 4;
+9 powmid_x0;
+4A 0 0 1540 2200; 
+L AB;
+    B 1540 2200 770 1100;
+L CM1;
+    B 1540 284 770 2058;
+    B 1540 284 770 142;
+L CM2;
+    B 528 88 440 2200;
+    B 528 88 1100 0;
+94 vss 770 132 CM1;
+94 vdd 770 2068 CM1;
+L REF;
+DF;
+C 1;
+End

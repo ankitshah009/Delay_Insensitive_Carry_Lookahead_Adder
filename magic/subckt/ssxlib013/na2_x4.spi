@@ -1,0 +1,40 @@
+.subckt na2_x4 i0 i1 nq vdd vss
+*   SPICE3 file   created from na2_x4.ext -      technology: scmos
+m00 w1     i0     vdd    vdd p w=20u  l=2.3636u ad=100p     pd=30u      as=123.188p ps=38.8406u
+m01 vdd    i1     w1     vdd p w=20u  l=2.3636u ad=123.188p pd=38.8406u as=100p     ps=30u
+m02 nq     w2     vdd    vdd p w=39u  l=2.3636u ad=195p     pd=49u      as=240.217p ps=75.7391u
+m03 vdd    w2     nq     vdd p w=39u  l=2.3636u ad=240.217p pd=75.7391u as=195p     ps=49u
+m04 w2     w1     vdd    vdd p w=20u  l=2.3636u ad=160p     pd=56u      as=123.188p ps=38.8406u
+m05 w3     i0     w1     vss n w=19u  l=2.3636u ad=76p      pd=27u      as=152p     ps=54u
+m06 vss    i1     w3     vss n w=19u  l=2.3636u ad=117.97p  pd=38u      as=76p      ps=27u
+m07 nq     w2     vss    vss n w=19u  l=2.3636u ad=95p      pd=29u      as=117.97p  ps=38u
+m08 vss    w2     nq     vss n w=19u  l=2.3636u ad=117.97p  pd=38u      as=95p      ps=29u
+m09 w2     w1     vss    vss n w=10u  l=2.3636u ad=80p      pd=36u      as=62.0896p ps=20u
+C0  vss    w2     0.051f
+C1  w1     i1     0.322f
+C2  nq     i0     0.054f
+C3  w1     vdd    0.342f
+C4  i1     i0     0.315f
+C5  nq     w2     0.122f
+C6  i0     vdd    0.022f
+C7  i1     w2     0.085f
+C8  vss    nq     0.043f
+C9  vdd    w2     0.018f
+C10 vss    i1     0.011f
+C11 w3     w1     0.016f
+C12 nq     i1     0.087f
+C13 w1     i0     0.127f
+C14 nq     vdd    0.036f
+C15 i1     vdd    0.011f
+C16 w1     w2     0.182f
+C17 i0     w2     0.027f
+C18 vss    w1     0.192f
+C19 w3     i1     0.010f
+C20 vss    i0     0.011f
+C21 nq     w1     0.343f
+C23 nq     vss    0.012f
+C24 w1     vss    0.035f
+C25 i1     vss    0.036f
+C26 i0     vss    0.031f
+C28 w2     vss    0.070f
+.ends

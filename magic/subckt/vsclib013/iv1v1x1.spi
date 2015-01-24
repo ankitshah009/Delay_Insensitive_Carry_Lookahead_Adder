@@ -1,0 +1,13 @@
+.subckt iv1v1x1 a vdd vss z
+*   SPICE3 file   created from iv1v1x1.ext -      technology: scmos
+m00 vdd    a      z      vdd p w=18u  l=2.3636u ad=176p     pd=58u      as=116p     ps=50u
+m01 vss    a      z      vss n w=12u  l=2.3636u ad=96p      pd=40u      as=72p      ps=38u
+C0  a      vdd    0.042f
+C1  vss    a      0.025f
+C2  z      vdd    0.046f
+C3  vss    z      0.064f
+C4  z      a      0.136f
+C5  vss    vdd    0.004f
+C7  z      vss    0.008f
+C8  a      vss    0.024f
+.ends

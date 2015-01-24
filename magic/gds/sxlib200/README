@@ -1,0 +1,10 @@
+# Use the following Alliance variables to view these cells with DREAL.
+# You can 
+# $ source ./README
+# to set them.
+export RDS_IN=gds
+export RDS_TECHNO_NAME=/usr/share/pharosc/alliance/etc/sx200.rds
+export DREAL_TECHNO_NAME=/usr/share/pharosc/alliance/etc/s200.dreal
+# The layout has been written from Magic. The
+# diffusion is present as both ndif and pdif, and activ with nimp
+# and pimp implant layers.

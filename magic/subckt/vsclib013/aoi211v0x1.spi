@@ -1,0 +1,55 @@
+.subckt aoi211v0x1 a1 a2 b c vdd vss z
+*   SPICE3 file   created from aoi211v0x1.ext -      technology: scmos
+m00 w1     b      n1     vdd p w=28u  l=2.3636u ad=70p      pd=33u      as=127.667p ps=47.3333u
+m01 z      c      w1     vdd p w=28u  l=2.3636u ad=112p     pd=36u      as=70p      ps=33u
+m02 w2     c      z      vdd p w=28u  l=2.3636u ad=70p      pd=33u      as=112p     ps=36u
+m03 n1     b      w2     vdd p w=28u  l=2.3636u ad=127.667p pd=47.3333u as=70p      ps=33u
+m04 vdd    a2     n1     vdd p w=28u  l=2.3636u ad=112p     pd=36u      as=127.667p ps=47.3333u
+m05 n1     a1     vdd    vdd p w=28u  l=2.3636u ad=127.667p pd=47.3333u as=112p     ps=36u
+m06 vdd    a1     n1     vdd p w=28u  l=2.3636u ad=112p     pd=36u      as=127.667p ps=47.3333u
+m07 n1     a2     vdd    vdd p w=28u  l=2.3636u ad=127.667p pd=47.3333u as=112p     ps=36u
+m08 z      b      vss    vss n w=10u  l=2.3636u ad=47.8378p pd=22.7027u as=102.703p ps=40.5405u
+m09 vss    c      z      vss n w=10u  l=2.3636u ad=102.703p pd=40.5405u as=47.8378p ps=22.7027u
+m10 w3     a2     z      vss n w=17u  l=2.3636u ad=42.5p    pd=22u      as=81.3243p ps=38.5946u
+m11 vss    a1     w3     vss n w=17u  l=2.3636u ad=174.595p pd=68.9189u as=42.5p    ps=22u
+C0  vdd    w2     0.005f
+C1  vss    z      0.289f
+C2  n1     b      0.048f
+C3  a1     c      0.028f
+C4  vdd    w1     0.005f
+C5  vss    n1     0.037f
+C6  a2     b      0.064f
+C7  vss    a2     0.051f
+C8  z      w1     0.011f
+C9  w2     n1     0.010f
+C10 vdd    a1     0.027f
+C11 z      a1     0.006f
+C12 w1     n1     0.010f
+C13 vdd    c      0.027f
+C14 vss    b      0.066f
+C15 n1     a1     0.053f
+C16 z      c      0.093f
+C17 n1     c      0.059f
+C18 w1     b      0.008f
+C19 a1     a2     0.371f
+C20 vdd    z      0.062f
+C21 a1     b      0.035f
+C22 a2     c      0.122f
+C23 vdd    n1     0.593f
+C24 vss    a1     0.121f
+C25 c      b      0.314f
+C26 vss    c      0.026f
+C27 vdd    a2     0.092f
+C28 z      n1     0.258f
+C29 z      a2     0.028f
+C30 w2     c      0.002f
+C31 vdd    b      0.033f
+C32 vss    vdd    0.003f
+C33 z      b      0.469f
+C34 n1     a2     0.296f
+C37 z      vss    0.016f
+C38 a1     vss    0.032f
+C39 a2     vss    0.031f
+C40 c      vss    0.030f
+C41 b      vss    0.042f
+.ends

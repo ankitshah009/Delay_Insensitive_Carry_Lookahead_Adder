@@ -1,0 +1,1 @@
+.subckt halfadder_x2 a b cout sout vdd vss

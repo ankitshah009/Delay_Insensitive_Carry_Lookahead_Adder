@@ -1,0 +1,49 @@
+.subckt mxi2v0x1 a0 a1 s vdd vss z
+*   SPICE3 file   created from mxi2v0x1.ext -      technology: scmos
+m00 w1     a0     vdd    vdd p w=25u  l=2.3636u ad=75p      pd=31u      as=151.271p ps=56.7797u
+m01 z      s      w1     vdd p w=25u  l=2.3636u ad=100p     pd=33u      as=75p      ps=31u
+m02 w2     sn     z      vdd p w=25u  l=2.3636u ad=75p      pd=31u      as=100p     ps=33u
+m03 vdd    a1     w2     vdd p w=25u  l=2.3636u ad=151.271p pd=56.7797u as=75p      ps=31u
+m04 sn     s      vdd    vdd p w=9u   l=2.3636u ad=57p      pd=32u      as=54.4576p ps=20.4407u
+m05 w3     a0     vss    vss n w=12u  l=2.3636u ad=30p      pd=17u      as=64.9655p ps=31.4483u
+m06 z      sn     w3     vss n w=12u  l=2.3636u ad=48.5217p pd=20.8696u as=30p      ps=17u
+m07 w4     s      z      vss n w=11u  l=2.3636u ad=46p      pd=23u      as=44.4783p ps=19.1304u
+m08 vss    a1     w4     vss n w=11u  l=2.3636u ad=59.5517p pd=28.8276u as=46p      ps=23u
+m09 sn     s      vss    vss n w=6u   l=2.3636u ad=42p      pd=26u      as=32.4828p ps=15.7241u
+C0  s      a0     0.062f
+C1  sn     vdd    0.083f
+C2  vss    sn     0.193f
+C3  a0     vdd    0.009f
+C4  w2     sn     0.004f
+C5  z      a1     0.015f
+C6  vss    a0     0.114f
+C7  w3     vss    0.005f
+C8  z      s      0.321f
+C9  vss    w4     0.004f
+C10 z      vdd    0.188f
+C11 a1     s      0.157f
+C12 vss    z      0.070f
+C13 sn     a0     0.079f
+C14 a1     vdd    0.022f
+C15 vss    a1     0.034f
+C16 s      vdd    0.199f
+C17 z      w1     0.025f
+C18 w3     a0     0.008f
+C19 w4     sn     0.006f
+C20 vss    s      0.035f
+C21 z      sn     0.090f
+C22 w2     s      0.023f
+C23 vss    vdd    0.003f
+C24 w2     vdd    0.006f
+C25 a1     sn     0.392f
+C26 w1     s      0.005f
+C27 z      a0     0.129f
+C28 a1     a0     0.015f
+C29 sn     s      0.408f
+C30 w1     vdd    0.006f
+C32 z      vss    0.011f
+C33 a1     vss    0.029f
+C34 sn     vss    0.039f
+C35 s      vss    0.051f
+C36 a0     vss    0.024f
+.ends

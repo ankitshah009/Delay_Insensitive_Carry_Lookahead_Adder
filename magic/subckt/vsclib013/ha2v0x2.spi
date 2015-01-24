@@ -1,0 +1,62 @@
+.subckt ha2v0x2 a b co so vdd vss
+*   SPICE3 file   created from ha2v0x2.ext -      technology: scmos
+m00 vdd    son    so     vdd p w=25u  l=2.3636u ad=155.952p pd=39.4558u as=151p     ps=64u
+m01 son    con    vdd    vdd p w=13u  l=2.3636u ad=56.1053p pd=22.5789u as=81.0952p ps=20.517u
+m02 w1     b      son    vdd p w=25u  l=2.3636u ad=62.5p    pd=30u      as=107.895p ps=43.4211u
+m03 vdd    a      w1     vdd p w=25u  l=2.3636u ad=155.952p pd=39.4558u as=62.5p    ps=30u
+m04 con    a      vdd    vdd p w=28u  l=2.3636u ad=112p     pd=36u      as=174.667p ps=44.1905u
+m05 vdd    b      con    vdd p w=28u  l=2.3636u ad=174.667p pd=44.1905u as=112p     ps=36u
+m06 co     con    vdd    vdd p w=28u  l=2.3636u ad=166p     pd=70u      as=174.667p ps=44.1905u
+m07 vss    son    so     vss n w=13u  l=2.3636u ad=59.9825p pd=22.807u  as=77p      ps=40u
+m08 n2     con    vss    vss n w=10u  l=2.3636u ad=53.6842p pd=24.2105u as=46.1404p ps=17.5439u
+m09 son    b      n2     vss n w=14u  l=2.3636u ad=56p      pd=22u      as=75.1579p ps=33.8947u
+m10 n2     a      son    vss n w=14u  l=2.3636u ad=75.1579p pd=33.8947u as=56p      ps=22u
+m11 w2     a      con    vss n w=20u  l=2.3636u ad=50p      pd=25u      as=112p     ps=54u
+m12 vss    b      w2     vss n w=20u  l=2.3636u ad=92.2807p pd=35.0877u as=50p      ps=25u
+m13 co     con    vss    vss n w=14u  l=2.3636u ad=84p      pd=42u      as=64.5965p ps=24.5614u
+C0  w2     vss    0.005f
+C1  con    b      0.602f
+C2  n2     son    0.174f
+C3  vss    n2     0.164f
+C4  w2     co     0.004f
+C5  a      vdd    0.025f
+C6  con    so     0.073f
+C7  n2     co     0.013f
+C8  w2     con    0.013f
+C9  b      so     0.015f
+C10 a      son    0.031f
+C11 n2     con    0.072f
+C12 vss    a      0.031f
+C13 vdd    son    0.035f
+C14 w1     con    0.013f
+C15 n2     b      0.043f
+C16 vss    vdd    0.004f
+C17 co     a      0.015f
+C18 w1     b      0.007f
+C19 co     vdd    0.024f
+C20 vss    son    0.077f
+C21 con    a      0.226f
+C22 n2     so     0.016f
+C23 a      b      0.323f
+C24 con    vdd    0.389f
+C25 vss    co     0.166f
+C26 a      so     0.003f
+C27 b      vdd    0.098f
+C28 con    son    0.335f
+C29 vss    con    0.162f
+C30 vdd    so     0.094f
+C31 b      son    0.202f
+C32 vss    b      0.053f
+C33 co     con    0.411f
+C34 n2     a      0.056f
+C35 so     son    0.091f
+C36 co     b      0.052f
+C37 n2     vdd    0.003f
+C38 vss    so     0.048f
+C40 co     vss    0.011f
+C41 con    vss    0.041f
+C42 a      vss    0.045f
+C43 b      vss    0.032f
+C45 so     vss    0.012f
+C46 son    vss    0.028f
+.ends

@@ -1,0 +1,54 @@
+.subckt an4v0x2 a b c d vdd vss z
+*   SPICE3 file   created from an4v0x2.ext -      technology: scmos
+m00 vdd    zn     z      vdd p w=28u  l=2.3636u ad=143.208p pd=50.75u   as=166p     ps=70u
+m01 zn     d      vdd    vdd p w=17u  l=2.3636u ad=68p      pd=25u      as=86.9479p ps=30.8125u
+m02 vdd    c      zn     vdd p w=17u  l=2.3636u ad=86.9479p pd=30.8125u as=68p      ps=25u
+m03 zn     b      vdd    vdd p w=17u  l=2.3636u ad=68p      pd=25u      as=86.9479p ps=30.8125u
+m04 vdd    a      zn     vdd p w=17u  l=2.3636u ad=86.9479p pd=30.8125u as=68p      ps=25u
+m05 vss    zn     z      vss n w=14u  l=2.3636u ad=109.529p pd=43.6471u as=82p      ps=42u
+m06 w1     d      zn     vss n w=20u  l=2.3636u ad=50p      pd=25u      as=112p     ps=54u
+m07 w2     c      w1     vss n w=20u  l=2.3636u ad=50p      pd=25u      as=50p      ps=25u
+m08 w3     b      w2     vss n w=20u  l=2.3636u ad=50p      pd=25u      as=50p      ps=25u
+m09 vss    a      w3     vss n w=20u  l=2.3636u ad=156.471p pd=62.3529u as=50p      ps=25u
+C0  w1     vss    0.005f
+C1  w3     a      0.018f
+C2  c      zn     0.240f
+C3  b      vdd    0.025f
+C4  vss    z      0.092f
+C5  d      vdd    0.026f
+C6  z      a      0.012f
+C7  w2     d      0.010f
+C8  vss    b      0.019f
+C9  z      c      0.022f
+C10 vss    d      0.062f
+C11 a      b      0.178f
+C12 vss    vdd    0.003f
+C13 b      c      0.187f
+C14 a      d      0.128f
+C15 z      zn     0.307f
+C16 w2     vss    0.005f
+C17 b      zn     0.100f
+C18 c      d      0.250f
+C19 a      vdd    0.024f
+C20 w2     a      0.006f
+C21 d      zn     0.227f
+C22 c      vdd    0.049f
+C23 vss    a      0.149f
+C24 zn     vdd    0.359f
+C25 vss    c      0.025f
+C26 w1     d      0.010f
+C27 z      b      0.019f
+C28 a      c      0.036f
+C29 z      d      0.032f
+C30 vss    zn     0.056f
+C31 w3     vss    0.005f
+C32 z      vdd    0.067f
+C33 b      d      0.069f
+C34 a      zn     0.032f
+C36 z      vss    0.011f
+C37 a      vss    0.032f
+C38 b      vss    0.026f
+C39 c      vss    0.029f
+C40 d      vss    0.027f
+C41 zn     vss    0.025f
+.ends

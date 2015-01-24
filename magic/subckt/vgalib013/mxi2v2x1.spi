@@ -1,0 +1,70 @@
+.subckt mxi2v2x1 a1 a2 s vdd vss z
+*   SPICE3 file   created from mxi2v2x1.ext -      technology: scmos
+m00 vdd    a1     w1     vdd p w=26u  l=2.3636u ad=130p     pd=36u      as=182p     ps=66u
+m01 w2     a2     vdd    vdd p w=26u  l=2.3636u ad=182p     pd=66u      as=130p     ps=36u
+m02 z      w3     w2     vdd p w=26u  l=2.3636u ad=130p     pd=36u      as=182p     ps=66u
+m03 w1     s      z      vdd p w=26u  l=2.3636u ad=182p     pd=66u      as=130p     ps=36u
+m04 vdd    s      w3     vdd p w=26u  l=2.3636u ad=130p     pd=36u      as=182p     ps=66u
+m05 w4     vdd    vdd    vdd p w=26u  l=2.3636u ad=182p     pd=66u      as=130p     ps=36u
+m06 vss    a1     w5     vss n w=18u  l=2.3636u ad=90p      pd=28u      as=126p     ps=50u
+m07 w6     a2     vss    vss n w=18u  l=2.3636u ad=126p     pd=50u      as=90p      ps=28u
+m08 z      w3     w5     vss n w=18u  l=2.3636u ad=90p      pd=28u      as=126p     ps=50u
+m09 w6     s      z      vss n w=18u  l=2.3636u ad=126p     pd=50u      as=90p      ps=28u
+m10 vss    s      w3     vss n w=18u  l=2.3636u ad=90p      pd=28u      as=126p     ps=50u
+m11 w7     vss    vss    vss n w=18u  l=2.3636u ad=126p     pd=50u      as=90p      ps=28u
+C0  a1     vdd    0.033f
+C1  w6     w5     0.163f
+C2  vss    a1     0.034f
+C3  z      w3     0.184f
+C4  w5     vdd    0.003f
+C5  w5     vss    0.131f
+C6  z      a1     0.019f
+C7  w1     w3     0.174f
+C8  w2     a2     0.005f
+C9  w5     z      0.021f
+C10 w6     w2     0.003f
+C11 w2     vdd    0.099f
+C12 s      a2     0.056f
+C13 w1     a1     0.047f
+C14 w5     w1     0.040f
+C15 w6     s      0.023f
+C16 s      vdd    0.126f
+C17 w3     a1     0.043f
+C18 vss    s      0.118f
+C19 w6     a2     0.007f
+C20 w5     w3     0.015f
+C21 a2     vdd    0.033f
+C22 w5     a1     0.047f
+C23 vss    a2     0.034f
+C24 w2     w1     0.142f
+C25 z      s      0.235f
+C26 w6     vss    0.071f
+C27 z      a2     0.033f
+C28 w2     w3     0.019f
+C29 vss    vdd    0.044f
+C30 w1     s      0.080f
+C31 w6     z      0.086f
+C32 w1     a2     0.046f
+C33 s      w3     0.549f
+C34 w5     w2     0.003f
+C35 w6     w1     0.019f
+C36 s      a1     0.016f
+C37 w3     a2     0.121f
+C38 w1     vdd    0.126f
+C39 w6     w3     0.079f
+C40 vss    w1     0.003f
+C41 w3     vdd    0.254f
+C42 a2     a1     0.183f
+C43 z      w1     0.099f
+C44 w5     a2     0.046f
+C45 vss    w3     0.120f
+C46 w6     vss    0.002f
+C47 w5     vss    0.002f
+C49 z      vss    0.006f
+C50 w2     vss    0.002f
+C51 w1     vss    0.002f
+C52 s      vss    0.126f
+C53 w3     vss    0.071f
+C54 a2     vss    0.062f
+C55 a1     vss    0.062f
+.ends

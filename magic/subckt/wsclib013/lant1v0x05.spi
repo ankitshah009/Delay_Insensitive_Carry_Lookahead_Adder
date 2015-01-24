@@ -1,0 +1,54 @@
+.subckt lant1v0x05 d e vdd vss z
+*   SPICE3 file   created from lant1v0x05.ext -      technology: scmos
+m00 w1     n2     vdd    vdd p w=6u   l=2.3636u ad=15p      pd=11u      as=26p      ps=11.7778u
+m01 n1     e      w1     vdd p w=6u   l=2.3636u ad=26p      pd=13.3333u as=15p      ps=11u
+m02 vdd    n1     z      vdd p w=12u  l=2.3636u ad=52p      pd=23.5556u as=72p      ps=38u
+m03 n2     n1     vdd    vdd p w=12u  l=2.3636u ad=72p      pd=38u      as=52p      ps=23.5556u
+m04 vss    n1     n2     vss n w=6u   l=2.3636u ad=50p      pd=26u      as=42p      ps=26u
+m05 w2     en     n1     vdd p w=12u  l=2.3636u ad=30p      pd=17u      as=52p      ps=26.6667u
+m06 vdd    d      w2     vdd p w=12u  l=2.3636u ad=52p      pd=23.5556u as=30p      ps=17u
+m07 en     e      vdd    vdd p w=12u  l=2.3636u ad=72p      pd=38u      as=52p      ps=23.5556u
+m08 vss    n1     z      vss n w=6u   l=2.3636u ad=50p      pd=26u      as=54p      ps=32u
+m09 w3     n2     vss    vss n w=6u   l=2.3636u ad=15p      pd=11u      as=50p      ps=26u
+m10 n1     en     w3     vss n w=6u   l=2.3636u ad=24p      pd=14u      as=15p      ps=11u
+m11 w4     e      n1     vss n w=6u   l=2.3636u ad=15p      pd=11u      as=24p      ps=14u
+m12 vss    d      w4     vss n w=6u   l=2.3636u ad=50p      pd=26u      as=15p      ps=11u
+m13 en     e      vss    vss n w=6u   l=2.3636u ad=42p      pd=26u      as=50p      ps=26u
+C0  n1     e      0.071f
+C1  d      n2     0.048f
+C2  vss    z      0.090f
+C3  w3     n1     0.010f
+C4  d      vdd    0.017f
+C5  en     e      0.349f
+C6  vss    n1     0.233f
+C7  n2     vdd    0.095f
+C8  w1     n1     0.004f
+C9  z      d      0.003f
+C10 vss    en     0.065f
+C11 n1     d      0.072f
+C12 z      n2     0.091f
+C13 vss    e      0.097f
+C14 d      en     0.332f
+C15 z      vdd    0.016f
+C16 n1     n2     0.253f
+C17 d      e      0.312f
+C18 n1     vdd    0.130f
+C19 en     n2     0.110f
+C20 en     vdd    0.111f
+C21 n2     e      0.122f
+C22 z      n1     0.041f
+C23 vss    d      0.036f
+C24 w2     en     0.005f
+C25 w4     e      0.005f
+C26 e      vdd    0.022f
+C27 vss    n2     0.056f
+C28 z      en     0.017f
+C29 n1     en     0.348f
+C30 vss    vdd    0.010f
+C32 z      vss    0.015f
+C33 n1     vss    0.047f
+C34 d      vss    0.028f
+C35 en     vss    0.044f
+C36 n2     vss    0.030f
+C37 e      vss    0.059f
+.ends

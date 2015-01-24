@@ -1,0 +1,23 @@
+.subckt nd2v4x3 a b vdd vss z
+*   SPICE3 file   created from nd2v4x3.ext -      technology: scmos
+m00 z      b      vdd    vdd p w=27u  l=2.3636u ad=108p     pd=36.3913u as=169.043p ps=56.9348u
+m01 vdd    b      z      vdd p w=27u  l=2.3636u ad=169.043p pd=56.9348u as=108p     ps=36.3913u
+m02 z      a      vdd    vdd p w=19u  l=2.3636u ad=76p      pd=25.6087u as=118.957p ps=40.0652u
+m03 vdd    a      z      vdd p w=19u  l=2.3636u ad=118.957p pd=40.0652u as=76p      ps=25.6087u
+m04 w1     b      z      vss n w=19u  l=2.3636u ad=47.5p    pd=24u      as=121p     ps=52u
+m05 vss    a      w1     vss n w=19u  l=2.3636u ad=152p     pd=54u      as=47.5p    ps=24u
+C0  vss    z      0.068f
+C1  a      vdd    0.022f
+C2  vss    b      0.021f
+C3  z      b      0.089f
+C4  w1     vss    0.004f
+C5  vss    a      0.025f
+C6  vss    vdd    0.003f
+C7  a      z      0.037f
+C8  z      vdd    0.110f
+C9  a      b      0.064f
+C10 vdd    b      0.027f
+C12 a      vss    0.037f
+C13 z      vss    0.003f
+C15 b      vss    0.041f
+.ends

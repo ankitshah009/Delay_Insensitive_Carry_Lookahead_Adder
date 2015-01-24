@@ -1,0 +1,51 @@
+.subckt xaoi21_x05 a1 a2 b vdd vss z
+*   SPICE3 file   created from xaoi21_x05.ext -      technology: scmos
+m00 vdd    a1     an     vdd p w=20u  l=2.3636u ad=121p     pd=37u      as=114p     ps=38.6667u
+m01 an     a2     vdd    vdd p w=20u  l=2.3636u ad=114p     pd=38.6667u as=121p     ps=37u
+m02 z      b      an     vdd p w=20u  l=2.3636u ad=115p     pd=42u      as=114p     ps=38.6667u
+m03 w1     bn     z      vdd p w=20u  l=2.3636u ad=60p      pd=26u      as=115p     ps=42u
+m04 vdd    an     w1     vdd p w=20u  l=2.3636u ad=121p     pd=37u      as=60p      ps=26u
+m05 bn     b      vdd    vdd p w=20u  l=2.3636u ad=142p     pd=56u      as=121p     ps=37u
+m06 w2     a1     vss    vss n w=12u  l=2.3636u ad=36p      pd=18u      as=148p     ps=56u
+m07 an     a2     w2     vss n w=12u  l=2.3636u ad=60p      pd=22u      as=36p      ps=18u
+m08 z      bn     an     vss n w=12u  l=2.3636u ad=60p      pd=25.1429u as=60p      ps=22u
+m09 bn     an     z      vss n w=9u   l=2.3636u ad=45p      pd=19u      as=45p      ps=18.8571u
+m10 vss    b      bn     vss n w=9u   l=2.3636u ad=111p     pd=42u      as=45p      ps=19u
+C0  an     bn     0.263f
+C1  b      vdd    0.255f
+C2  vss    a1     0.060f
+C3  bn     vdd    0.041f
+C4  w1     b      0.013f
+C5  vss    an     0.206f
+C6  z      a1     0.111f
+C7  a2     b      0.042f
+C8  z      an     0.164f
+C9  z      vdd    0.007f
+C10 a1     an     0.259f
+C11 a2     bn     0.076f
+C12 b      bn     0.257f
+C13 a1     vdd    0.006f
+C14 vss    a2     0.009f
+C15 w2     a1     0.006f
+C16 an     vdd    0.144f
+C17 z      a2     0.131f
+C18 vss    b      0.002f
+C19 w2     an     0.012f
+C20 z      b      0.039f
+C21 w1     an     0.008f
+C22 a2     a1     0.227f
+C23 vss    bn     0.071f
+C24 a1     b      0.013f
+C25 a2     an     0.212f
+C26 z      bn     0.234f
+C27 a1     bn     0.062f
+C28 b      an     0.331f
+C29 a2     vdd    0.036f
+C30 vss    z      0.058f
+C32 z      vss    0.024f
+C33 a2     vss    0.027f
+C34 a1     vss    0.039f
+C35 b      vss    0.042f
+C36 an     vss    0.053f
+C37 bn     vss    0.054f
+.ends

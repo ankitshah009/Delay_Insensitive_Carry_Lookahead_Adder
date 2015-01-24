@@ -1,0 +1,12 @@
+# Use the following Alliance variables to view these cells with DREAL.
+# You can 
+# $ source ./README
+# to set them.
+
+export RDS_IN=cif
+export RDS_TECHNO_NAME=/usr/share/pharosc/alliance/etc/sx100.rds
+export DREAL_TECHNO_NAME=/usr/share/pharosc/alliance/etc/s100.dreal
+# The layout contains both separate ndif and pdif layers for the
+# diffusion, and a single activ layer for the diffusion with
+# implant layers NIMP and PIMP. The geometries are cleaner than
+# the layout written from Alliance.

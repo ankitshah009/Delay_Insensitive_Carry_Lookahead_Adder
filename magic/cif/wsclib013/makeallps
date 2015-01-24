@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -1 *.cif | sed 's|^\(.*\)\.cif|./makeps \1|' | bash

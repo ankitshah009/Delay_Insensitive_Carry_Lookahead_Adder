@@ -1,0 +1,51 @@
+.subckt xor2v4x1 a b vdd vss z
+*   SPICE3 file   created from xor2v4x1.ext -      technology: scmos
+m00 vdd    b      bn     vdd p w=11u  l=2.3636u ad=55.8684p pd=20.8421u as=67p      ps=36u
+m01 w1     an     vdd    vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=137.132p ps=51.1579u
+m02 z      b      w1     vdd p w=27u  l=2.3636u ad=121.5p   pd=36u      as=67.5p    ps=32u
+m03 w2     bn     z      vdd p w=27u  l=2.3636u ad=67.5p    pd=32u      as=121.5p   ps=36u
+m04 vdd    a      w2     vdd p w=27u  l=2.3636u ad=137.132p pd=51.1579u as=67.5p    ps=32u
+m05 an     a      vdd    vdd p w=11u  l=2.3636u ad=67p      pd=36u      as=55.8684p ps=20.8421u
+m06 vss    b      bn     vss n w=6u   l=2.3636u ad=34.7368p pd=15.7895u as=42p      ps=26u
+m07 n3     b      vss    vss n w=12u  l=2.3636u ad=51.6735p pd=23.5102u as=69.4737p ps=31.5789u
+m08 z      bn     n3     vss n w=11u  l=2.3636u ad=56.4348p pd=23.913u  as=47.3673p ps=21.551u
+m09 n3     a      z      vss n w=12u  l=2.3636u ad=51.6735p pd=23.5102u as=61.5652p ps=26.087u
+m10 vss    an     n3     vss n w=14u  l=2.3636u ad=81.0526p pd=36.8421u as=60.2857p ps=27.4286u
+m11 an     a      vss    vss n w=6u   l=2.3636u ad=42p      pd=26u      as=34.7368p ps=15.7895u
+C0  vdd    b      0.091f
+C1  w1     an     0.016f
+C2  a      bn     0.070f
+C3  vss    z      0.038f
+C4  a      an     0.294f
+C5  bn     b      0.148f
+C6  vss    vdd    0.002f
+C7  n3     a      0.005f
+C8  b      an     0.168f
+C9  vss    bn     0.087f
+C10 z      vdd    0.043f
+C11 z      bn     0.167f
+C12 vss    an     0.086f
+C13 n3     vss    0.146f
+C14 z      an     0.353f
+C15 vdd    bn     0.037f
+C16 n3     z      0.141f
+C17 vdd    an     0.176f
+C18 a      b      0.036f
+C19 n3     vdd    0.003f
+C20 w2     z      0.007f
+C21 bn     an     0.199f
+C22 n3     bn     0.080f
+C23 w2     vdd    0.005f
+C24 vss    a      0.013f
+C25 z      a      0.029f
+C26 w1     vdd    0.005f
+C27 vss    b      0.011f
+C28 n3     an     0.039f
+C29 vdd    a      0.024f
+C30 w2     an     0.010f
+C32 z      vss    0.004f
+C34 a      vss    0.050f
+C35 bn     vss    0.037f
+C36 b      vss    0.040f
+C37 an     vss    0.035f
+.ends

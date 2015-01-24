@@ -1,0 +1,49 @@
+.subckt an3v0x4 a b c vdd vss z
+*   SPICE3 file   created from an3v0x4.ext -      technology: scmos
+m00 z      zn     vdd    vdd p w=28u  l=2.3636u ad=112p     pd=36u      as=194.58p  ps=59.6522u
+m01 vdd    zn     z      vdd p w=28u  l=2.3636u ad=194.58p  pd=59.6522u as=112p     ps=36u
+m02 zn     b      vdd    vdd p w=14u  l=2.3636u ad=56p      pd=19.4634u as=97.2899p ps=29.8261u
+m03 vdd    b      zn     vdd p w=14u  l=2.3636u ad=97.2899p pd=29.8261u as=56p      ps=19.4634u
+m04 zn     c      vdd    vdd p w=27u  l=2.3636u ad=108p     pd=37.5366u as=187.63p  ps=57.5217u
+m05 vdd    a      zn     vdd p w=27u  l=2.3636u ad=187.63p  pd=57.5217u as=108p     ps=37.5366u
+m06 z      zn     vss    vss n w=14u  l=2.3636u ad=56p      pd=22u      as=97.5p    ps=37.5u
+m07 vss    zn     z      vss n w=14u  l=2.3636u ad=97.5p    pd=37.5u    as=56p      ps=22u
+m08 w1     a      vss    vss n w=14u  l=2.3636u ad=35p      pd=19u      as=97.5p    ps=37.5u
+m09 w2     b      w1     vss n w=14u  l=2.3636u ad=35p      pd=19u      as=35p      ps=19u
+m10 zn     c      w2     vss n w=14u  l=2.3636u ad=56p      pd=22u      as=35p      ps=19u
+m11 w3     c      zn     vss n w=14u  l=2.3636u ad=35p      pd=19u      as=56p      ps=22u
+m12 w4     b      w3     vss n w=14u  l=2.3636u ad=35p      pd=19u      as=35p      ps=19u
+m13 vss    a      w4     vss n w=14u  l=2.3636u ad=97.5p    pd=37.5u    as=35p      ps=19u
+C0  z      vdd    0.107f
+C1  vss    c      0.038f
+C2  w1     zn     0.010f
+C3  b      a      0.200f
+C4  z      c      0.021f
+C5  b      zn     0.248f
+C6  vdd    a      0.052f
+C7  vdd    zn     0.404f
+C8  a      c      0.315f
+C9  w4     a      0.007f
+C10 c      zn     0.192f
+C11 w2     a      0.007f
+C12 vss    z      0.091f
+C13 b      vdd    0.091f
+C14 vss    a      0.184f
+C15 w2     zn     0.010f
+C16 vss    zn     0.294f
+C17 b      c      0.298f
+C18 z      a      0.028f
+C19 z      zn     0.291f
+C20 vdd    c      0.032f
+C21 a      zn     0.443f
+C22 w3     a      0.020f
+C23 vss    b      0.042f
+C24 vss    vdd    0.006f
+C25 b      z      0.007f
+C26 w1     a      0.007f
+C28 b      vss    0.048f
+C29 z      vss    0.006f
+C31 a      vss    0.037f
+C32 c      vss    0.030f
+C33 zn     vss    0.032f
+.ends

@@ -1,0 +1,8 @@
+.subckt one_x0 q vdd vss
+*   SPICE3 file   created from one_x0.ext -      technology: scmos
+m00 q      vss    vdd    vdd p w=20u  l=2.3636u ad=160p     pd=56u      as=200p     ps=60u
+C0  q      vdd    0.169f
+C1  q      vss    0.321f
+C2  vss    vdd    0.036f
+C3  q      vss    0.032f
+.ends

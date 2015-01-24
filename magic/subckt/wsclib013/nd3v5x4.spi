@@ -1,0 +1,54 @@
+.subckt nd3v5x4 a b c vdd vss z
+*   SPICE3 file   created from nd3v5x4.ext -      technology: scmos
+m00 z      a      vdd    vdd p w=20u  l=2.3636u ad=85.1111p pd=30.8889u as=88.8889p ps=31.1111u
+m01 vdd    a      z      vdd p w=20u  l=2.3636u ad=88.8889p pd=31.1111u as=85.1111p ps=30.8889u
+m02 z      a      vdd    vdd p w=20u  l=2.3636u ad=85.1111p pd=30.8889u as=88.8889p ps=31.1111u
+m03 vdd    b      z      vdd p w=20u  l=2.3636u ad=88.8889p pd=31.1111u as=85.1111p ps=30.8889u
+m04 z      b      vdd    vdd p w=20u  l=2.3636u ad=85.1111p pd=30.8889u as=88.8889p ps=31.1111u
+m05 vdd    b      z      vdd p w=20u  l=2.3636u ad=88.8889p pd=31.1111u as=85.1111p ps=30.8889u
+m06 z      c      vdd    vdd p w=20u  l=2.3636u ad=85.1111p pd=30.8889u as=88.8889p ps=31.1111u
+m07 vdd    c      z      vdd p w=20u  l=2.3636u ad=88.8889p pd=31.1111u as=85.1111p ps=30.8889u
+m08 z      c      vdd    vdd p w=20u  l=2.3636u ad=85.1111p pd=30.8889u as=88.8889p ps=31.1111u
+m09 n1     a      vss    vss n w=20u  l=2.3636u ad=80p      pd=28u      as=106.667p ps=37.3333u
+m10 vss    a      n1     vss n w=20u  l=2.3636u ad=106.667p pd=37.3333u as=80p      ps=28u
+m11 n1     a      vss    vss n w=20u  l=2.3636u ad=80p      pd=28u      as=106.667p ps=37.3333u
+m12 n2     b      n1     vss n w=20u  l=2.3636u ad=85.3333p pd=33.6667u as=80p      ps=28u
+m13 n1     b      n2     vss n w=20u  l=2.3636u ad=80p      pd=28u      as=85.3333p ps=33.6667u
+m14 n2     b      n1     vss n w=20u  l=2.3636u ad=85.3333p pd=33.6667u as=80p      ps=28u
+m15 z      c      n2     vss n w=20u  l=2.3636u ad=83.3333p pd=31.3333u as=85.3333p ps=33.6667u
+m16 n2     c      z      vss n w=20u  l=2.3636u ad=85.3333p pd=33.6667u as=83.3333p ps=31.3333u
+m17 z      c      n2     vss n w=10u  l=2.3636u ad=41.6667p pd=15.6667u as=42.6667p ps=16.8333u
+m18 n2     c      z      vss n w=10u  l=2.3636u ad=42.6667p pd=16.8333u as=41.6667p ps=15.6667u
+C0  c      vdd    0.031f
+C1  b      a      0.132f
+C2  n2     vss    0.343f
+C3  a      vdd    0.070f
+C4  n1     z      0.072f
+C5  n2     c      0.056f
+C6  vss    c      0.025f
+C7  n1     b      0.117f
+C8  n2     a      0.003f
+C9  n1     vdd    0.017f
+C10 vss    a      0.087f
+C11 z      b      0.200f
+C12 z      vdd    0.766f
+C13 c      a      0.009f
+C14 n2     n1     0.223f
+C15 b      vdd    0.031f
+C16 n1     vss    0.326f
+C17 n2     z      0.281f
+C18 vss    z      0.115f
+C19 n2     b      0.106f
+C20 z      c      0.209f
+C21 n1     a      0.083f
+C22 n2     vdd    0.038f
+C23 vss    b      0.046f
+C24 z      a      0.099f
+C25 vss    vdd    0.026f
+C26 c      b      0.111f
+C27 n2     vss    0.007f
+C29 z      vss    0.007f
+C30 c      vss    0.077f
+C31 b      vss    0.053f
+C32 a      vss    0.055f
+.ends
